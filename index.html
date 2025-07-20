@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Guru - प्रेम की दुनिया</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>Love Guru</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shayari">Shayari</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Love Guru</h1>
+            <p class="hero-subtitle">प्रेम की दुनिया में आपका स्वागत है</p>
+            <div class="hero-description">
+                <p>यहाँ मिलेगी दिल को छू जाने वाली शायरी और प्रेम के अनमोल विचार</p>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('shayari')">
+                <i class="fas fa-heart"></i>
+                शायरी पढ़ें
+            </button>
+        </div>
+        <div class="floating-hearts">
+            <i class="fas fa-heart heart1"></i>
+            <i class="fas fa-heart heart2"></i>
+            <i class="fas fa-heart heart3"></i>
+            <i class="fas fa-heart heart4"></i>
+            <i class="fas fa-heart heart5"></i>
+        </div>
+    </section>
+
+    <!-- Shayari Section -->
+    <section id="shayari" class="shayari-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-feather-alt"></i>
+                    रोमांटिक शायरी
+                </h2>
+                <div class="filter-container">
+                    <select class="filter-select" id="shayari-filter">
+                        <option value="latest">नई शायरी पहले</option>
+                        <option value="popular">सबसे लोकप्रिय</option>
+                        <option value="short">छोटी शायरी</option>
+                        <option value="long">लंबी शायरी</option>
+                    </select>
+                </div>
+            </div>
+            <div class="shayari-grid" id="shayari-container">
+                <div class="shayari-card">
+                    <div class="shayari-header">
+                        <div class="author-info">
+                            <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
+                            <div>
+                                <h4 class="author-name">Love Guru</h4>
+                                <p class="post-date">2 दिन पहले</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-heart like-btn" data-likes="245"></i>
+                    </div>
+                    <div class="shayari-content">
+                        <p>"तेरी मुस्कान में छुपा है मेरा प्यार,<br>
+                        तेरे बिना अधूरा है ये संसार।<br>
+                        हर सांस में बसा है तेरा नाम,<br>
+                        तू ही तो है मेरी जिंदगी का आराम।"</p>
+                    </div>
+                    <div class="shayari-footer">
+                        <div class="like-info">
+                            <span class="like-count">245</span>
+                            <span class="like-text">लाइक्स</span>
+                        </div>
+                        <button class="share-btn">
+                            <i class="fas fa-share-alt"></i>
+                            शेयर करें
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shayari-card">
+                    <div class="shayari-header">
+                        <div class="author-info">
+                            <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
+                            <div>
+                                <h4 class="author-name">Love Guru</h4>
+                                <p class="post-date">4 दिन पहले</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-heart like-btn" data-likes="189"></i>
+                    </div>
+                    <div class="shayari-content">
+                        <p>"चाँद सितारों से भी खूबसूरत है तेरा चेहरा,<br>
+                        दिल की दुनिया में बसा है तेरा बसेरा।<br>
+                        इश्क़ की इस राह में तू ही मेरा साथी,<br>
+                        तेरे प्यार में मिली है मुझे खुशी की रात्री।"</p>
+                    </div>
+                    <div class="shayari-footer">
+                        <div class="like-info">
+                            <span class="like-count">189</span>
+                            <span class="like-text">लाइक्स</span>
+                        </div>
+                        <button class="share-btn">
+                            <i class="fas fa-share-alt"></i>
+                            शेयर करें
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shayari-card">
+                    <div class="shayari-header">
+                        <div class="author-info">
+                            <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
+                            <div>
+                                <h4 class="author-name">Love Guru</h4>
+                                <p class="post-date">1 सप्ताह पहले</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-heart like-btn liked" data-likes="312"></i>
+                    </div>
+                    <div class="shayari-content">
+                        <p>"तेरी आँखों में छुपे हैं हज़ारों ख्वाब,<br>
+                        तेरे प्यार में मिला है मुझे सुकून का जवाब।<br>
+                        हर पल तेरे साथ बिताना चाहता हूँ,<br>
+                        तेरे इश्क़ में खुद को खो जाना चाहता हूँ।"</p>
+                    </div>
+                    <div class="shayari-footer">
+                        <div class="like-info">
+                            <span class="like-count">312</span>
+                            <span class="like-text">लाइक्स</span>
+                        </div>
+                        <button class="share-btn">
+                            <i class="fas fa-share-alt"></i>
+                            शेयर करें
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="load-more-btn" class="load-more-btn">
+                    <i class="fas fa-arrow-down"></i>
+                    और शायरी लोड करें
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="quotes-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-quote-left"></i>
+                प्रेम के अनमोल विचार
+            </h2>
+            <div class="quotes-slider">
+                <div class="quote-card active">
+                    <p>"सच्चा प्यार वो है जो दिल से निकले और दिल तक पहुंचे।"</p>
+                    <span class="quote-author">- Love Guru</span>
+                </div>
+                <div class="quote-card">
+                    <p>"प्रेम में वो शक्ति है जो दुनिया को बदल सकती है।"</p>
+                    <span class="quote-author">- Love Guru</span>
+                </div>
+                <div class="quote-card">
+                    <p>"जब दिल से दिल मिलता है, तो वहाँ स्वर्ग बन जाता है।"</p>
+                    <span class="quote-author">- Love Guru</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Shayari Modal -->
+    <div id="add-shayari-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>नई शायरी जोड़ें</h3>
+                <button class="modal-close" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="add-shayari-form">
+                <div class="form-group">
+                    <label for="shayari-text">आपकी रोमांटिक शायरी</label>
+                    <textarea id="shayari-text" rows="6" placeholder="यहाँ अपनी खूबसूरत शायरी लिखें..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn" id="submit-shayari">
+                        <i class="fas fa-paper-plane"></i>
+                        शायरी पोस्ट करें
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Add Button -->
+    <button id="floating-add-btn" class="floating-add-btn" title="नई शायरी जोड़ें">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-heart"></i>
+                    <span>Love Guru</span>
+                </div>
+                <p>प्रेम की दुनिया में आपका स्वागत है</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Love Guru. सभी अधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
