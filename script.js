@@ -202,6 +202,43 @@ function addShayariToDOM(shayari, isNew = false) {
     }
 }
 
+// Copy to clipboard function
+function copyToClipboard(text, button) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Show success message
+        const originalText = button.innerHTML;
+        const originalBackground = button.style.background;
+        
+        button.innerHTML = '<i class="fas fa-check"></i> कॉपी हो गया';
+        button.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = originalBackground;
+        }, 2000);
+    }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        // Show success message
+        const originalText = button.innerHTML;
+        const originalBackground = button.style.background;
+        
+        button.innerHTML = '<i class="fas fa-check"></i> कॉपी हो गया';
+        button.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+        
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = originalBackground;
+        }, 2000);
+    });
+}
+
 // Enhanced like functionality
 shayariContainer.addEventListener('click', function(e) {
     if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
@@ -228,31 +265,23 @@ shayariContainer.addEventListener('click', function(e) {
         const shayariCard = shareBtn.closest('.shayari-card');
         const shayariText = shayariCard.querySelector('.shayari-content p').textContent;
         
-        // Create share text
-        const shareText = `Love Guru की यह खूबसूरत शायरी:\n\n${shayariText}\n\n#LoveGuru #Shayari #Romantic`;
+        // Create share text with only the shayari content
+        const shareText = `💕 Love Guru की यह खूबसूरत शायरी 💕\n\n${shayariText}\n\n#LoveGuru #Shayari #Romantic #HindiShayari`;
         
         // Try to use Web Share API if available
         if (navigator.share) {
             navigator.share({
                 title: 'Love Guru Shayari',
-                text: shareText,
-                url: window.location.href
-            }).catch(console.error);
+                text: shareText
+                // Removed URL parameter to avoid showing localhost
+            }).catch((error) => {
+                console.log('Share failed:', error);
+                // Fallback to clipboard if share fails
+                copyToClipboard(shareText, shareBtn);
+            });
         } else {
             // Fallback: copy to clipboard
-            navigator.clipboard.writeText(shareText).then(() => {
-                // Show success message
-                const originalText = shareBtn.innerHTML;
-                shareBtn.innerHTML = '<i class="fas fa-check"></i> कॉपी हो गया';
-                shareBtn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-                
-                setTimeout(() => {
-                    shareBtn.innerHTML = originalText;
-                    shareBtn.style.background = 'linear-gradient(45deg, #4f46e5, #4338ca)';
-                }, 2000);
-            }).catch(() => {
-                alert('शेयर करने में समस्या आई। कृपया मैन्युअली कॉपी करें।');
-            });
+            copyToClipboard(shareText, shareBtn);
         }
     }
 });
