@@ -376,6 +376,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+function openMobileMenu() {
+    mobileMenuToggle.classList.add('active');
+    navMenu.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
+
+function closeMobileMenu() {
+    mobileMenuToggle.classList.remove('active');
+    navMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+}
+
+mobileMenuToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+});
+
+// Close mobile menu when clicking on overlay
+mobileMenuOverlay.addEventListener('click', function() {
+    closeMobileMenu();
+});
+
+// Close mobile menu when clicking on a link
+const navLinks = document.querySelectorAll('.nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        
+        // Close menu first
+        closeMobileMenu();
+        
+        // Then scroll to target after a small delay
+        setTimeout(() => {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 300);
+    });
+});
+
+// Close mobile menu on escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+    }
+});
+
 // Keyboard shortcuts
 document.addEventListener('keydown', function(e) {
     // Escape key to close modal
