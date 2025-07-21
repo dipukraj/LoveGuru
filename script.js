@@ -193,7 +193,7 @@ const allShayaris = [
 ];
 
 // Load more functionality
-let loadedShayaris = 3;
+let loadedShayaris = 5;
 loadMoreBtn.addEventListener('click', function() {
     // Show loading state
     loadMoreBtn.disabled = true;
@@ -203,9 +203,13 @@ loadMoreBtn.addEventListener('click', function() {
     setTimeout(function() {
         // Check if there are more shayaris to load
         if (loadedShayaris < allShayaris.length) {
-            const shayari = allShayaris[loadedShayaris];
-            addShayariToDOM(shayari);
-            loadedShayaris++;
+            let count = 0;
+            while (loadedShayaris < allShayaris.length && count < 5) {
+                const shayari = allShayaris[loadedShayaris];
+                addShayariToDOM(shayari);
+                loadedShayaris++;
+                count++;
+            }
             
             if (loadedShayaris >= allShayaris.length) {
                 loadMoreBtn.disabled = true;
@@ -261,7 +265,8 @@ addShayariForm.addEventListener('submit', function(e) {
             author: "Love Guru",
             date: "अभी अभी",
             content: shayariText,
-            likes: 0
+            likes: 0,
+            timestamp: Date.now() // <-- add timestamp
         };
         
         // Add to DOM
@@ -285,14 +290,18 @@ addShayariForm.addEventListener('submit', function(e) {
 function addShayariToDOM(shayari, isNew = false) {
     const shayariCard = document.createElement('div');
     shayariCard.className = `shayari-card ${isNew ? 'new-shayari' : ''}`;
-    
+    // --- AUTO-UPDATE DATE LABEL ---
+    let timestamp = shayari.timestamp || getShayariTimestamp(shayari);
+    if (!shayari.timestamp) shayari.timestamp = timestamp;
+    const dateLabel = getTimeAgoLabel(timestamp);
+    // --- END ---
     shayariCard.innerHTML = `
         <div class="shayari-header">
             <div class="author-info">
                 <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
                 <div>
                     <h4 class="author-name">${shayari.author}</h4>
-                    <p class="post-date">${shayari.date}</p>
+                    <p class="post-date">${dateLabel}</p>
                 </div>
             </div>
             <i class="fas fa-heart like-btn" data-likes="${shayari.likes}"></i>
@@ -309,9 +318,25 @@ function addShayariToDOM(shayari, isNew = false) {
                 <i class="fas fa-share-alt"></i>
                 शेयर करें
             </button>
+            <button class="comment-btn">
+                <i class="fas fa-comment"></i>
+                कमेंट करें <span class="comment-count">0</span>
+            </button>
+        </div>
+        <div class="comments-section" style="display:none;">
+            <div class="comments-list"></div>
+            <form class="comment-form">
+                <input type="text" class="comment-input" placeholder="अपना कमेंट लिखें..." required />
+                <button type="submit" class="submit-comment-btn">पोस्ट</button>
+            </form>
         </div>
     `;
     
+    // --- AUTO-INCREMENT LIKES USAGE ---
+    const likeCountElement = shayariCard.querySelector('.like-count');
+    autoIncrementLikes(shayari, likeCountElement);
+    // --- END ---
+
     if (isNew) {
         shayariContainer.prepend(shayariCard);
         
@@ -388,7 +413,7 @@ shayariContainer.addEventListener('click', function(e) {
         const shayariText = shayariCard.querySelector('.shayari-content p').textContent;
         
         // Create share text with only the shayari content
-        const shareText = `💕 Love Guru की यह खूबसूरत शायरी 💕\n\n${shayariText}\n\n#LoveGuru #Shayari #Romantic #HindiShayari`;
+        const shareText = `💕 Love Guru की यह खूबसूरत शायरी ��\n\n${shayariText}\n\n#LoveGuru #Shayari #Romantic #HindiShayari`;
         
         // Try to use Web Share API if available
         if (navigator.share) {
@@ -550,6 +575,91 @@ document.addEventListener('DOMContentLoaded', function() {
     setupCommentFeatures();
 });
 // --- COMMENT FUNCTIONALITY END ---
+
+// --- AUTO-INCREMENT LIKES START ---
+function getLikeKey(shayariId) {
+    return `auto_likes_${shayariId}`;
+}
+
+function getLastLikeUpdateKey(shayariId) {
+    return `auto_likes_last_${shayariId}`;
+}
+
+function getAutoLikes(shayariId, baseLikes) {
+    const stored = localStorage.getItem(getLikeKey(shayariId));
+    return stored ? parseInt(stored) : baseLikes;
+}
+
+function setAutoLikes(shayariId, likes) {
+    localStorage.setItem(getLikeKey(shayariId), likes);
+}
+
+function getLastLikeUpdate(shayariId) {
+    const stored = localStorage.getItem(getLastLikeUpdateKey(shayariId));
+    return stored ? parseInt(stored) : null;
+}
+
+function setLastLikeUpdate(shayariId, timestamp) {
+    localStorage.setItem(getLastLikeUpdateKey(shayariId), timestamp);
+}
+
+function autoIncrementLikes(shayari, likeCountElement) {
+    const shayariId = shayari.id;
+    const baseLikes = shayari.likes;
+    let likes = getAutoLikes(shayariId, baseLikes);
+    let lastUpdate = getLastLikeUpdate(shayariId);
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+    if (!lastUpdate) {
+        setLastLikeUpdate(shayariId, now);
+        setAutoLikes(shayariId, likes);
+    } else {
+        const daysPassed = Math.floor((now - lastUpdate) / oneDay);
+        if (daysPassed > 0) {
+            likes += daysPassed; // 1 like per day
+            setAutoLikes(shayariId, likes);
+            setLastLikeUpdate(shayariId, lastUpdate + daysPassed * oneDay);
+        }
+    }
+    likeCountElement.textContent = likes;
+}
+// --- AUTO-INCREMENT LIKES END ---
+
+// --- AUTO-UPDATE DATE LABEL START ---
+function getShayariTimestamp(shayari) {
+    // If timestamp already present, use it
+    if (shayari.timestamp) return shayari.timestamp;
+    // Try to estimate from date string
+    const dateStr = shayari.date;
+    const now = Date.now();
+    if (dateStr.includes('महीना')) {
+        const n = parseInt(dateStr);
+        return now - (n || 1) * 30 * 24 * 60 * 60 * 1000;
+    } else if (dateStr.includes('सप्ताह')) {
+        const n = parseInt(dateStr);
+        return now - (n || 1) * 7 * 24 * 60 * 60 * 1000;
+    } else if (dateStr.includes('दिन')) {
+        const n = parseInt(dateStr);
+        return now - (n || 1) * 24 * 60 * 60 * 1000;
+    } else if (dateStr.includes('अभी')) {
+        return now;
+    } else {
+        // fallback: 1 दिन पहले
+        return now - 24 * 60 * 60 * 1000;
+    }
+}
+
+function getTimeAgoLabel(timestamp) {
+    const now = Date.now();
+    const diffMs = now - timestamp;
+    const diffDays = Math.floor(diffMs / (24 * 60 * 60 * 1000));
+    if (diffDays < 1) return 'अभी अभी';
+    if (diffDays < 7) return `${diffDays} दिन पहले`;
+    if (diffDays < 30) return `${Math.floor(diffDays / 7)} सप्ताह पहले`;
+    if (diffDays < 365) return `${Math.floor(diffDays / 30)} महीना पहले`;
+    return `${Math.floor(diffDays / 365)} साल पहले`;
+}
+// --- AUTO-UPDATE DATE LABEL END ---
 
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
