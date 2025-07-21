@@ -210,7 +210,9 @@ loadMoreBtn.addEventListener('click', function() {
                 loadedShayaris++;
                 count++;
             }
-            
+            // --- FIX: Re-attach comment features after loading more ---
+            setupCommentFeatures();
+            // --- END FIX ---
             if (loadedShayaris >= allShayaris.length) {
                 loadMoreBtn.disabled = true;
                 loadMoreBtn.textContent = 'कोई और शायरी नहीं है';
@@ -295,8 +297,11 @@ function addShayariToDOM(shayari, isNew = false) {
     if (!shayari.timestamp) shayari.timestamp = timestamp;
     const dateLabel = getTimeAgoLabel(timestamp);
     // --- END ---
+    // Calculate shayari number (1-based index in DOM)
+    const shayariNumber = shayariContainer.children.length + 1;
     shayariCard.innerHTML = `
         <div class="shayari-header">
+            <div class="shayari-number" style="font-weight:bold;font-size:1.2rem;margin-right:10px;min-width:24px;">${shayariNumber}.</div>
             <div class="author-info">
                 <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
                 <div>
@@ -626,7 +631,18 @@ function autoIncrementLikes(shayari, likeCountElement) {
     } else {
         const daysPassed = Math.floor((now - lastUpdate) / oneDay);
         if (daysPassed > 0) {
-            likes += daysPassed; // 1 like per day
+            // For each day passed, add a random number (1-5) likes
+            for (let i = 0; i < daysPassed; i++) {
+                // Use a seeded random based on shayariId and day offset for consistency
+                const seed = shayariId + '_' + (lastUpdate + i * oneDay);
+                let hash = 0;
+                for (let j = 0; j < seed.length; j++) {
+                    hash = ((hash << 5) - hash) + seed.charCodeAt(j);
+                    hash |= 0;
+                }
+                const rand = Math.abs(hash % 5) + 1; // 1 to 5
+                likes += rand;
+            }
             setAutoLikes(shayariId, likes);
             setLastLikeUpdate(shayariId, lastUpdate + daysPassed * oneDay);
         }
