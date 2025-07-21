@@ -184,6 +184,104 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " किसी को आसानी से मत मिल जाना, लोग सस्ता समझने लगते हैं।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "कमियां हर जगह होती है, उन्हें ठीक किया जाता है, गिनाया नहीं जाता।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " इतना मत रूठा करो तुम मुझसे, तुम मेरी किस्मत में वैसे भी नहीं हो।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " कितना खुश नसीब होगा वो शख़्स, जिसे तुम बिन मांगे मिल जाओगे।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " रुकने वाले वजह Dhundhte हैं, और जाने वाले Bahane।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " जिंदगी नहीं रुलाती, रुलाते वह लोग हैं जिन्हें हम जिंदगी समझ लेते हैं।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " मन ही नहीं है अब किसी से बहस या लगाव का, जो है जैसा है सब ठीक है।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " जो सोचा था वह हुआ नहीं, जो हो रहा है वह कभी सोचा नहीं था।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम जिसको जितना इज्जत क्या और अहमियत दोगे, वह इतना ही ज्यादा फ़ालतू समझेगा।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " जिंदगी में एक बात तो सिखा दी, हम हमेशा किसी के लिए खास नहीं हो सकते।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  इतनी दुनिया देख ली है कि, अब चेहरा देखकर बता दु कौन कैसा है।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Perfect nahi hu lekin, ऐसा इंसान भी नहीं हू जो सिर्फ मतलब के लिए रिश्ता रखता हो।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  किसी को लगता है हम कुछ समझते नहीं, हम समझते सब हैं पर कहते कुछ नहीं।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  दिल के रिश्ते किस्मत से मिलते हैं साहब, वरना मुलाकात तो हजारों से होती है।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -303,7 +401,7 @@ function addShayariToDOM(shayari, isNew = false) {
         <div class="shayari-header">
             <div class="shayari-number" style="font-weight:bold;font-size:1.2rem;margin-right:10px;min-width:24px;">${shayariNumber}.</div>
             <div class="author-info">
-                <img src="https://placehold.co/100x100" alt="Love Guru" class="author-avatar">
+                <img src="https://cdn.pixabay.com/photo/2023/01/23/15/04/couple-7738917_1280.png" alt="Love Guru" class="author-avatar">
                 <div>
                     <h4 class="author-name">${shayari.author}</h4>
                     <p class="post-date">${dateLabel}</p>
