@@ -62,6 +62,128 @@ const allShayaris = [
         likes: 189
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "मुझसे तो नफ़रत है,मोहब्बत उसके साथ कर लेना,\n और बाद मे पछताओ ऐसे ना हालात कर लेना,\n  मैं जनता हु कि तुम्हारे पसंद का खिलौना मैं ही हु, जब जी चाहे वापस आना,\n  Number वहीं hai हमें याद कर लेना।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "तुम्हे पाने का मोह त्याग चुके है हम,\n रही प्रेम की बात तो वो हमेशा रहेगी।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "बदुआ नहीं दे रहा हूँ, ये दुआ है मेरी,\n अगर तुम्हे लगता है,\n की तुने मेरे साथ अच्छा किया है,\n  तो खुदा करे ये अच्छा तुम्हारे साथ भी हो।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "रौशनी से तेरे यहां चांद रूठा बैठा है,\n मैंने मांगा जब भी तुम्हे, टूटा हुआ तारा देखा है,\n तेरी जैसी महक यहां किसी फुल में नहीं,\n यक़ीन कर मेरा, मैने हर बाग देखा है।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "मुझे kaha फ़ुर्सत है कि मै मौसम सुहाना देखू,\n  आप से नजर हटे, तब तो मैं ये जमाना देखू।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "औ बारिश जरा थम के बरश, जब वो आए,\n तो जम के बरश , पहले न बरश की वो आ ना सके, फिर इतना बरश की वो जा न सके|",
+
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "नही हम में कोई अनबन नही है,\n बस इतना है की अब वो मन नहीं है,\n मैं अपने आप को सुलझा रहा हूं,\n तुम्हे लेकर कोई उलझन नहीं है|",
+
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "Woh Nazrain Na Milate Toh Achha Hota,\n  Woh Itane karib Na Aate Toh Achha Hota,\n Hai Mohabbat Phir bhi Mukar Jate Hain Har Dafa,\n  Kaash Ajnabee Reh Jate Toh Achha Hota।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " भूला देंगे तुमको, जरा सब्र तो रखो, रग रग में बसे हो, थोड़ा वक्त तो लगेगा|",
+
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "हम दोनों मिले एक कहानी बनी, हम दोनों अलग हुए तीन कहानीया बनी, एक तेरी कहानी जो तुझे समझ आई, एक मेरी कहानी जो मुझे समझ आई और एक तीसरी अनकही कहानी जो बात कर लेते जरा तो हम दोनों को समझ आ जाती।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "सौ बार कहा इश दिल को चल भूल भी जा तुम उनको, हर बार दिल कहा तुम दिल से नहीं कहते यार।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "तू कर ले सितम तेरी हद जहां तक है, मैं हस कर सहूँगा हर ग़म मेरी इंतहान जहां तक है, तू सोच रही हैं मुझे दर्द कितना हुआ जानी मै देख रहा हूं, तू बेवफा कहा तक है।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "Mujhe Puri Zindagi Tere Saath chahiye tha par ab tu mere saath nahi, Tera haal bhi main puchhu par ab wo mere halat nahi. Tu jiske saath bhi rahe Khush rahe, main kaise bhi rah lunga meri koie baat nahi।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुमने कहा था, हर शाम हाल पूछोगी तुम्हारा, अब तुम बदल गई हो या फिर तुम्हारे शहर में, अब शाम नहीं होती।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " पंडित जी की एक लाइन याद आ गई, मैं तेरी हर ज़िद मान लूंगा बस याद रखना, इस झगड़े में कोई तीसरा शामिल ना हो, यहां तो बिना झगड़े के ही तीसरा आ गया।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "मैने देखा है first priority से लेकर कोई ignore होने तक का सफ़र, तुम मेरे सब कुछ हो, से लेकर तुम होते कौन हो, तक का सफ़र, तुम्हारी बातें बहुत अच्छी लगती हैं से लेकर, तुम मुझे इरिटेट करते हो तक का सफ़र।",
+        likes: 189
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -356,6 +478,78 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// --- COMMENT FUNCTIONALITY START ---
+function getCommentsKey(shayariId) {
+    return `comments_${shayariId}`;
+}
+
+function loadComments(shayariId) {
+    const key = getCommentsKey(shayariId);
+    const comments = localStorage.getItem(key);
+    return comments ? JSON.parse(comments) : [];
+}
+
+function saveComments(shayariId, comments) {
+    const key = getCommentsKey(shayariId);
+    localStorage.setItem(key, JSON.stringify(comments));
+}
+
+function renderComments(shayariCard, shayariId) {
+    const commentsSection = shayariCard.querySelector('.comments-section');
+    const commentsList = commentsSection.querySelector('.comments-list');
+    const commentCount = shayariCard.querySelector('.comment-count');
+    const comments = loadComments(shayariId);
+    commentsList.innerHTML = '';
+    comments.forEach(comment => {
+        const div = document.createElement('div');
+        div.className = 'comment-item';
+        div.textContent = comment;
+        commentsList.appendChild(div);
+    });
+    commentCount.textContent = comments.length;
+}
+
+// Attach comment functionality to all shayari cards
+function setupCommentFeatures() {
+    const shayariCards = document.querySelectorAll('.shayari-card');
+    shayariCards.forEach((card, idx) => {
+        // Use data-id if available, else fallback to index
+        let shayariId = card.getAttribute('data-id') || idx;
+        card.setAttribute('data-id', shayariId);
+        const commentBtn = card.querySelector('.comment-btn');
+        const commentsSection = card.querySelector('.comments-section');
+        const commentForm = card.querySelector('.comment-form');
+        const commentInput = card.querySelector('.comment-input');
+        // Toggle comment section
+        commentBtn.addEventListener('click', function() {
+            if (commentsSection.style.display === 'none' || !commentsSection.style.display) {
+                commentsSection.style.display = 'block';
+                commentInput.focus();
+            } else {
+                commentsSection.style.display = 'none';
+            }
+        });
+        // Render comments on load
+        renderComments(card, shayariId);
+        // Handle comment submit
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const comment = commentInput.value.trim();
+            if (!comment) return;
+            const comments = loadComments(shayariId);
+            comments.push(comment);
+            saveComments(shayariId, comments);
+            renderComments(card, shayariId);
+            commentInput.value = '';
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setupCommentFeatures();
+});
+// --- COMMENT FUNCTIONALITY END ---
 
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
