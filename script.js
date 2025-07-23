@@ -289,6 +289,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   मेरा सन्नाटा गवाह है, मैने पुकारा बहुत था।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
