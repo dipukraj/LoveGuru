@@ -331,6 +331,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " मसला Sukoon का हैं, वरना जिंदगी तो हर कोई काट रहा है|",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
