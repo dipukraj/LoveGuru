@@ -317,6 +317,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  मीठे लोगों से मिलकर मैने जाना, कड़वे लोग अक्सर सच्चे होते हैं।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
