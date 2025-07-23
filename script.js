@@ -338,6 +338,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  अतीत को अगर जाने नहीं दोगे तो, ये आप को कभी जीने नहीं देगा|",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
