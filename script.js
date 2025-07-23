@@ -345,6 +345,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  हक वहीं दिखाना चाहिए जहां, हमारे शब्द और भावनाओं की कद्र हो|",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
