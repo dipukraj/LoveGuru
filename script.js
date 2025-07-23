@@ -303,6 +303,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   पतझड़ में ही रिश्तों की परख होती हैं, बारिश में तो हर पता हरा ही दिखता हैं।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
