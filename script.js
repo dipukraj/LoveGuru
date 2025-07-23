@@ -282,6 +282,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  कमियां और खूबियां सब में होती हैं, इतना भी बेहतर मत खोजो कि बेहतरीन को ही खो दो।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
