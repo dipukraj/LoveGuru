@@ -296,6 +296,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  आसान हैं क्या, मन में चल रहे तूफ़ान को शांत करके मुस्कुराना|",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
