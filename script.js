@@ -387,6 +387,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " अजीब लोग है। खुशी छीन कर कहते है खुश रहो।",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
