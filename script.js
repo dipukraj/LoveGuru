@@ -358,6 +358,13 @@ const allShayaris = [
         content: " अकेला हूं पर पहले से थोड़ा समझदार बना बैठा हूं, अब ख्वाबों से नहीं बहकता, हकीकतों का यार हूं, जो गया उसका शुक्र है-अब खुद से वफादार हूं।",
         likes: 502
     },
+        {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        likes: 502
+    },
     {
         id: 8,
         author: "Love Guru",
