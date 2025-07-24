@@ -408,6 +408,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   मैं खुद अकेला रह गया, सबका साथ देते देते !!",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
