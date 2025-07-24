@@ -394,6 +394,13 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " कहने वाले तो कुछ भी बोल देते है, लेकिन कभी सोचा है सहने वाले पर क्या बितती है !!",
+        likes: 502
+    },
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
