@@ -372,11 +372,18 @@ const allShayaris = [
         content: "  नसीब के बारे में क्या कहूं... जो चाहा कभी मिला ही नहीं।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "TU AGLE JANAM MIL SAKE DUBARA MUJHE।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तेरे बदलने का दुःख नहीं है, मैं तो अपने भरोसे पर शर्मिंदा हूँ।",
         likes: 502
     },
     {
