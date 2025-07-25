@@ -615,7 +615,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   जुर्म का पता नहीं बस सजा दिए जा रही है जिंदगी !!",
+        content: "    संभावना 1% भी है तो लड़ जाओ !!",
         likes: 502
     },
     {
