@@ -1485,9 +1485,129 @@ function renderInitialShayaris() {
     }
     loadedShayaris = count;
 }
+// Search Functionality
+function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    
+    function performSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        const shayariCards = document.querySelectorAll('.shayari-card');
+        
+        if (query === '') {
+            // Show all shayaris if search is empty
+            shayariCards.forEach(card => {
+                card.style.display = 'block';
+                card.style.animation = 'fadeIn 0.5s ease';
+            });
+            return;
+        }
+        
+        let foundCount = 0;
+        shayariCards.forEach(card => {
+            const shayariText = card.querySelector('.shayari-content p').textContent.toLowerCase();
+            const authorName = card.querySelector('.author-name').textContent.toLowerCase();
+            
+            if (shayariText.includes(query) || authorName.includes(query)) {
+                card.style.display = 'block';
+                card.style.animation = 'fadeIn 0.5s ease';
+                foundCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Show search results notification
+        showSearchNotification(foundCount, query);
+    }
+    
+    // Search on button click
+    searchBtn.addEventListener('click', performSearch);
+    
+    // Search on Enter key
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+    
+    // Real-time search (optional)
+    searchInput.addEventListener('input', function() {
+        if (this.value.length >= 3) {
+            performSearch();
+        } else if (this.value.length === 0) {
+            performSearch();
+        }
+    });
+}
+
+// Show search results notification
+function showSearchNotification(count, query) {
+    const notification = document.createElement('div');
+    notification.className = 'search-notification';
+    notification.innerHTML = `
+        <i class="fas fa-search"></i>
+        <span>${count} शायरी मिली "${query}" के लिए</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: linear-gradient(45deg, #ff6b6b, #ff4757);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        z-index: 1000;
+        animation: slideInFromRight 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToRight 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 3000);
+}
+
+// Theme Switcher Functionality
+function initThemeSwitcher() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    
+    themeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-theme');
+        
+        if (body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     renderInitialShayaris();
     setupCommentFeatures();
+    initThemeSwitcher();
+    initSearch();
 });
 // --- COMMENT FUNCTIONALITY END ---
 

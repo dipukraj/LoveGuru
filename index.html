@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -26,6 +40,11 @@
                 <li><a href="#shayari">Shayari</a></li>
                 <li><a href="#quotes">Quotes</a></li>
                 <li><a href="#about">About</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" title="थीम बदलें">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -64,6 +83,12 @@
                     रोमांटिक शायरी
                 </h2>
                 <div class="filter-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="शायरी खोजें..." class="search-input">
+                        <button class="search-btn" id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                     <select class="filter-select" id="shayari-filter">
                         <option value="latest">नई शायरी पहले</option>
                         <option value="popular">सबसे लोकप्रिय</option>
