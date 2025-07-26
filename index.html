@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Guru - प्रेम की दुनिया</title>
+    <title>Love Guru - रोमांटिक शायरी</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#ff6b6b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Love Guru">
+    <meta name="msapplication-TileColor" content="#ff6b6b">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/icon-167x167.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -41,9 +63,33 @@
                 <li><a href="#quotes">Quotes</a></li>
                 <li><a href="#about">About</a></li>
                 <li>
-                    <button class="theme-toggle" id="theme-toggle" title="थीम बदलें">
-                        <i class="fas fa-moon"></i>
-                    </button>
+                    <div class="theme-selector">
+                        <button class="theme-toggle" id="theme-toggle" title="थीम बदलें">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <div class="theme-options" id="theme-options">
+                            <div class="theme-option" data-theme="default">
+                                <div class="theme-preview default-theme"></div>
+                                <span>डिफ़ॉल्ट</span>
+                            </div>
+                            <div class="theme-option" data-theme="sunset">
+                                <div class="theme-preview sunset-theme"></div>
+                                <span>सनसेट</span>
+                            </div>
+                            <div class="theme-option" data-theme="ocean">
+                                <div class="theme-preview ocean-theme"></div>
+                                <span>समुद्र</span>
+                            </div>
+                            <div class="theme-option" data-theme="forest">
+                                <div class="theme-preview forest-theme"></div>
+                                <span>जंगल</span>
+                            </div>
+                            <div class="theme-option" data-theme="purple">
+                                <div class="theme-preview purple-theme"></div>
+                                <span>बैंगनी</span>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -222,6 +268,77 @@
             </div>
         </div>
     </section>
+
+    <!-- AI Shayari Generator Modal -->
+    <div id="ai-generator-modal" class="modal-overlay">
+        <div class="modal-content ai-modal">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-magic"></i>
+                    AI शायरी जनरेटर
+                </h3>
+                <button class="modal-close" id="close-ai-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="ai-generator-content">
+                <div class="ai-options">
+                    <div class="option-group">
+                        <label>शायरी का विषय:</label>
+                        <select id="ai-topic" class="ai-select">
+                            <option value="love">प्रेम</option>
+                            <option value="sad">दर्द</option>
+                            <option value="friendship">दोस्ती</option>
+                            <option value="motivation">प्रेरणा</option>
+                            <option value="nature">प्रकृति</option>
+                            <option value="life">जीवन</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>शायरी की लंबाई:</label>
+                        <select id="ai-length" class="ai-select">
+                            <option value="short">छोटी (2 लाइन)</option>
+                            <option value="medium">मध्यम (4 लाइन)</option>
+                            <option value="long">लंबी (6 लाइन)</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>शैली:</label>
+                        <select id="ai-style" class="ai-select">
+                            <option value="romantic">रोमांटिक</option>
+                            <option value="philosophical">दार्शनिक</option>
+                            <option value="emotional">भावनात्मक</option>
+                            <option value="modern">आधुनिक</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ai-generate-section">
+                    <button id="generate-shayari-btn" class="generate-btn">
+                        <i class="fas fa-magic"></i>
+                        शायरी जनरेट करें
+                    </button>
+                    <div class="loading-animation" id="ai-loading" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>शायरी जनरेट हो रही है...</p>
+                    </div>
+                </div>
+                <div class="generated-shayari" id="generated-shayari" style="display: none;">
+                    <h4>आपकी जनरेट की गई शायरी:</h4>
+                    <div class="shayari-preview" id="shayari-preview"></div>
+                    <div class="shayari-actions">
+                        <button id="regenerate-btn" class="action-btn secondary">
+                            <i class="fas fa-redo"></i>
+                            फिर से जनरेट करें
+                        </button>
+                        <button id="save-shayari-btn" class="action-btn primary">
+                            <i class="fas fa-save"></i>
+                            शायरी सेव करें
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Add Shayari Modal -->
     <div id="add-shayari-modal" class="modal-overlay">

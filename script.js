@@ -992,8 +992,56 @@ loadMoreBtn.addEventListener('click', function() {
 
 // Modal functionality
 floatingAddBtn.addEventListener('click', function() {
-    addShayariModal.classList.add('active');
-    shayariTextArea.focus();
+    // Create options menu
+    const optionsMenu = document.createElement('div');
+    optionsMenu.className = 'floating-options';
+    optionsMenu.innerHTML = `
+        <div class="option-item" id="manual-add">
+            <i class="fas fa-edit"></i>
+            <span>मैनुअल शायरी</span>
+        </div>
+        <div class="option-item" id="ai-generate">
+            <i class="fas fa-magic"></i>
+            <span>AI जनरेटर</span>
+        </div>
+    `;
+    optionsMenu.style.cssText = `
+        position: absolute;
+        bottom: 80px;
+        right: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        z-index: 1000;
+        animation: slideInFromBottom 0.3s ease;
+    `;
+    
+    document.body.appendChild(optionsMenu);
+    
+    // Add event listeners
+    document.getElementById('manual-add').addEventListener('click', function() {
+        addShayariModal.classList.add('active');
+        shayariTextArea.focus();
+        document.body.removeChild(optionsMenu);
+    });
+    
+    document.getElementById('ai-generate').addEventListener('click', function() {
+        document.getElementById('ai-generator-modal').classList.add('active');
+        document.body.removeChild(optionsMenu);
+    });
+    
+    // Close menu when clicking outside
+    setTimeout(() => {
+        document.addEventListener('click', function closeMenu(e) {
+            if (!floatingAddBtn.contains(e.target) && !optionsMenu.contains(e.target)) {
+                if (document.body.contains(optionsMenu)) {
+                    document.body.removeChild(optionsMenu);
+                }
+                document.removeEventListener('click', closeMenu);
+            }
+        });
+    }, 100);
 });
 
 closeModalBtn.addEventListener('click', function() {
@@ -1580,6 +1628,194 @@ function checkCategoryMatch(text, category) {
     return keywords.some(keyword => text.includes(keyword));
 }
 
+// AI Shayari Generator
+function initAIGenerator() {
+    const aiModal = document.getElementById('ai-generator-modal');
+    const closeAiModal = document.getElementById('close-ai-modal');
+    const generateBtn = document.getElementById('generate-shayari-btn');
+    const regenerateBtn = document.getElementById('regenerate-btn');
+    const saveShayariBtn = document.getElementById('save-shayari-btn');
+    
+    // Close AI modal
+    closeAiModal.addEventListener('click', function() {
+        aiModal.classList.remove('active');
+    });
+    
+    // Generate shayari
+    generateBtn.addEventListener('click', generateShayari);
+    regenerateBtn.addEventListener('click', generateShayari);
+    
+    // Save generated shayari
+    saveShayariBtn.addEventListener('click', saveGeneratedShayari);
+}
+
+// Generate shayari based on selected options
+function generateShayari() {
+    const topic = document.getElementById('ai-topic').value;
+    const length = document.getElementById('ai-length').value;
+    const style = document.getElementById('ai-style').value;
+    
+    const generateBtn = document.getElementById('generate-shayari-btn');
+    const loading = document.getElementById('ai-loading');
+    const generatedSection = document.getElementById('generated-shayari');
+    
+    // Show loading
+    generateBtn.style.display = 'none';
+    loading.style.display = 'flex';
+    generatedSection.style.display = 'none';
+    
+    // Simulate AI generation delay
+    setTimeout(() => {
+        const shayari = generateAIShayari(topic, length, style);
+        displayGeneratedShayari(shayari);
+        
+        // Hide loading
+        loading.style.display = 'none';
+        generateBtn.style.display = 'inline-flex';
+    }, 2000);
+}
+
+// Generate AI shayari based on parameters
+function generateAIShayari(topic, length, style) {
+    const shayariTemplates = {
+        love: {
+            short: [
+                "तुम्हारी याद में दिन कटते हैं,\nदिल तुम्हारे लिए धड़कता है।",
+                "तुम्हारा चेहरा सपनों में आता है,\nदिल तुम्हारे लिए रोता है।"
+            ],
+            medium: [
+                "तुम्हारी मोहब्बत में खो गया हूं,\nदिल तुम्हारे लिए धड़कता है।\nतुम्हारी याद में दिन कटते हैं,\nजिंदगी तुम्हारे बिना अधूरी है।",
+                "तुम्हारा चेहरा सपनों में आता है,\nदिल तुम्हारे लिए रोता है।\nतुम्हारी मोहब्बत में खो गया हूं,\nजिंदगी तुम्हारे बिना अधूरी है।"
+            ],
+            long: [
+                "तुम्हारी मोहब्बत में खो गया हूं,\nदिल तुम्हारे लिए धड़कता है।\nतुम्हारी याद में दिन कटते हैं,\nजिंदगी तुम्हारे बिना अधूरी है।\nतुम्हारा चेहरा सपनों में आता है,\nदिल तुम्हारे लिए रोता है।"
+            ]
+        },
+        sad: {
+            short: [
+                "दर्द दिल में छुपा है,\nआंसू आंखों में भरा है।",
+                "अकेलापन साथ है,\nदर्द दिल में भरा है।"
+            ],
+            medium: [
+                "दर्द दिल में छुपा है,\nआंसू आंखों में भरा है।\nअकेलापन साथ है,\nजिंदगी अधूरी है।",
+                "तन्हा रास्तों पर चल रहा हूं,\nदर्द दिल में भरा है।\nआंसू आंखों में छुपा है,\nजिंदगी अधूरी है।"
+            ],
+            long: [
+                "दर्द दिल में छुपा है,\nआंसू आंखों में भरा है।\nअकेलापन साथ है,\nजिंदगी अधूरी है।\nतन्हा रास्तों पर चल रहा हूं,\nदर्द दिल में भरा है।"
+            ]
+        },
+        friendship: {
+            short: [
+                "दोस्ती का रिश्ता अनमोल है,\nदिल से दिल का मिलन है।",
+                "सच्ची दोस्ती जिंदगी का खजाना है,\nदिल से दिल का मिलन है।"
+            ],
+            medium: [
+                "दोस्ती का रिश्ता अनमोल है,\nदिल से दिल का मिलन है।\nसच्ची दोस्ती जिंदगी का खजाना है,\nहर पल साथ निभाना है।",
+                "दोस्ती में कोई शर्त नहीं होती,\nदिल से दिल का मिलन होता है।\nसच्ची दोस्ती जिंदगी का खजाना है,\nहर पल साथ निभाना है।"
+            ],
+            long: [
+                "दोस्ती का रिश्ता अनमोल है,\nदिल से दिल का मिलन है।\nसच्ची दोस्ती जिंदगी का खजाना है,\nहर पल साथ निभाना है।\nदोस्ती में कोई शर्त नहीं होती,\nदिल से दिल का मिलन होता है।"
+            ]
+        },
+        motivation: {
+            short: [
+                "हार से नहीं डरना चाहिए,\nजीत की राह पर चलना चाहिए।",
+                "मुश्किलों से लड़ना सीखो,\nसफलता की राह पर चलो।"
+            ],
+            medium: [
+                "हार से नहीं डरना चाहिए,\nजीत की राह पर चलना चाहिए।\nमुश्किलों से लड़ना सीखो,\nसफलता की राह पर चलो।",
+                "जीतने की इच्छा रखो,\nहार से नहीं डरो।\nमुश्किलों से लड़ना सीखो,\nसफलता की राह पर चलो।"
+            ],
+            long: [
+                "हार से नहीं डरना चाहिए,\nजीत की राह पर चलना चाहिए।\nमुश्किलों से लड़ना सीखो,\nसफलता की राह पर चलो।\nजीतने की इच्छा रखो,\nहार से नहीं डरो।"
+            ]
+        }
+    };
+    
+    const templates = shayariTemplates[topic] || shayariTemplates.love;
+    const lengthTemplates = templates[length] || templates.medium;
+    const randomIndex = Math.floor(Math.random() * lengthTemplates.length);
+    
+    return lengthTemplates[randomIndex];
+}
+
+// Display generated shayari
+function displayGeneratedShayari(shayari) {
+    const preview = document.getElementById('shayari-preview');
+    const generatedSection = document.getElementById('generated-shayari');
+    
+    preview.textContent = shayari;
+    generatedSection.style.display = 'block';
+    
+    // Store generated shayari for saving
+    window.generatedShayari = shayari;
+}
+
+// Save generated shayari
+function saveGeneratedShayari() {
+    if (!window.generatedShayari) return;
+    
+    const newShayari = {
+        id: Date.now(),
+        author: "AI Generated",
+        content: window.generatedShayari,
+        likes: 0,
+        timestamp: Date.now()
+    };
+    
+    // Add to allShayaris array
+    allShayaris.unshift(newShayari);
+    
+    // Add to DOM
+    addShayariToDOM(newShayari, true);
+    
+    // Close AI modal
+    document.getElementById('ai-generator-modal').classList.remove('active');
+    
+    // Show success notification
+    showAISuccessNotification();
+    
+    // Update analytics
+    updateAnalytics();
+}
+
+// Show AI success notification
+function showAISuccessNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'ai-success-notification';
+    notification.innerHTML = `
+        <i class="fas fa-magic"></i>
+        <span>AI शायरी सफलतापूर्वक जोड़ी गई! ✨</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 300px;
+        left: 20px;
+        background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 3000);
+}
+
 // Show category notification
 function showCategoryNotification(category, count) {
     const categoryNames = {
@@ -2044,26 +2280,256 @@ function showSearchNotification(count, query) {
 // Theme Switcher Functionality
 function initThemeSwitcher() {
     const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    const themeOptions = document.querySelectorAll('.theme-option');
+    const savedTheme = localStorage.getItem('theme') || 'default';
     
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-theme');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
+    // Apply saved theme
+    applyTheme(savedTheme);
     
+    // Theme option clicks
+    themeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const theme = this.getAttribute('data-theme');
+            applyTheme(theme);
+            localStorage.setItem('theme', theme);
+            showThemeNotification(theme);
+        });
+    });
+    
+    // Toggle dark/light mode
     themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-theme');
+        const currentTheme = document.body.className;
+        let newTheme = 'default';
         
-        if (body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-            localStorage.setItem('theme', 'light');
+        if (currentTheme.includes('dark-theme')) {
+            newTheme = 'default';
+            document.body.classList.remove('dark-theme');
             themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            newTheme = 'dark';
+            document.body.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        localStorage.setItem('theme', newTheme);
+        showThemeNotification(newTheme);
+    });
+}
+
+// Apply theme
+function applyTheme(theme) {
+    // Remove all theme classes
+    document.body.classList.remove('theme-default', 'theme-sunset', 'theme-ocean', 'theme-forest', 'theme-purple', 'dark-theme');
+    
+    // Add new theme class
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.add(`theme-${theme}`);
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+// Show theme notification
+function showThemeNotification(theme) {
+    const themeNames = {
+        'default': 'डिफ़ॉल्ट थीम',
+        'sunset': 'सनसेट थीम',
+        'ocean': 'समुद्र थीम',
+        'forest': 'जंगल थीम',
+        'purple': 'बैंगनी थीम',
+        'dark': 'डार्क थीम'
+    };
+    
+    const notification = document.createElement('div');
+    notification.className = 'theme-notification';
+    notification.innerHTML = `
+        <i class="fas fa-palette"></i>
+        <span>${themeNames[theme]} लागू की गई! 🎨</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 150px;
+        left: 20px;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 2000);
+}
+
+// PWA Service Worker Registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+                initPWAFeatures(registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+    });
+}
+
+// PWA Features
+function initPWAFeatures(registration) {
+    // Check if app is installed
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        showInstallPrompt();
+    });
+    
+    // App installed event
+    window.addEventListener('appinstalled', (evt) => {
+        console.log('App was installed');
+        hideInstallPrompt();
+        showInstallSuccessNotification();
+    });
+    
+    // Handle URL parameters for shortcuts
+    const urlParams = new URLSearchParams(window.location.search);
+    const action = urlParams.get('action');
+    
+    if (action === 'add') {
+        setTimeout(() => {
+            document.getElementById('floating-add-btn').click();
+            const manualAdd = document.getElementById('manual-add');
+            if (manualAdd) manualAdd.click();
+        }, 1000);
+    } else if (action === 'ai') {
+        setTimeout(() => {
+            document.getElementById('floating-add-btn').click();
+            const aiGenerate = document.getElementById('ai-generate');
+            if (aiGenerate) aiGenerate.click();
+        }, 1000);
+    }
+}
+
+// Show install prompt
+function showInstallPrompt() {
+    const installPrompt = document.createElement('div');
+    installPrompt.id = 'install-prompt';
+    installPrompt.innerHTML = `
+        <div class="install-content">
+            <i class="fas fa-download"></i>
+            <div class="install-text">
+                <h4>Love Guru को Install करें</h4>
+                <p>अपने phone पर app की तरह use करें</p>
+            </div>
+            <button class="install-btn" id="install-btn">
+                <i class="fas fa-plus"></i>
+                Install
+            </button>
+            <button class="install-close" id="install-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    
+    installPrompt.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+        color: white;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        z-index: 10000;
+        animation: slideInFromBottom 0.5s ease;
+    `;
+    
+    document.body.appendChild(installPrompt);
+    
+    // Install button click
+    document.getElementById('install-btn').addEventListener('click', () => {
+        if (window.deferredPrompt) {
+            window.deferredPrompt.prompt();
+            window.deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                }
+                window.deferredPrompt = null;
+            });
         }
     });
+    
+    // Close button click
+    document.getElementById('install-close').addEventListener('click', hideInstallPrompt);
+}
+
+// Hide install prompt
+function hideInstallPrompt() {
+    const prompt = document.getElementById('install-prompt');
+    if (prompt) {
+        prompt.style.animation = 'slideOutToBottom 0.5s ease forwards';
+        setTimeout(() => {
+            if (prompt.parentNode) {
+                prompt.parentNode.removeChild(prompt);
+            }
+        }, 500);
+    }
+}
+
+// Show install success notification
+function showInstallSuccessNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'install-success-notification';
+    notification.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        <span>Love Guru सफलतापूर्वक install हो गया! 🎉</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: linear-gradient(45deg, #10b981, #059669);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 3000);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -2073,6 +2539,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSearch();
     initAudioControls();
     initCategories();
+    initAIGenerator();
     
     // Initialize analytics and trending
     setTimeout(() => {

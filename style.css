@@ -1129,6 +1129,171 @@ body {
     transform: none;
 }
 
+/* AI Generator Modal */
+.ai-modal {
+    max-width: 600px;
+    width: 90%;
+}
+
+.ai-generator-content {
+    padding: 2rem;
+}
+
+.ai-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.ai-select {
+    padding: 0.8rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ai-select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.ai-generate-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.generate-btn {
+    background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.generate-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.loading-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #8b5cf6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-animation p {
+    color: #666;
+    font-weight: 500;
+}
+
+.generated-shayari {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #e5e7eb;
+}
+
+.generated-shayari h4 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.shayari-preview {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #8b5cf6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.shayari-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-btn.primary {
+    background: linear-gradient(45deg, #10b981, #059669);
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.action-btn.secondary {
+    background: linear-gradient(45deg, #6b7280, #4b5563);
+    color: white;
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+}
+
+.action-btn.secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 114, 128, 0.4);
+}
+
 /* Floating Add Button */
 .floating-add-btn {
     position: fixed;
@@ -1153,6 +1318,126 @@ body {
 .floating-add-btn:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+/* Floating Options Menu */
+.floating-options {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    z-index: 1000;
+    animation: slideInFromBottom 0.3s ease;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 500;
+}
+
+.option-item:hover {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+    color: white;
+    transform: translateX(5px);
+}
+
+.option-item i {
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutToBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* PWA Install Prompt */
+.install-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.install-content i {
+    font-size: 2rem;
+    color: white;
+}
+
+.install-text {
+    flex: 1;
+}
+
+.install-text h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.install-text p {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.install-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.install-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.install-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.install-close:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Audio Controls */
@@ -1738,6 +2023,195 @@ body {
 .theme-toggle:hover {
     background: rgba(255, 107, 107, 0.1);
     transform: scale(1.1);
+}
+
+/* Theme Selector */
+.theme-selector {
+    position: relative;
+}
+
+.theme-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-selector:hover .theme-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.theme-option:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.theme-option:last-child {
+    margin-bottom: 0;
+}
+
+.theme-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.theme-preview::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.8;
+}
+
+/* Theme Color Variables */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ff4757;
+    --accent-color: #8b5cf6;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --border-color: #e5e7eb;
+}
+
+/* Default Theme */
+body.theme-default {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ff4757;
+    --accent-color: #8b5cf6;
+}
+
+/* Sunset Theme */
+body.theme-sunset {
+    --primary-color: #ff7f50;
+    --secondary-color: #ff6347;
+    --accent-color: #ff8c00;
+}
+
+/* Ocean Theme */
+body.theme-ocean {
+    --primary-color: #4facfe;
+    --secondary-color: #00f2fe;
+    --accent-color: #667eea;
+}
+
+/* Forest Theme */
+body.theme-forest {
+    --primary-color: #56ab2f;
+    --secondary-color: #a8e6cf;
+    --accent-color: #11998e;
+}
+
+/* Purple Theme */
+body.theme-purple {
+    --primary-color: #8b5cf6;
+    --secondary-color: #7c3aed;
+    --accent-color: #a855f7;
+}
+
+/* Apply theme colors */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.shayari-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+}
+
+.like-btn, .share-btn, .comment-btn, .favorite-btn {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.analytics-card {
+    border-left: 5px solid var(--primary-color);
+}
+
+.analytics-icon {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.trending-card {
+    border-left: 5px solid var(--primary-color);
+}
+
+.trending-card::before {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+}
+
+.trending-rank {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.category-tab.active {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.generate-btn {
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+}
+
+/* Theme Preview Colors */
+.default-theme::before {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+}
+
+.sunset-theme::before {
+    background: linear-gradient(45deg, #ff7f50, #ff6347);
+}
+
+.ocean-theme::before {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.forest-theme::before {
+    background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+}
+
+.purple-theme::before {
+    background: linear-gradient(45deg, #8b5cf6, #7c3aed);
 }
 
 /* Dark Theme Styles */
