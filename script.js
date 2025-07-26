@@ -755,7 +755,189 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   जुर्म का पता नहीं बस सजा दिए जा रही है जिंदगी !!",
+        content: "   चाय जैसा किरदार है मेरा, किसी को हद से ज्यादा पसंद हूँ, किसी को मेरे नाम से ही नफरत है..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    10 जगह मुंह मारने वाले भी अब...Saiyaara movie देखकर ईमोशनल हो रहें !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    मेरे पास girlfriend का पद खाली है Aapki नजरो में कोई हो तो batana (बिना परीक्षा सीधी भर्ती) !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   संबंध रहे या ना रहे रहस्य रहस्य रहना चाहिए, इसे वफ़ा कहते है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   मोहब्बत पहली, दूसरी या तीसरी नहीं होती मोहब्बत वो होती है, जिसके बाद मोहब्बत न हो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  प्रेम सब्र है, सौदा नहीं इसलिए तो सबसे होता नहीं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तबीयत एक की खराब हो, और चेहरे दोनों के बीमार नज़र आएं वो है प्रेम..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   साथ सोना इश्क़ नहीं, साथ देना इश्क़ है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  ये मोहब्बत का गणित है यारो, यहां दो में से एक गया, तो कुछ नहीं बचता !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    तुम अंदर तक बसे हो मेरे, तुझे भूलने के लिए मुझे मौत का सहारा लेना पड़ेगा..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   जब दिल दुखता है तब जुबान अपने आप बंद हो जाती है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    आपकी क़ीमत तब होती है जब आपकी ज़रूरत हो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   किरदार अच्छा हो तो लोग, कब्र का भी रास्ता पूछ कर पहुँच जाते हैं...!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  I realised, तुम्हारे अलावा मुझे कोई खुश नहीं रख सकता !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  कहाँ से लाऊँ वो नसीब, जो तुझे मेरा कर दे !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   Life is really Beautiful, अगर तुम साथ हो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   करीब उनके रहिए, जो आपसे दर नहीं रह सकते !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  थोड़ी नजर अपनी गलतियों पर भी रखना सामने वाला हमेशा गलत नहीं होता !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   Saiyaara movie se ye samjha Mohabbat ho jaye to nibhate Kaise hain, Mohabbat ho jane ke baad chora Nahi jata chahe phir wajah halat Waqt kaisa bhi ho..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   Reply ki speed bata deti hai Ki mohabbat kitni hai..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   Narazgi kabhi bhi itni lambi Nahi rakhni chahiye, Ki insan guzar jaye aur Narazgi reh jaye..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तुमने वो इंसान खो दिया, जो खुदसे ज्यादा तुम्हे प्यार करता था !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   रिश्ते वक्त के साथ नहीं समझदारी के साथ टिकते है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  पल भर भी नहीं मिला वो जो उम्र भर चाहिए था !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   किसी को पाने की ज़िद होनी चाहिये, मिलना ना मिलना तो किस्मत की बात हैं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Saiyaara Movie, ने एक चीज तो सीखा दी, के बहुत dard देती है.. वो Mohabbat जो छोड़ती भी नही, और अपनाती भी नही !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   *Saiyara Taughts Us जिसको निभाना होता है वो हर हाल में निभा लेते हैं !!",
         likes: 502
     },
     {
