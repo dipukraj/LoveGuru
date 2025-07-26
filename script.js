@@ -1112,9 +1112,26 @@ function addShayariToDOM(shayari, isNew = false) {
         </div>
     `;
     
-    // --- AUTO-INCREMENT LIKES USAGE ---
+    // --- SET INITIAL LIKE COUNT AND STATE ---
     const likeCountElement = shayariCard.querySelector('.like-count');
-    autoIncrementLikes(shayari, likeCountElement);
+    const likeBtn = shayariCard.querySelector('.like-btn');
+    const likeTextElement = shayariCard.querySelector('.like-text');
+    
+    // Load saved like state
+    const shayariId = shayari.id || shayariNumber;
+    const likeState = loadLikeState(shayariId, shayari.likes);
+    
+    // Set like count
+    likeCountElement.textContent = likeState.likeCount;
+    
+    // Set like button state
+    if (likeState.isLiked) {
+        likeBtn.classList.add('liked');
+    }
+    
+    // Set like text
+    const count = likeState.likeCount;
+    likeTextElement.textContent = count === 1 ? 'लाइक' : 'लाइक्स';
     // --- END ---
 
     if (isNew) {
@@ -1166,6 +1183,30 @@ function copyToClipboard(text, button) {
     });
 }
 
+// Save like state to localStorage
+function saveLikeState(shayariId, isLiked, likeCount) {
+    localStorage.setItem(`like_state_${shayariId}`, JSON.stringify({
+        isLiked: isLiked,
+        likeCount: likeCount
+    }));
+}
+
+// Load like state from localStorage
+function loadLikeState(shayariId, baseLikes) {
+    const stored = localStorage.getItem(`like_state_${shayariId}`);
+    if (stored) {
+        const state = JSON.parse(stored);
+        return {
+            isLiked: state.isLiked,
+            likeCount: state.likeCount
+        };
+    }
+    return {
+        isLiked: false,
+        likeCount: baseLikes
+    };
+}
+
 // Show like notification function
 function showLikeNotification(likeBtn, message) {
     const notification = document.createElement('div');
@@ -1205,11 +1246,17 @@ shayariContainer.addEventListener('click', function(e) {
         const likeCountElement = likeBtn.closest('.shayari-card').querySelector('.like-count');
         const likeTextElement = likeBtn.closest('.shayari-card').querySelector('.like-text');
         
+        const shayariCard = likeBtn.closest('.shayari-card');
+        const shayariId = shayariCard.getAttribute('data-id') || shayariCard.querySelector('.shayari-number').textContent.replace('.', '');
+        
         if (!likeBtn.classList.contains('liked')) {
             likeBtn.classList.add('liked');
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes + 1;
             likeTextElement.textContent = likes === 0 ? 'लाइक' : 'लाइक्स';
+            
+            // Save like state to localStorage
+            saveLikeState(shayariId, true, likes + 1);
             
             // Show like notification
             showLikeNotification(likeBtn, '❤️ लाइक किया गया!');
@@ -1218,6 +1265,9 @@ shayariContainer.addEventListener('click', function(e) {
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes - 1;
             likeTextElement.textContent = likes - 1 === 1 ? 'लाइक' : 'लाइक्स';
+            
+            // Save like state to localStorage
+            saveLikeState(shayariId, false, likes - 1);
             
             // Show unlike notification
             showLikeNotification(likeBtn, '💔 लाइक हटा दिया गया');
@@ -1439,7 +1489,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // --- COMMENT FUNCTIONALITY END ---
 
-// --- AUTO-INCREMENT LIKES START ---
+// --- AUTO-INCREMENT LIKES DISABLED ---
+// Auto-increment likes feature has been disabled to prevent automatic like increases on refresh
+// Now likes only increase when users actually click the like button
+
+/*
 function getLikeKey(shayariId) {
     return `auto_likes_${shayariId}`;
 }
@@ -1497,6 +1551,7 @@ function autoIncrementLikes(shayari, likeCountElement) {
     }
     likeCountElement.textContent = likes;
 }
+*/
 // --- AUTO-INCREMENT LIKES END ---
 
 // --- AUTO-UPDATE DATE LABEL START ---
