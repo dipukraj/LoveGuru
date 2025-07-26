@@ -1087,6 +1087,10 @@ function addShayariToDOM(shayari, isNew = false) {
                     <i class="fas fa-heart"></i>
                     <span class="like-btn-text">लाइक</span>
                 </button>
+                <button class="favorite-btn" data-shayari-id="${shayari.id || shayariNumber}" title="फेवरिट में जोड़ें">
+                    <i class="fas fa-star"></i>
+                    <span class="favorite-btn-text">फेवरिट</span>
+                </button>
                 <button class="share-btn">
                     <i class="fas fa-share-alt"></i>
                     <span class="share-btn-text">शेयर</span>
@@ -1134,6 +1138,12 @@ function addShayariToDOM(shayari, isNew = false) {
     // Set like text
     const count = likeState.likeCount;
     likeTextElement.textContent = count === 1 ? 'लाइक' : 'लाइक्स';
+    
+    // Set favorite button state
+    const favoriteBtn = shayariCard.querySelector('.favorite-btn');
+    if (isFavorited(shayariId)) {
+        favoriteBtn.classList.add('favorited');
+    }
     // --- END ---
 
     if (isNew) {
@@ -1241,9 +1251,27 @@ function showLikeNotification(likeBtn, message) {
     }, 2000);
 }
 
-// Enhanced like functionality
-shayariContainer.addEventListener('click', function(e) {
-    if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
+    // Enhanced like functionality
+    shayariContainer.addEventListener('click', function(e) {
+        // Favorite functionality
+        if (e.target.classList.contains('favorite-btn') || e.target.closest('.favorite-btn')) {
+            const favoriteBtn = e.target.classList.contains('favorite-btn') ? e.target : e.target.closest('.favorite-btn');
+            const shayariId = favoriteBtn.getAttribute('data-shayari-id');
+            
+            if (!favoriteBtn.classList.contains('favorited')) {
+                favoriteBtn.classList.add('favorited');
+                addToFavorites(shayariId);
+                showFavoriteNotification('⭐ फेवरिट में जोड़ा गया!');
+            } else {
+                favoriteBtn.classList.remove('favorited');
+                removeFromFavorites(shayariId);
+                showFavoriteNotification('💔 फेवरिट से हटा दिया गया');
+            }
+            return;
+        }
+        
+        // Like functionality
+        if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
         const likeBtn = e.target.classList.contains('like-btn') ? e.target : e.target.closest('.like-btn');
         const likeCountElement = likeBtn.closest('.shayari-card').querySelector('.like-count');
         const likeTextElement = likeBtn.closest('.shayari-card').querySelector('.like-text');
@@ -1541,6 +1569,203 @@ function initSearch() {
     });
 }
 
+// Audio Controls Functionality
+function initAudioControls() {
+    const musicToggle = document.getElementById('music-toggle');
+    const volumeSlider = document.getElementById('volume-slider');
+    const backgroundMusic = document.getElementById('background-music');
+    
+    // Load saved audio settings
+    const savedVolume = localStorage.getItem('musicVolume') || 50;
+    const savedMusicState = localStorage.getItem('musicPlaying') === 'true';
+    
+    // Set initial volume
+    volumeSlider.value = savedVolume;
+    backgroundMusic.volume = savedVolume / 100;
+    
+    // Set initial music state
+    if (savedMusicState) {
+        backgroundMusic.play().catch(() => {
+            // Auto-play blocked, show notification
+            showMusicNotification('संगीत चालू करने के लिए क्लिक करें');
+        });
+        musicToggle.classList.add('playing');
+    }
+    
+    // Music toggle functionality
+    musicToggle.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().then(() => {
+                musicToggle.classList.add('playing');
+                localStorage.setItem('musicPlaying', 'true');
+                showMusicNotification('🎵 संगीत चालू हो गया');
+            }).catch(() => {
+                showMusicNotification('❌ संगीत चालू नहीं हो सका');
+            });
+        } else {
+            backgroundMusic.pause();
+            musicToggle.classList.remove('playing');
+            localStorage.setItem('musicPlaying', 'false');
+            showMusicNotification('🔇 संगीत बंद हो गया');
+        }
+    });
+    
+    // Volume control
+    volumeSlider.addEventListener('input', function() {
+        const volume = this.value / 100;
+        backgroundMusic.volume = volume;
+        localStorage.setItem('musicVolume', this.value);
+        
+        // Show volume notification
+        showVolumeNotification(this.value);
+    });
+    
+    // Handle audio errors
+    backgroundMusic.addEventListener('error', function() {
+        showMusicNotification('❌ संगीत फ़ाइल लोड नहीं हो सकी');
+    });
+}
+
+// Show music notification
+function showMusicNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'music-notification';
+    notification.innerHTML = `
+        <i class="fas fa-music"></i>
+        <span>${message}</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: linear-gradient(45deg, #4f46e5, #7c3aed);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 2000);
+}
+
+// Favorites System
+function addToFavorites(shayariId) {
+    const favorites = getFavorites();
+    if (!favorites.includes(shayariId)) {
+        favorites.push(shayariId);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+}
+
+function removeFromFavorites(shayariId) {
+    const favorites = getFavorites();
+    const index = favorites.indexOf(shayariId);
+    if (index > -1) {
+        favorites.splice(index, 1);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+}
+
+function getFavorites() {
+    const stored = localStorage.getItem('favorites');
+    return stored ? JSON.parse(stored) : [];
+}
+
+function isFavorited(shayariId) {
+    const favorites = getFavorites();
+    return favorites.includes(shayariId);
+}
+
+// Show favorite notification
+function showFavoriteNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'favorite-notification';
+    notification.innerHTML = `
+        <i class="fas fa-star"></i>
+        <span>${message}</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 200px;
+        left: 20px;
+        background: linear-gradient(45deg, #f59e0b, #d97706);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 2000);
+}
+
+// Show volume notification
+function showVolumeNotification(volume) {
+    const notification = document.createElement('div');
+    notification.className = 'volume-notification';
+    notification.innerHTML = `
+        <i class="fas fa-volume-up"></i>
+        <span>Volume: ${volume}%</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 150px;
+        left: 20px;
+        background: linear-gradient(45deg, #10b981, #059669);
+        color: white;
+        padding: 0.8rem 1.2rem;
+        border-radius: 20px;
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: 0.9rem;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 1000);
+}
+
 // Show search results notification
 function showSearchNotification(count, query) {
     const notification = document.createElement('div');
@@ -1608,6 +1833,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupCommentFeatures();
     initThemeSwitcher();
     initSearch();
+    initAudioControls();
 });
 // --- COMMENT FUNCTIONALITY END ---
 
