@@ -1267,6 +1267,7 @@ function showLikeNotification(likeBtn, message) {
                 removeFromFavorites(shayariId);
                 showFavoriteNotification('💔 फेवरिट से हटा दिया गया');
             }
+            updateAnalytics();
             return;
         }
         
@@ -1302,6 +1303,9 @@ function showLikeNotification(likeBtn, message) {
             // Show unlike notification
             showLikeNotification(likeBtn, '💔 लाइक हटा दिया गया');
         }
+        
+        // Update analytics after like/unlike
+        updateAnalytics();
     }
     
     // Share functionality
@@ -1513,6 +1517,114 @@ function renderInitialShayaris() {
     }
     loadedShayaris = count;
 }
+// Categories System
+function initCategories() {
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Update active tab
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter shayaris by category
+            filterShayarisByCategory(category);
+        });
+    });
+}
+
+// Filter shayaris by category
+function filterShayarisByCategory(category) {
+    const shayariCards = document.querySelectorAll('.shayari-card');
+    
+    if (category === 'all') {
+        shayariCards.forEach(card => {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+        });
+        return;
+    }
+    
+    let visibleCount = 0;
+    shayariCards.forEach(card => {
+        const shayariText = card.querySelector('.shayari-content p').textContent.toLowerCase();
+        
+        // Simple category detection based on keywords
+        const isInCategory = checkCategoryMatch(shayariText, category);
+        
+        if (isInCategory) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // Show category notification
+    showCategoryNotification(category, visibleCount);
+}
+
+// Check if shayari matches category
+function checkCategoryMatch(text, category) {
+    const categoryKeywords = {
+        'love': ['प्यार', 'दिल', 'मोहब्बत', 'इश्क', 'प्रेम', 'दिल', 'जान', 'दिल', 'मिलन', 'मिलना'],
+        'sad': ['दर्द', 'दुख', 'रोना', 'आंसू', 'अकेला', 'तन्हा', 'बिछड़ना', 'जुदा', 'दर्द', 'दुख'],
+        'friendship': ['दोस्त', 'यार', 'साथी', 'मित्र', 'दोस्ती', 'साथ', 'साथी', 'दोस्त'],
+        'motivation': ['जीत', 'सफलता', 'हार', 'लड़ना', 'जीतना', 'सफल', 'प्रेरणा', 'उत्साह']
+    };
+    
+    const keywords = categoryKeywords[category] || [];
+    return keywords.some(keyword => text.includes(keyword));
+}
+
+// Show category notification
+function showCategoryNotification(category, count) {
+    const categoryNames = {
+        'all': 'सभी शायरी',
+        'love': 'प्रेम शायरी',
+        'sad': 'दर्द शायरी',
+        'friendship': 'दोस्ती शायरी',
+        'motivation': 'प्रेरणा शायरी'
+    };
+    
+    const notification = document.createElement('div');
+    notification.className = 'category-notification';
+    notification.innerHTML = `
+        <i class="fas fa-filter"></i>
+        <span>${categoryNames[category]}: ${count} शायरी मिली</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 250px;
+        left: 20px;
+        background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        z-index: 1000;
+        animation: slideInFromLeft 0.5s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 500);
+    }, 2000);
+}
+
 // Search Functionality
 function initSearch() {
     const searchInput = document.getElementById('search-input');
@@ -1691,6 +1803,132 @@ function isFavorited(shayariId) {
     return favorites.includes(shayariId);
 }
 
+// Analytics System
+function updateAnalytics() {
+    // Calculate total likes
+    const likeElements = document.querySelectorAll('.like-count');
+    let totalLikes = 0;
+    likeElements.forEach(element => {
+        totalLikes += parseInt(element.textContent) || 0;
+    });
+    
+    // Get total favorites
+    const totalFavorites = getFavorites().length;
+    
+    // Calculate total comments
+    const commentElements = document.querySelectorAll('.comment-count');
+    let totalComments = 0;
+    commentElements.forEach(element => {
+        totalComments += parseInt(element.textContent) || 0;
+    });
+    
+    // Calculate total views (simulated based on page visits)
+    const totalViews = Math.floor(totalLikes * 10 + Math.random() * 100);
+    
+    // Update analytics display
+    document.getElementById('total-likes').textContent = totalLikes.toLocaleString();
+    document.getElementById('total-favorites').textContent = totalFavorites.toLocaleString();
+    document.getElementById('total-comments').textContent = totalComments.toLocaleString();
+    document.getElementById('total-views').textContent = totalViews.toLocaleString();
+    
+    // Animate numbers
+    animateNumber('total-likes', totalLikes);
+    animateNumber('total-favorites', totalFavorites);
+    animateNumber('total-comments', totalComments);
+    animateNumber('total-views', totalViews);
+}
+
+// Animate number counting
+function animateNumber(elementId, finalValue) {
+    const element = document.getElementById(elementId);
+    const startValue = 0;
+    const duration = 2000;
+    const increment = finalValue / (duration / 16);
+    let currentValue = startValue;
+    
+    const timer = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= finalValue) {
+            currentValue = finalValue;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(currentValue).toLocaleString();
+    }, 16);
+}
+
+// Load trending shayaris
+function loadTrendingShayaris() {
+    const trendingContainer = document.getElementById('trending-container');
+    
+    // Sort shayaris by likes (simulated popularity)
+    const sortedShayaris = [...allShayaris].sort((a, b) => {
+        const aLikes = getLikeState(a.id || 1, a.likes).likeCount;
+        const bLikes = getLikeState(b.id || 2, b.likes).likeCount;
+        return bLikes - aLikes;
+    });
+    
+    // Take top 6 trending shayaris
+    const trendingShayaris = sortedShayaris.slice(0, 6);
+    
+    trendingContainer.innerHTML = '';
+    trendingShayaris.forEach((shayari, index) => {
+        const trendingCard = createTrendingCard(shayari, index + 1);
+        trendingContainer.appendChild(trendingCard);
+    });
+}
+
+// Create trending card
+function createTrendingCard(shayari, rank) {
+    const card = document.createElement('div');
+    card.className = 'trending-card';
+    
+    const likeState = getLikeState(shayari.id || rank, shayari.likes);
+    
+    card.innerHTML = `
+        <div class="trending-rank">${rank}</div>
+        <div class="shayari-header">
+            <div class="author-info">
+                <img src="https://cdn.pixabay.com/photo/2023/01/23/15/04/couple-7738917_1280.png" alt="Love Guru" class="author-avatar">
+                <div>
+                    <h4 class="author-name">${shayari.author}</h4>
+                    <p class="post-date">${getTimeAgoLabel(shayari.timestamp || getShayariTimestamp(shayari))}</p>
+                </div>
+            </div>
+        </div>
+        <div class="shayari-content">
+            <p>${shayari.content}</p>
+        </div>
+        <div class="shayari-footer">
+            <div class="like-info">
+                <span class="like-count">${likeState.likeCount}</span>
+                <span class="like-text">लाइक्स</span>
+            </div>
+            <div class="action-buttons">
+                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
+                    <i class="fas fa-heart"></i>
+                    <span class="like-btn-text">लाइक</span>
+                </button>
+                <button class="favorite-btn" data-shayari-id="${shayari.id || rank}" title="फेवरिट में जोड़ें">
+                    <i class="fas fa-star"></i>
+                    <span class="favorite-btn-text">फेवरिट</span>
+                </button>
+                <button class="share-btn">
+                    <i class="fas fa-share-alt"></i>
+                    <span class="share-btn-text">शेयर</span>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Set favorite state
+    const favoriteBtn = card.querySelector('.favorite-btn');
+    if (isFavorited(shayari.id || rank)) {
+        favoriteBtn.classList.add('favorited');
+    }
+    
+    return card;
+}
+
 // Show favorite notification
 function showFavoriteNotification(message) {
     const notification = document.createElement('div');
@@ -1834,6 +2072,16 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeSwitcher();
     initSearch();
     initAudioControls();
+    initCategories();
+    
+    // Initialize analytics and trending
+    setTimeout(() => {
+        updateAnalytics();
+        loadTrendingShayaris();
+    }, 1000);
+    
+    // Update analytics every 30 seconds
+    setInterval(updateAnalytics, 30000);
 });
 // --- COMMENT FUNCTIONALITY END ---
 
