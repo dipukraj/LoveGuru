@@ -348,6 +348,18 @@ body {
     color: white;
 }
 
+.share-btn-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.comment-btn-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
 /* Enhanced Like Info */
 .like-info {
     display: flex;
@@ -704,6 +716,15 @@ body {
     border-top: 1px solid #eee;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 /* Load More Button */
@@ -1233,11 +1254,51 @@ body {
     
     .shayari-footer {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1rem;
+    }
+    
+    .action-buttons {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+    
+    .like-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .share-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .comment-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .like-btn-text {
+        font-size: 0.8rem;
+    }
+    
+    .share-btn-text {
+        font-size: 0.8rem;
+    }
+    
+    .comment-btn-text {
+        font-size: 0.8rem;
     }
     
     .like-info {
         padding: 0.6rem 1rem;
+        align-self: flex-start;
     }
     
     .comment-section {
@@ -1254,22 +1315,9 @@ body {
         font-size: 0.9rem;
     }
     
-    .like-btn {
-        padding: 0.6rem 1rem;
-        font-size: 1rem;
-    }
-    
-    .like-btn-text {
-        font-size: 0.8rem;
-    }
-    
     .shayari-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
-    }
-    
-    .like-btn {
-        align-self: flex-end;
     }
 }

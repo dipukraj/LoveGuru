@@ -1073,10 +1073,6 @@ function addShayariToDOM(shayari, isNew = false) {
                     <p class="post-date">${dateLabel}</p>
                 </div>
             </div>
-            <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
-                <i class="fas fa-heart"></i>
-                <span class="like-btn-text">लाइक</span>
-            </button>
         </div>
         <div class="shayari-content">
             <p>${shayari.content}</p>
@@ -1086,14 +1082,20 @@ function addShayariToDOM(shayari, isNew = false) {
                 <span class="like-count">${shayari.likes}</span>
                 <span class="like-text">लाइक्स</span>
             </div>
-            <button class="share-btn">
-                <i class="fas fa-share-alt"></i>
-                शेयर करें
-            </button>
-            <button class="comment-btn">
-                <i class="fas fa-comment"></i>
-                कमेंट करें
-            </button>
+            <div class="action-buttons">
+                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
+                    <i class="fas fa-heart"></i>
+                    <span class="like-btn-text">लाइक</span>
+                </button>
+                <button class="share-btn">
+                    <i class="fas fa-share-alt"></i>
+                    <span class="share-btn-text">शेयर</span>
+                </button>
+                <button class="comment-btn">
+                    <i class="fas fa-comment"></i>
+                    <span class="comment-btn-text">कमेंट</span>
+                </button>
+            </div>
         </div>
         <div class="comments-section" style="display:none;">
             <div class="comment-header">
