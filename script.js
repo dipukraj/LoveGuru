@@ -2280,40 +2280,49 @@ function showSearchNotification(count, query) {
 // Theme Switcher Functionality
 function initThemeSwitcher() {
     const themeToggle = document.getElementById('theme-toggle');
-    const themeOptions = document.querySelectorAll('.theme-option');
-    const savedTheme = localStorage.getItem('theme') || 'default';
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
     
     // Apply saved theme
     applyTheme(savedTheme);
     
-    // Theme option clicks
-    themeOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            const theme = this.getAttribute('data-theme');
-            applyTheme(theme);
-            localStorage.setItem('theme', theme);
-            showThemeNotification(theme);
-        });
+    // Desktop theme toggle
+    themeToggle.addEventListener('click', function() {
+        toggleTheme();
     });
     
-    // Toggle dark/light mode
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.body.className;
-        let newTheme = 'default';
-        
-        if (currentTheme.includes('dark-theme')) {
-            newTheme = 'default';
-            document.body.classList.remove('dark-theme');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        } else {
-            newTheme = 'dark';
-            document.body.classList.add('dark-theme');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-        
-        localStorage.setItem('theme', newTheme);
-        showThemeNotification(newTheme);
-    });
+    // Mobile theme toggle
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', function() {
+            toggleTheme();
+        });
+    }
+}
+
+// Toggle theme function
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    showThemeNotification(newTheme);
+}
+
+// Apply theme function
+function applyTheme(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark-theme');
+        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
 }
 
 // Apply theme
@@ -2334,25 +2343,21 @@ function applyTheme(theme) {
 // Show theme notification
 function showThemeNotification(theme) {
     const themeNames = {
-        'default': 'डिफ़ॉल्ट थीम',
-        'sunset': 'सनसेट थीम',
-        'ocean': 'समुद्र थीम',
-        'forest': 'जंगल थीम',
-        'purple': 'बैंगनी थीम',
-        'dark': 'डार्क थीम'
+        'light': 'लाइट मोड',
+        'dark': 'डार्क मोड'
     };
     
     const notification = document.createElement('div');
     notification.className = 'theme-notification';
     notification.innerHTML = `
-        <i class="fas fa-palette"></i>
-        <span>${themeNames[theme]} लागू की गई! 🎨</span>
+        <i class="fas fa-${theme === 'dark' ? 'moon' : 'sun'}"></i>
+        <span>${themeNames[theme]} लागू किया गया! ${theme === 'dark' ? '🌙' : '☀️'}</span>
     `;
     notification.style.cssText = `
         position: fixed;
         top: 150px;
         left: 20px;
-        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        background: linear-gradient(45deg, ${theme === 'dark' ? '#4f46e5' : '#ff6b6b'}, ${theme === 'dark' ? '#7c3aed' : '#ff4757'});
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 25px;
@@ -2703,26 +2708,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-const navMenu = document.getElementById('nav-menu');
 const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
 function openMobileMenu() {
     mobileMenuToggle.classList.add('active');
-    navMenu.classList.add('active');
     mobileMenuOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scroll
 }
 
 function closeMobileMenu() {
     mobileMenuToggle.classList.remove('active');
-    navMenu.classList.remove('active');
     mobileMenuOverlay.classList.remove('active');
     document.body.style.overflow = ''; // Restore scroll
 }
 
 mobileMenuToggle.addEventListener('click', function(e) {
     e.stopPropagation();
-    if (navMenu.classList.contains('active')) {
+    if (mobileMenuOverlay.classList.contains('active')) {
         closeMobileMenu();
     } else {
         openMobileMenu();
@@ -2730,13 +2732,15 @@ mobileMenuToggle.addEventListener('click', function(e) {
 });
 
 // Close mobile menu when clicking on overlay
-mobileMenuOverlay.addEventListener('click', function() {
-    closeMobileMenu();
+mobileMenuOverlay.addEventListener('click', function(e) {
+    if (e.target === mobileMenuOverlay) {
+        closeMobileMenu();
+    }
 });
 
 // Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
+mobileNavLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');

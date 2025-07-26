@@ -63,40 +63,32 @@
                 <li><a href="#quotes">Quotes</a></li>
                 <li><a href="#about">About</a></li>
                 <li>
-                    <div class="theme-selector">
-                        <button class="theme-toggle" id="theme-toggle" title="थीम बदलें">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                        <div class="theme-options" id="theme-options">
-                            <div class="theme-option" data-theme="default">
-                                <div class="theme-preview default-theme"></div>
-                                <span>डिफ़ॉल्ट</span>
-                            </div>
-                            <div class="theme-option" data-theme="sunset">
-                                <div class="theme-preview sunset-theme"></div>
-                                <span>सनसेट</span>
-                            </div>
-                            <div class="theme-option" data-theme="ocean">
-                                <div class="theme-preview ocean-theme"></div>
-                                <span>समुद्र</span>
-                            </div>
-                            <div class="theme-option" data-theme="forest">
-                                <div class="theme-preview forest-theme"></div>
-                                <span>जंगल</span>
-                            </div>
-                            <div class="theme-option" data-theme="purple">
-                                <div class="theme-preview purple-theme"></div>
-                                <span>बैंगनी</span>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="theme-toggle" id="theme-toggle" title="डार्क/लाइट मोड">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </li>
             </ul>
         </nav>
     </header>
     
     <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h3>Love Guru</h3>
+                <button class="mobile-theme-toggle" id="mobile-theme-toggle" title="डार्क/लाइट मोड">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-menu">
+                <li><a href="#home">होम</a></li>
+                <li><a href="#shayari">शायरी</a></li>
+                <li><a href="#trending">ट्रेंडिंग</a></li>
+                <li><a href="#analytics">आंकड़े</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
