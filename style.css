@@ -288,13 +288,18 @@ body {
     color: #ff6b6b;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    font-size: 1.6rem;
-    padding: 0.8rem;
-    border-radius: 50%;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
     background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 71, 87, 0.05));
-    border: 2px solid transparent;
+    border: 2px solid rgba(255, 107, 107, 0.2);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.1);
 }
 
 .like-btn::before {
@@ -321,11 +326,26 @@ body {
 }
 
 .like-btn.liked {
-    color: #ff4757;
-    background: linear-gradient(135deg, #ff6b6b, #ff4757);
     color: white;
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    border-color: #ff4757;
     box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
     animation: heartBeat 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.like-btn i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.like-btn-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.like-btn.liked .like-btn-text {
+    color: white;
 }
 
 /* Enhanced Like Info */
@@ -1019,6 +1039,17 @@ body {
     }
 }
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -1221,5 +1252,24 @@ body {
     .comment-submit {
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
+    }
+    
+    .like-btn {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .like-btn-text {
+        font-size: 0.8rem;
+    }
+    
+    .shayari-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .like-btn {
+        align-self: flex-end;
     }
 }

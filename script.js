@@ -1073,7 +1073,10 @@ function addShayariToDOM(shayari, isNew = false) {
                     <p class="post-date">${dateLabel}</p>
                 </div>
             </div>
-            <i class="fas fa-heart like-btn" data-likes="${shayari.likes}"></i>
+            <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
+                <i class="fas fa-heart"></i>
+                <span class="like-btn-text">लाइक</span>
+            </button>
         </div>
         <div class="shayari-content">
             <p>${shayari.content}</p>
@@ -1163,6 +1166,38 @@ function copyToClipboard(text, button) {
     });
 }
 
+// Show like notification function
+function showLikeNotification(likeBtn, message) {
+    const notification = document.createElement('div');
+    notification.className = 'like-notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(45deg, #ff6b6b, #ff4757);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        z-index: 1000;
+        animation: slideInFromTop 0.5s ease, fadeOut 0.5s ease 1.5s forwards;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        white-space: nowrap;
+    `;
+    
+    likeBtn.style.position = 'relative';
+    likeBtn.appendChild(notification);
+    
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 2000);
+}
+
 // Enhanced like functionality
 shayariContainer.addEventListener('click', function(e) {
     if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
@@ -1175,11 +1210,17 @@ shayariContainer.addEventListener('click', function(e) {
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes + 1;
             likeTextElement.textContent = likes === 0 ? 'लाइक' : 'लाइक्स';
+            
+            // Show like notification
+            showLikeNotification(likeBtn, '❤️ लाइक किया गया!');
         } else {
             likeBtn.classList.remove('liked');
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes - 1;
             likeTextElement.textContent = likes - 1 === 1 ? 'लाइक' : 'लाइक्स';
+            
+            // Show unlike notification
+            showLikeNotification(likeBtn, '💔 लाइक हटा दिया गया');
         }
     }
     
