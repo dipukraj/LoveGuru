@@ -1089,14 +1089,22 @@ function addShayariToDOM(shayari, isNew = false) {
             </button>
             <button class="comment-btn">
                 <i class="fas fa-comment"></i>
-                कमेंट करें <span class="comment-count">0</span>
+                कमेंट करें
             </button>
         </div>
         <div class="comments-section" style="display:none;">
+            <div class="comment-header">
+                <i class="fas fa-comments comment-icon"></i>
+                <h4 class="comment-title">कमेंट्स</h4>
+                <span class="comment-count">0</span>
+            </div>
             <div class="comments-list"></div>
             <form class="comment-form">
-                <input type="text" class="comment-input" placeholder="अपना कमेंट लिखें..." required />
-                <button type="submit" class="submit-comment-btn">पोस्ट</button>
+                <textarea class="comment-input" placeholder="अपना कमेंट लिखें..." required></textarea>
+                <button type="submit" class="comment-submit">
+                    <i class="fas fa-paper-plane"></i>
+                    कमेंट पोस्ट करें
+                </button>
             </form>
         </div>
     `;
@@ -1295,12 +1303,47 @@ function renderComments(shayariCard, shayariId) {
     const commentCount = shayariCard.querySelector('.comment-count');
     const comments = loadComments(shayariId);
     commentsList.innerHTML = '';
+    
     comments.forEach(comment => {
-        const div = document.createElement('div');
-        div.className = 'comment-item';
-        div.textContent = comment;
-        commentsList.appendChild(div);
+        const commentItem = document.createElement('div');
+        commentItem.className = 'comment-item';
+        
+        // Create comment structure with author, text, and date
+        const author = document.createElement('div');
+        author.className = 'comment-author';
+        author.textContent = 'Anonymous User';
+        
+        const text = document.createElement('div');
+        text.className = 'comment-text';
+        text.textContent = comment;
+        
+        const date = document.createElement('div');
+        date.className = 'comment-date';
+        date.textContent = 'Just now';
+        
+        // Add action buttons
+        const actions = document.createElement('div');
+        actions.className = 'comment-actions';
+        
+        const likeBtn = document.createElement('button');
+        likeBtn.className = 'comment-action-btn';
+        likeBtn.innerHTML = '<i class="fas fa-heart"></i> Like';
+        
+        const replyBtn = document.createElement('button');
+        replyBtn.className = 'comment-action-btn';
+        replyBtn.innerHTML = '<i class="fas fa-reply"></i> Reply';
+        
+        actions.appendChild(likeBtn);
+        actions.appendChild(replyBtn);
+        
+        commentItem.appendChild(author);
+        commentItem.appendChild(text);
+        commentItem.appendChild(date);
+        commentItem.appendChild(actions);
+        
+        commentsList.appendChild(commentItem);
     });
+    
     commentCount.textContent = comments.length;
 }
 
