@@ -1681,7 +1681,7 @@ function showLikeNotification(likeBtn, message) {
                 text: shareText
                 // Removed URL parameter to avoid showing localhost
             }).catch((error) => {
-                console.log('Share failed:', error);
+                // Share failed silently
                 // Fallback to clipboard if share fails
                 copyToClipboard(shareText, shareBtn);
             });
@@ -2279,7 +2279,8 @@ function initAudioControls() {
     
     // Handle audio errors
     backgroundMusic.addEventListener('error', function() {
-        showMusicNotification('❌ संगीत फ़ाइल लोड नहीं हो सकी');
+        // Audio failed to load - continue silently
+        // showMusicNotification('❌ संगीत फ़ाइल लोड नहीं हो सकी');
     });
 }
 
@@ -2640,10 +2641,7 @@ function applyTheme(theme) {
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const mobileThemeToggleNav = document.getElementById('mobile-theme-toggle-nav');
     
-    console.log('Applying theme:', theme);
-    console.log('Theme toggle found:', !!themeToggle);
-    console.log('Mobile theme toggle found:', !!mobileThemeToggle);
-    console.log('Mobile theme toggle nav found:', !!mobileThemeToggleNav);
+    // Theme application in progress
     
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
@@ -2666,7 +2664,7 @@ function applyTheme(theme) {
             mobileThemeToggleNav.title = 'लाइट मोड में बदलें';
         }
         
-        console.log('Dark theme applied - Sun icons set');
+        // Dark theme applied successfully
     } else {
         document.body.classList.remove('dark-theme');
         
@@ -2688,7 +2686,7 @@ function applyTheme(theme) {
             mobileThemeToggleNav.title = 'डार्क मोड में बदलें';
         }
         
-        console.log('Default theme applied - Moon icons set');
+        // Default theme applied successfully
     }
     
     // Apply mobile button colors
@@ -2696,7 +2694,7 @@ function applyTheme(theme) {
     
     // Force icon update after a small delay
     setTimeout(() => {
-        console.log('Forcing icon update...');
+        // Forcing icon update
         if (theme === 'dark') {
             if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
@@ -2828,7 +2826,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(registrations) {
         for(let registration of registrations) {
             registration.unregister();
-            console.log('Service Worker unregistered');
+            // Service Worker unregistered
         }
     });
     
@@ -2877,24 +2875,29 @@ if ('serviceWorker' in navigator) {
 // Install prompt functions removed
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize theme switcher first
-    initThemeSwitcher();
-    
-    renderInitialShayaris();
-    setupCommentFeatures();
-    initSearch();
-    initAudioControls();
-    initCategories();
-    initAIGenerator();
-    
-    // Initialize analytics and trending
-    setTimeout(() => {
-        updateAnalytics();
-        loadTrendingShayaris();
-    }, 1000);
-    
-    // Update analytics every 30 seconds
-    setInterval(updateAnalytics, 30000);
+    try {
+        // Initialize theme switcher first
+        initThemeSwitcher();
+        
+        renderInitialShayaris();
+        setupCommentFeatures();
+        initSearch();
+        initAudioControls();
+        initCategories();
+        initAIGenerator();
+        
+        // Initialize analytics and trending
+        setTimeout(() => {
+            updateAnalytics();
+            loadTrendingShayaris();
+        }, 1000);
+        
+        // Update analytics every 30 seconds
+        setInterval(updateAnalytics, 30000);
+    } catch (error) {
+        // Handle any initialization errors silently
+        console.error('Initialization error:', error);
+    }
 });
 // --- COMMENT FUNCTIONALITY END ---
 
