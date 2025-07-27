@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Love Guru - रोमांटिक शायरी</title>
     
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#ff6b6b">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Love Guru">
-    <meta name="msapplication-TileColor" content="#ff6b6b">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- PWA Meta Tags - Disabled -->
+    <!-- <meta name="theme-color" content="#ff6b6b"> -->
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="default"> -->
+    <!-- <meta name="apple-mobile-web-app-title" content="Love Guru"> -->
+    <!-- <meta name="msapplication-TileColor" content="#ff6b6b"> -->
+    <!-- <meta name="msapplication-config" content="/browserconfig.xml"> -->
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- PWA Manifest - Disabled -->
+    <!-- <link rel="manifest" href="/manifest.json"> -->
     
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="/icon-192x192.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/icon-167x167.png">
+    <!-- Apple Touch Icons - Disabled -->
+    <!-- <link rel="apple-touch-icon" href="/icon-192x192.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="167x167" href="/icon-167x167.png"> -->
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -52,10 +55,15 @@
                 <i class="fas fa-heart"></i>
                 <span>Love Guru</span>
             </div>
+            <div class="mobile-controls">
+                <button class="mobile-theme-toggle-nav" id="mobile-theme-toggle-nav" title="डार्क मोड में बदलें">
+                    <i class="fas fa-moon"></i>
+                </button>
             <div class="mobile-menu-toggle" id="mobile-menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
+                </div>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -63,7 +71,7 @@
                 <li><a href="#quotes">Quotes</a></li>
                 <li><a href="#about">About</a></li>
                 <li>
-                    <button class="theme-toggle" id="theme-toggle" title="डार्क/लाइट मोड">
+                    <button class="theme-toggle" id="theme-toggle" title="डार्क मोड में बदलें">
                         <i class="fas fa-moon"></i>
                     </button>
                 </li>
@@ -76,7 +84,7 @@
         <div class="mobile-menu-content">
             <div class="mobile-menu-header">
                 <h3>Love Guru</h3>
-                <button class="mobile-theme-toggle" id="mobile-theme-toggle" title="डार्क/लाइट मोड">
+                <button class="mobile-theme-toggle" id="mobile-theme-toggle" title="डार्क मोड में बदलें">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
@@ -400,6 +408,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4.0"></script>
 </body>
 </html>

@@ -37,28 +37,28 @@ const allShayaris = [
         id: 4,
         author: "Love Guru",
         date: "3 सप्ताह पहले",
-        content: "तेरी आँखों में मैंने देखा,\nएक ऐसा जहां जहाँ कोई गम ना हो,\nबस तेरी मुस्कान की छाँव में,\nखुशियों का एक आलम हो।",
+        content: " दुनियां की सबसे Best Couple, मैं और मेरा Laptop है..!!",
         likes: 156
     },
     {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "प्यार की इन राहों पर,\nचलना है तेरे संग,\nहर मोड़ पर तेरा हाथ थाम,\nकर देगा जीवन में रंग।",
+        content: " मैने मां से पूछा Computer इतने स्मार्ट क्यों होते हैं...? मां का सुंदर जवाब... क्योंकि Computer अपने Motherboard की सुनते हैं..!!",
         likes: 203
     },
     {
         id: 6,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "तुझसे मिलकर बदल गई,\nमेरी ज़िन्दगी की सारी कहानी,\nतेरे प्यार की गर्माहट में,\nखो गई मैं बेख़ुदानी।",
+        content: " HTML से शुरू किया था प्यार, CSS ने दिए रंग हजार, JavaScript ने घुमाया दिमाग, React ने बना दिया Superstar ।",
         likes: 278
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "तेरी यादों की बरसात में,\nभीग गया दिल मेरा बेहिसाब,\nतू जो दूर है तो क्या हुआ,\nतेरी यादें तो मेरे साथ हैं।",
+        content: " Node ने पकड़ी backend की कमान, MongoDB बोला - अब data मेरी जान, Express ने सबको किया connect, MERN stack बना, बन गया perfect ।",
         likes: 189
     },
     {
@@ -93,6 +93,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: " Frontend का हूँ दीवाना, CSS मेरा फसाना, Hover पे बदल दूँ दुनिया का नज़ारा, JavaScript से दिल लगाया है मैंने, हर function में इश्क़ सजाया है मैंने।।",
+        likes: 215
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "मुझे kaha फ़ुर्सत है कि मै मौसम सुहाना देखू,\n  आप से नजर हटे, तब तो मैं ये जमाना देखू।",
         likes: 215
     },
@@ -118,6 +125,14 @@ const allShayaris = [
         date: "2 महीने पहले",
         content: "Woh Nazrain Na Milate Toh Achha Hota,\n  Woh Itane karib Na Aate Toh Achha Hota,\n Hai Mohabbat Phir bhi Mukar Jate Hain Har Dafa,\n  Kaash Ajnabee Reh Jate Toh Achha Hota।",
         likes: 240
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Ishq और Coding में फर्क बस इतना है, Ishq में Dil टूटता है, Coding में laptop, लेकिन दोनों में ही – धड़कनें तेज़, नींदें कम, और उम्मीदें बहुत होती हैं|",
+
+        likes: 280
     },
     {
         id: 7,
@@ -165,6 +180,12 @@ const allShayaris = [
     {
         id: 7,
         author: "Love Guru",
+        date: "अगर तू HTML है, तो मैं तेरा CSS बन जाऊं, तेरे हर tag को स्टाइल करूं, तेरे हर mood में रंग लाऊं।",
+        likes: 311
+    },
+    {
+        id: 7,
+        author: "Love Guru",
         date: "2 महीने पहले",
         content: " पंडित जी की एक लाइन याद आ गई, मैं तेरी हर ज़िद मान लूंगा बस याद रखना, इस झगड़े में कोई तीसरा शामिल ना हो, यहां तो बिना झगड़े के ही तीसरा आ गया।",
         likes: 409
@@ -174,6 +195,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  if में उलझे, else ने रुलाया, loop ने तो कई बार infinite तक पहुँचाया, पर हर दिक्कत ने सिखाया एक नया तरीका, यही है Coder का असली मसीहा ।",
         likes: 277
     },
     {
@@ -202,6 +230,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: " इतना मत रूठा करो तुम मुझसे, तुम मेरी किस्मत में वैसे भी नहीं हो।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्यार किया था एक coder से, उसने कहा - चलो pair programming करते हैं, मैंने पूछा - दिल दोगे क्या? वो बोला - error मत दो, बस input सही रखना ।",
         likes: 502
     },
     {
@@ -243,6 +278,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  Git पे Commit, दिल में इरादा, हर Project में बस सपना हमारा, Push करो मेहनत, Pull करो ज्ञान, Coding ही है हमारा धर्म और ईमान।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " तुम जिसको जितना इज्जत और अहमियत दोगे, वह इतना ही ज्यादा फ़ालतू समझेगा।",
         likes: 502
     },
@@ -258,6 +300,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  इतनी दुनिया देख ली है कि, अब चेहरा देखकर बता दु कौन कैसा है।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तेरे बिना जैसे Code में semicolon की कमी, हर Line सही पर कुछ अधूरी सी लगी,function भी लिखा, logic भी strong था, पर तेरे बिना कोई output ही नहीं मिली।।",
         likes: 502
     },
     {
@@ -299,6 +348,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "   हम Coder हैं, आशिक़ नहीं, पर चाहत हमारी भी कम नहीं, वो commit करे ना करे अपने प्यार को, हम तो हर दिन push करते हैं उस रिश्ते को।।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "  आसान हैं क्या, मन में चल रहे तूफ़ान को शांत करके मुस्कुराना|",
         likes: 502
     },
@@ -334,6 +390,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: " कभी 'Hello World' से होती है शुरुआत फिर धीरे-धीरे बनती है अपनी बात, छोटे-छोटे Script, बड़े-बड़े ख्वाब, हर Coder का ऐसा ही होता है हिसाब |",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " मसला Sukoon का हैं, वरना जिंदगी तो हर कोई काट रहा है|",
         likes: 502
     },
@@ -363,6 +426,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  कभी backend की गलियों में खो जाते हैं, तो कभी frontend पे CSS से उलझ जाते हैं, पर layout हो या logic की बात हो, हम हर pixel को प्यार से सजाते हैं।।",
         likes: 502
     },
     {
@@ -418,6 +488,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "   System crash हो या दिल टूटा हो, Coder फिर भी online होता है, Stack Overflow से ही सही, हर problem का हल ढूंढ ही लेता है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " परखने वाले बहुत मिले मुझे, काश कोई समझने वाला होता !!",
         likes: 502
     },
@@ -453,49 +530,49 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " सोचते रहोगे, तो मौके निकल जाएंगे, उठो और शुरू करो !!",
+        content: "  तेरी हँसी मेरी syntax है, तेरी बातें मेरी logic, तेरे साथ हर दिन चलता है, जैसे loop में हो कोई magic !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  हर बार सोचते रहो, तो करने का वक़्त कभी नहीं आएगा !!",
+        content: "   तू सामने हो तो system भी hang हो जाए, तेरी smile देखूँ तो code भूल जाए, Keyboard पे उंगलियाँ रुक जाती हैं, जब तेरा नाम console में print हो जाए !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " तुम्हें खुद से ये पूछना चाहिए, मैं कब तक बस सोचता रहूंगा !!",
+        content: "  तेरा प्यार भी Coding जैसा निकला, Logic लगाया तो Error दिखा, Ignore किया तो Run हो गया, Accept किया तो Crash हो गया !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  जो करना है, वो आज करो, कल सोचने से कुछ नहीं होगा !!",
+        content: "   Love है तुझसे - कोई condition नहीं, Tere बिना चले - ऐसी permission नहीं, तेरा नाम मेरी हर query में आए, तू मिले - तो हर bug भी मुस्काए !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   मौका दरवाज़ा खटखटाता नहीं, वो तो बस एक झलक देकर चला जाता है !!",
+        content: "   Code लिखा रात भर जागकर, Coffee की चुस्की और bugs भाग कर, जब Run हुआ बिना error के वो code, दिल बोला-भाई तू तो God mode !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  वक़्त रुकता नहीं... लेकिन तुम्हारा डर तुम्हें रोक रहा है !!",
+        content: "   नाम terminal में लिखा, Enter दबाया, दिल का command चला, Error आया, retry किया, तेरे प्यार को फिर से install किया !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  उठो, शुरू करो... क्योंकि तुम जितना सोचते हो, उससे ज़्यादा कर सकते हो !!",
+        content: "   तेरा इश्क़ भी Coding जैसा है, जितना समझने की Koshish करता हूँ, कहीं न कहीं एक Bug रह ही जाता है !!",
         likes: 502
     },
     {
@@ -546,6 +623,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  जो मुस्कुरा रहा हूँ, वो मेरी मजबूरी है... खुशी नहीं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Code की दुनिया, bugs का राज, Debug करो, बनाओ अंदाज, Loop में फंसी ये जिंदगी हमारी, Code चले तो लगे बलिहारी !!",
         likes: 502
     },
     {
@@ -948,6 +1032,231 @@ const allShayaris = [
         likes: 502
     },
     {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   कोई नहीं है मुझे समझ ने वाला एक तुमसे उम्मीद थी अब वो भी टूट गई..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! किसी ने सही कहा है !! अगर किसी चीज को दिल से चाहो न तो! वह चीज ज्यादा भाव खाने लगती है चाहे वो प्यार हो या इंसान !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   चलो कोई ना, हम दोनों में से कोई तो खुश है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  रिश्ते निभाने का ज्ञान हमें ना दे.. क्योंकि हम तो उनसे भी हँसकर बात करते है, जो मन में हमारे प्रति ज़हर भर कर बैठे हुए है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    भाड़ में जाए Move On वो पसंद थी, पसंद हैं, और पसंद रहेगी!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तुम्हारी मजबूरिया तुम्हें मुबारक मेरी नज़रों में तो धोखेबाज़ हो तुम !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    मुझे मौका मत देना मैं सबको छोड़ने के इरादे में हूं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   बहुत तकलीफ होती है जब किसी की याद हद से ज्यादा आती है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   पीछे ना मुड़ना ऐ मुसाफ़िर आगे मंज़िल बहुत खूबसूरत है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   यक़ीन नहीं होता की ये वही जवानी है जिसके ख़्वाब हम बचपन में देखते थे !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   गलती करके गलत हो जाना आसान है, सही हो कर खुद को सही साबित करना कठिन ..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   'हीरा परखने वाले से ज्यादा, पीड़ा परखने वाला महत्वपूर्ण होता है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   पसंद एक ही रखो ..फिर चाहे मिले या ना मिले..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   हमेशा अकेले रहने के लिए तैयार रहो क्यूंकि लोग अचानक बदल जाते हैं..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    हर कोई आपको नहीं समझेगा यही जिंदगी है और हकीकत भी..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! एक बार जो पराया, महसूस करवा दे फिर वो लाख अच्छी बातें कर ले वो पराया ही लगता है..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! मोहब्बत ऐसे शख्स से करो, जो तुम्हें ऐसे देखे जैसे तुम उसके लिये दुनिया के आखिरी इंसान हो..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! तुम तरसो गी फिर हमे पाने के लिए..पहले तुम ज़रा दुनिया तो देख लो..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! मिल ही जाएगा कोई हमे भी टूट कर चाहने वाला, अब सारा शहर बेवफ़ा तो नहीं हो सकता..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   मेरे लिए टाइम मिल जाए तो, massage कर देना..वेट कर रहें है आपका..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तक़दीर में उससे मिलना लिखा था...उसका मिलना नहीं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   हो सके तो समझना मुझे, वरना ग़लत समझ कर भूल जाना !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   तुम्हारा तो पता नहीं लेकिन मेरा दिल तरसता है तुमसे बात करने के लिए !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    Ek raat ek baat likhunga Khud ko daag aur tujhe Chaand likhunga, Mujhe pata hai tu mujhe Nahi milegi, Phir bhi teri khubsurati par Ek kitaab likhunga !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   Bharosa यूंही नहीं टूटा है मेरा मैंने उसे देखा है...किसी और के लिए मुझसे jhuth बोलते हुए..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   कुछ घर के मसले भी हसी छीन लेते है हर उदासी की वजह इश्क़ नही होता..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   “ कौन से मंदिर में धागा बांधू कि, तुम सिर्फ मेरी हो जाओ !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    एक दिन सब जीत कर भी मृत्यु से हार जाना है...!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "    त्याग से ही शांति त्प्राप्त होती है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   वक्त तय है जगह तय है, घटना तय है घटित होना तय है !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   जुर्म का पता नहीं बस सजा दिए जा रही है जिंदगी !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   जुर्म का पता नहीं बस सजा दिए जा रही है जिंदगी !!",
+        likes: 502
+    },
+
+    {
         id: 8,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -1131,21 +1440,21 @@ function addShayariToDOM(shayari, isNew = false) {
                 <span class="like-text">लाइक्स</span>
             </div>
             <div class="action-buttons">
-                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
+                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें" style="background: linear-gradient(45deg, #ff6b6b, #ff4757); color: white; border: none; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);">
                     <i class="fas fa-heart"></i>
-                    <span class="like-btn-text">लाइक</span>
+                    <span class="like-btn-text" style="color: white; font-weight: 600;">लाइक</span>
                 </button>
-                <button class="favorite-btn" data-shayari-id="${shayari.id || shayariNumber}" title="फेवरिट में जोड़ें">
+                <button class="favorite-btn" data-shayari-id="${shayari.id || shayariNumber}" title="फेवरिट में जोड़ें" style="background: linear-gradient(45deg, #f59e0b, #d97706); color: white; border: none; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
                     <i class="fas fa-star"></i>
-                    <span class="favorite-btn-text">फेवरिट</span>
+                    <span class="favorite-btn-text" style="color: white; font-weight: 600;">फेवरिट</span>
                 </button>
-                <button class="share-btn">
+                <button class="share-btn" style="background: linear-gradient(45deg, #4facfe, #00f2fe); color: white; border: none; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
                     <i class="fas fa-share-alt"></i>
-                    <span class="share-btn-text">शेयर</span>
+                    <span class="share-btn-text" style="color: white; font-weight: 600;">शेयर</span>
                 </button>
-                <button class="comment-btn">
+                <button class="comment-btn" style="background: linear-gradient(45deg, #8b5cf6, #7c3aed); color: white; border: none; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
                     <i class="fas fa-comment"></i>
-                    <span class="comment-btn-text">कमेंट</span>
+                    <span class="comment-btn-text" style="color: white; font-weight: 600;">कमेंट</span>
                 </button>
             </div>
         </div>
@@ -2281,19 +2590,35 @@ function showSearchNotification(count, query) {
 function initThemeSwitcher() {
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const mobileThemeToggleNav = document.getElementById('mobile-theme-toggle-nav');
+    
+    // Clear old theme data and set default
+    if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'default');
+    }
+    
+    const savedTheme = localStorage.getItem('theme');
     
     // Apply saved theme
     applyTheme(savedTheme);
     
     // Desktop theme toggle
-    themeToggle.addEventListener('click', function() {
-        toggleTheme();
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            toggleTheme();
+        });
+    }
     
-    // Mobile theme toggle
+    // Mobile theme toggle (in mobile menu)
     if (mobileThemeToggle) {
         mobileThemeToggle.addEventListener('click', function() {
+            toggleTheme();
+        });
+    }
+    
+    // Mobile theme toggle (in navbar)
+    if (mobileThemeToggleNav) {
+        mobileThemeToggleNav.addEventListener('click', function() {
             toggleTheme();
         });
     }
@@ -2301,8 +2626,8 @@ function initThemeSwitcher() {
 
 // Toggle theme function
 function toggleTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const currentTheme = localStorage.getItem('theme') || 'default';
+    const newTheme = currentTheme === 'dark' ? 'default' : 'dark';
     
     applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
@@ -2313,32 +2638,147 @@ function toggleTheme() {
 function applyTheme(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const mobileThemeToggleNav = document.getElementById('mobile-theme-toggle-nav');
+    
+    console.log('Applying theme:', theme);
+    console.log('Theme toggle found:', !!themeToggle);
+    console.log('Mobile theme toggle found:', !!mobileThemeToggle);
+    console.log('Mobile theme toggle nav found:', !!mobileThemeToggleNav);
     
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        
+        // Update desktop theme toggle icon
+        if (themeToggle) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            themeToggle.title = 'लाइट मोड में बदलें';
+        }
+        
+        // Update mobile theme toggle icon (in mobile menu)
+        if (mobileThemeToggle) {
+            mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            mobileThemeToggle.title = 'लाइट मोड में बदलें';
+        }
+        
+        // Update mobile theme toggle icon (in navbar)
+        if (mobileThemeToggleNav) {
+            mobileThemeToggleNav.innerHTML = '<i class="fas fa-sun"></i>';
+            mobileThemeToggleNav.title = 'लाइट मोड में बदलें';
+        }
+        
+        console.log('Dark theme applied - Sun icons set');
     } else {
         document.body.classList.remove('dark-theme');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        
+        // Update desktop theme toggle icon
+        if (themeToggle) {
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            themeToggle.title = 'डार्क मोड में बदलें';
+        }
+        
+        // Update mobile theme toggle icon (in mobile menu)
+        if (mobileThemeToggle) {
+            mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            mobileThemeToggle.title = 'डार्क मोड में बदलें';
+        }
+        
+        // Update mobile theme toggle icon (in navbar)
+        if (mobileThemeToggleNav) {
+            mobileThemeToggleNav.innerHTML = '<i class="fas fa-moon"></i>';
+            mobileThemeToggleNav.title = 'डार्क मोड में बदलें';
+        }
+        
+        console.log('Default theme applied - Moon icons set');
+    }
+    
+    // Apply mobile button colors
+    applyMobileButtonColors();
+    
+    // Force icon update after a small delay
+    setTimeout(() => {
+        console.log('Forcing icon update...');
+        if (theme === 'dark') {
+            if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            if (mobileThemeToggleNav) mobileThemeToggleNav.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            if (mobileThemeToggleNav) mobileThemeToggleNav.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    }, 100);
+}
+
+// Apply mobile button colors function
+function applyMobileButtonColors() {
+    // Check if mobile view
+    if (window.innerWidth <= 768) {
+        const likeBtns = document.querySelectorAll('.like-btn');
+        const shareBtns = document.querySelectorAll('.share-btn');
+        const commentBtns = document.querySelectorAll('.comment-btn');
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+        
+        // Apply colors to like buttons
+        likeBtns.forEach(btn => {
+            btn.style.background = 'linear-gradient(45deg, #ff6b6b, #ff4757)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
+        });
+        
+        // Apply colors to share buttons
+        shareBtns.forEach(btn => {
+            btn.style.background = 'linear-gradient(45deg, #4facfe, #00f2fe)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(79, 172, 254, 0.3)';
+        });
+        
+        // Apply colors to comment buttons
+        commentBtns.forEach(btn => {
+            btn.style.background = 'linear-gradient(45deg, #8b5cf6, #7c3aed)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(139, 92, 246, 0.3)';
+        });
+        
+        // Apply colors to favorite buttons
+        favoriteBtns.forEach(btn => {
+            btn.style.background = 'linear-gradient(45deg, #f59e0b, #d97706)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.3)';
+        });
+        
+        // Apply text colors
+        const likeBtnTexts = document.querySelectorAll('.like-btn-text');
+        const shareBtnTexts = document.querySelectorAll('.share-btn-text');
+        const commentBtnTexts = document.querySelectorAll('.comment-btn-text');
+        const favoriteBtnTexts = document.querySelectorAll('.favorite-btn-text');
+        
+        likeBtnTexts.forEach(text => {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        });
+        
+        shareBtnTexts.forEach(text => {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        });
+        
+        commentBtnTexts.forEach(text => {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        });
+        
+        favoriteBtnTexts.forEach(text => {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        });
     }
 }
 
-// Apply theme
-function applyTheme(theme) {
-    // Remove all theme classes
-    document.body.classList.remove('theme-default', 'theme-sunset', 'theme-ocean', 'theme-forest', 'theme-purple', 'dark-theme');
-    
-    // Add new theme class
-    if (theme === 'dark') {
-        document.body.classList.add('dark-theme');
-        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        document.body.classList.add(`theme-${theme}`);
-        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
-    }
-}
+// Duplicate applyTheme function removed
 
 // Show theme notification
 function showThemeNotification(theme) {
@@ -2382,165 +2822,66 @@ function showThemeNotification(theme) {
     }, 2000);
 }
 
-// PWA Service Worker Registration
+// PWA Service Worker Registration - Disabled and Unregistered
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-                initPWAFeatures(registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
-
-// PWA Features
-function initPWAFeatures(registration) {
-    // Check if app is installed
-    let deferredPrompt;
-    
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        showInstallPrompt();
-    });
-    
-    // App installed event
-    window.addEventListener('appinstalled', (evt) => {
-        console.log('App was installed');
-        hideInstallPrompt();
-        showInstallSuccessNotification();
-    });
-    
-    // Handle URL parameters for shortcuts
-    const urlParams = new URLSearchParams(window.location.search);
-    const action = urlParams.get('action');
-    
-    if (action === 'add') {
-        setTimeout(() => {
-            document.getElementById('floating-add-btn').click();
-            const manualAdd = document.getElementById('manual-add');
-            if (manualAdd) manualAdd.click();
-        }, 1000);
-    } else if (action === 'ai') {
-        setTimeout(() => {
-            document.getElementById('floating-add-btn').click();
-            const aiGenerate = document.getElementById('ai-generate');
-            if (aiGenerate) aiGenerate.click();
-        }, 1000);
-    }
-}
-
-// Show install prompt
-function showInstallPrompt() {
-    const installPrompt = document.createElement('div');
-    installPrompt.id = 'install-prompt';
-    installPrompt.innerHTML = `
-        <div class="install-content">
-            <i class="fas fa-download"></i>
-            <div class="install-text">
-                <h4>Love Guru को Install करें</h4>
-                <p>अपने phone पर app की तरह use करें</p>
-            </div>
-            <button class="install-btn" id="install-btn">
-                <i class="fas fa-plus"></i>
-                Install
-            </button>
-            <button class="install-close" id="install-close">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    `;
-    
-    installPrompt.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        background: linear-gradient(45deg, #8b5cf6, #7c3aed);
-        color: white;
-        padding: 1rem;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-        z-index: 10000;
-        animation: slideInFromBottom 0.5s ease;
-    `;
-    
-    document.body.appendChild(installPrompt);
-    
-    // Install button click
-    document.getElementById('install-btn').addEventListener('click', () => {
-        if (window.deferredPrompt) {
-            window.deferredPrompt.prompt();
-            window.deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the install prompt');
-                }
-                window.deferredPrompt = null;
-            });
+    // Unregister any existing service workers
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+            registration.unregister();
+            console.log('Service Worker unregistered');
         }
     });
     
-    // Close button click
-    document.getElementById('install-close').addEventListener('click', hideInstallPrompt);
+    // Prevent new service worker registration
+    // if ('serviceWorker' in navigator) {
+    //     window.addEventListener('load', () => {
+    //         navigator.serviceWorker.register('/sw.js')
+    //             .then(registration => {
+    //                 console.log('SW registered: ', registration);
+    //                 initPWAFeatures(registration);
+    //             })
+    //             .catch(registrationError => {
+    //                 console.log('SW registration failed: ', registrationError);
+    //             });
+    //     });
+    // }
 }
 
-// Hide install prompt
-function hideInstallPrompt() {
-    const prompt = document.getElementById('install-prompt');
-    if (prompt) {
-        prompt.style.animation = 'slideOutToBottom 0.5s ease forwards';
-        setTimeout(() => {
-            if (prompt.parentNode) {
-                prompt.parentNode.removeChild(prompt);
-            }
-        }, 500);
-    }
-}
+// PWA Features - Disabled
+// function initPWAFeatures(registration) {
+//     // App installed event
+//     window.addEventListener('appinstalled', (evt) => {
+//         console.log('App was installed');
+//     });
+//     
+//     // Handle URL parameters for shortcuts
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const action = urlParams.get('action');
+//     
+//     if (action === 'add') {
+//         setTimeout(() => {
+//             document.getElementById('floating-add-btn').click();
+//             const manualAdd = document.getElementById('manual-add');
+//             if (manualAdd) manualAdd.click();
+//         }, 1000);
+//     } else if (action === 'ai') {
+//         setTimeout(() => {
+//             document.getElementById('floating-add-btn').click();
+//             const aiGenerate = document.getElementById('ai-generate');
+//             if (aiGenerate) aiGenerate.click();
+//         }, 1000);
+//     }
+// }
 
-// Show install success notification
-function showInstallSuccessNotification() {
-    const notification = document.createElement('div');
-    notification.className = 'install-success-notification';
-    notification.innerHTML = `
-        <i class="fas fa-check-circle"></i>
-        <span>Love Guru सफलतापूर्वक install हो गया! 🎉</span>
-    `;
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        left: 20px;
-        background: linear-gradient(45deg, #10b981, #059669);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 25px;
-        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
-        z-index: 1000;
-        animation: slideInFromLeft 0.5s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-weight: 600;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 500);
-    }, 3000);
-}
+// Show install prompt
+// Install prompt functions removed
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize theme switcher first
+    initThemeSwitcher();
+    
     renderInitialShayaris();
     setupCommentFeatures();
-    initThemeSwitcher();
     initSearch();
     initAudioControls();
     initCategories();
@@ -2704,6 +3045,12 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = `all 0.6s ease ${index * 0.2}s`;
         observer.observe(card);
     });
+    
+    // Apply mobile button colors on page load
+    setTimeout(() => {
+        applyMobileButtonColors();
+        applyColorsToExistingButtons();
+    }, 1000);
 });
 
 // Mobile Menu Toggle
@@ -2767,6 +3114,96 @@ document.addEventListener('keydown', function(e) {
         closeMobileMenu();
     }
 });
+
+// Apply mobile button colors on window resize
+window.addEventListener('resize', function() {
+    setTimeout(() => {
+        applyMobileButtonColors();
+        applyColorsToExistingButtons();
+    }, 100);
+});
+
+// Apply colors to existing buttons
+function applyColorsToExistingButtons() {
+    const likeBtns = document.querySelectorAll('.like-btn');
+    const shareBtns = document.querySelectorAll('.share-btn');
+    const commentBtns = document.querySelectorAll('.comment-btn');
+    const favoriteBtns = document.querySelectorAll('.favorite-btn');
+    
+    // Apply colors to like buttons
+    likeBtns.forEach(btn => {
+        if (!btn.style.background || btn.style.background === '') {
+            btn.style.background = 'linear-gradient(45deg, #ff6b6b, #ff4757)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
+        }
+    });
+    
+    // Apply colors to share buttons
+    shareBtns.forEach(btn => {
+        if (!btn.style.background || btn.style.background === '') {
+            btn.style.background = 'linear-gradient(45deg, #4facfe, #00f2fe)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(79, 172, 254, 0.3)';
+        }
+    });
+    
+    // Apply colors to comment buttons
+    commentBtns.forEach(btn => {
+        if (!btn.style.background || btn.style.background === '') {
+            btn.style.background = 'linear-gradient(45deg, #8b5cf6, #7c3aed)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(139, 92, 246, 0.3)';
+        }
+    });
+    
+    // Apply colors to favorite buttons
+    favoriteBtns.forEach(btn => {
+        if (!btn.style.background || btn.style.background === '') {
+            btn.style.background = 'linear-gradient(45deg, #f59e0b, #d97706)';
+            btn.style.color = 'white';
+            btn.style.border = 'none';
+            btn.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.3)';
+        }
+    });
+    
+    // Apply text colors
+    const likeBtnTexts = document.querySelectorAll('.like-btn-text');
+    const shareBtnTexts = document.querySelectorAll('.share-btn-text');
+    const commentBtnTexts = document.querySelectorAll('.comment-btn-text');
+    const favoriteBtnTexts = document.querySelectorAll('.favorite-btn-text');
+    
+    likeBtnTexts.forEach(text => {
+        if (!text.style.color || text.style.color === '') {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        }
+    });
+    
+    shareBtnTexts.forEach(text => {
+        if (!text.style.color || text.style.color === '') {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        }
+    });
+    
+    commentBtnTexts.forEach(text => {
+        if (!text.style.color || text.style.color === '') {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        }
+    });
+    
+    favoriteBtnTexts.forEach(text => {
+        if (!text.style.color || text.style.color === '') {
+            text.style.color = 'white';
+            text.style.fontWeight = '600';
+        }
+    });
+}
 
 // Keyboard shortcuts
 document.addEventListener('keydown', function(e) {

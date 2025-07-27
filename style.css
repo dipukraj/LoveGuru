@@ -1378,67 +1378,7 @@ body {
     }
 }
 
-/* PWA Install Prompt */
-.install-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.install-content i {
-    font-size: 2rem;
-    color: white;
-}
-
-.install-text {
-    flex: 1;
-}
-
-.install-text h4 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.install-text p {
-    margin: 0.2rem 0 0 0;
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-.install-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 0.6rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.install-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
-}
-
-.install-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.install-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+/* PWA Install Prompt - Removed */
 
 /* Audio Controls */
 .audio-controls {
@@ -1858,6 +1798,34 @@ body {
     }
 }
 
+/* Mobile Controls */
+.mobile-controls {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-theme-toggle-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.mobile-theme-toggle-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -2027,6 +1995,10 @@ body {
     .navbar {
         padding: 1rem 1.5rem;
         position: relative;
+    }
+    
+    .mobile-controls {
+        display: flex;
     }
     
     .mobile-menu-toggle {
@@ -2220,6 +2192,10 @@ body.theme-default {
     --primary-color: #ff6b6b;
     --secondary-color: #ff4757;
     --accent-color: #8b5cf6;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-background: rgba(255, 255, 255, 0.9);
+    --border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Sunset Theme */
@@ -2317,53 +2293,179 @@ body {
 /* Dark Theme Styles */
 body.dark-theme {
     color: #fff;
+    background: #000000 !important;
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #ff6b6b;
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --card-background: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.2);
 }
 
 body.dark-theme::before {
-    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #0a0a0a, #000000);
+    animation: gradientShift 15s ease infinite;
 }
 
+body.dark-theme::after {
+    background: radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(118, 75, 162, 0.2) 0%, transparent 50%);
+}
+
+/* Header and Navigation */
+body.dark-theme .header {
+    background: rgba(26, 26, 46, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .logo {
+    color: #667eea;
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    font-weight: 700;
+}
+
+body.dark-theme .logo i {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.4);
+}
+
+body.dark-theme .nav-menu a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+}
+
+body.dark-theme .nav-menu a::before {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* Hero Section */
+body.dark-theme .hero-title {
+    color: #667eea;
+    text-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+    font-weight: 700;
+}
+
+body.dark-theme .hero-subtitle {
+    color: #ff6b6b;
+    text-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
+    font-weight: 600;
+}
+
+body.dark-theme .hero-description {
+    color: #764ba2;
+    text-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
+}
+
+/* Shayari Cards */
 body.dark-theme .shayari-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .shayari-card:hover {
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
 }
 
 body.dark-theme .author-name {
-    color: #fff;
+    color: #667eea;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
 }
 
 body.dark-theme .post-date {
-    color: #ccc;
+    color: #ff6b6b;
+    font-weight: 500;
 }
 
 body.dark-theme .shayari-content p {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* Buttons and Interactive Elements */
+body.dark-theme .like-btn,
+body.dark-theme .share-btn,
+body.dark-theme .comment-btn,
+body.dark-theme .favorite-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
 }
 
+body.dark-theme .like-btn:hover,
+body.dark-theme .share-btn:hover,
+body.dark-theme .comment-btn:hover,
+body.dark-theme .favorite-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .like-btn.liked {
+    background: linear-gradient(45deg, #ff6b6b, #ff4757);
+    border-color: #ff6b6b;
+}
+
+body.dark-theme .favorite-btn.favorited {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-color: #ffd700;
+    color: #333;
+}
+
+/* Theme Toggle */
 body.dark-theme .theme-toggle {
     color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 body.dark-theme .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 body.dark-theme .mobile-theme-toggle {
     color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 body.dark-theme .mobile-theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
+body.dark-theme .mobile-theme-toggle-nav {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .mobile-theme-toggle-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Menu */
 body.dark-theme .mobile-menu-content {
     background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .mobile-menu-header h3 {
@@ -2379,6 +2481,309 @@ body.dark-theme .mobile-nav-menu a {
 body.dark-theme .mobile-nav-menu a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Search and Filters */
+body.dark-theme .search-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .search-input {
+    color: #fff;
+    background: transparent;
+}
+
+body.dark-theme .search-input::placeholder {
+    color: #ccc;
+}
+
+body.dark-theme .search-btn {
+    color: #fff;
+}
+
+body.dark-theme .category-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .category-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .category-tab.active {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-color: #667eea;
+}
+
+/* Comments Section */
+body.dark-theme .comment-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .comment-input::placeholder {
+    color: #ccc;
+}
+
+body.dark-theme .comment-submit {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #fff;
+}
+
+body.dark-theme .comment-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Analytics and Trending */
+body.dark-theme .analytics-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .trending-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Quotes Section */
+body.dark-theme .quote-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .quote-card p {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+body.dark-theme .quote-author {
+    color: #667eea;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+/* Footer */
+body.dark-theme .footer {
+    background: rgba(26, 26, 46, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .footer-logo {
+    color: #667eea;
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    font-weight: 700;
+}
+
+body.dark-theme .footer-logo i {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.4);
+}
+
+body.dark-theme .social-links a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .social-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Modal */
+body.dark-theme .modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .modal-header h3 {
+    color: #667eea;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.4);
+}
+
+body.dark-theme .form-group label {
+    color: #667eea;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-theme .form-group textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .form-group textarea::placeholder {
+    color: #ccc;
+}
+
+/* Floating Elements */
+body.dark-theme .floating-add-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+body.dark-theme .floating-add-btn:hover {
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+}
+
+/* Audio Controls */
+body.dark-theme .music-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .music-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .volume-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .volume-label {
+    color: #fff;
+}
+
+/* Additional Dark Theme Styles */
+body.dark-theme .section-title {
+    color: #667eea;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    font-weight: 700;
+}
+
+body.dark-theme .section-subtitle {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    font-weight: 600;
+}
+
+body.dark-theme .load-more-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .load-more-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .like-info {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .like-count {
+    color: #ff6b6b;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .like-text {
+    color: #764ba2;
+    font-weight: 500;
+}
+
+body.dark-theme .comment-header {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .comment-title {
+    color: #667eea;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-theme .comment-count {
+    color: #ff6b6b;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .comment-author {
+    color: #667eea;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-theme .comment-text {
+    color: #ffffff;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+body.dark-theme .comment-date {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+body.dark-theme .comment-action-btn {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .comment-action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark-theme .floating-options {
+    background: rgba(26, 26, 46, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .option-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+body.dark-theme .option-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Dark theme install prompt styles removed */
+
+/* Particles in dark mode */
+body.dark-theme .particle {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Floating hearts in dark mode */
+body.dark-theme .floating-hearts i {
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Analytics Labels in Dark Theme */
+body.dark-theme .analytics-label {
+    color: #ff6b6b;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-theme .analytics-number {
+    color: #667eea;
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+    font-size: 2.5rem;
 }
     
     .hero-title {
@@ -2427,43 +2832,88 @@ body.dark-theme .mobile-nav-menu a:hover {
     }
     
     .like-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        flex: 1;
-        min-width: 0;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
     }
     
     .share-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        flex: 1;
-        min-width: 0;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        background: linear-gradient(45deg, #4facfe, #00f2fe) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
     }
     
     .comment-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        flex: 1;
-        min-width: 0;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        background: linear-gradient(45deg, #8b5cf6, #7c3aed) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
     }
     
     .favorite-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        flex: 1;
-        min-width: 0;
+        padding: 0.6rem 1rem !important;
+        font-size: 0.9rem !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        background: linear-gradient(45deg, #f59e0b, #d97706) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
     }
     
     .like-btn-text {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
+        color: white !important;
+        font-weight: 600 !important;
     }
     
     .share-btn-text {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
+        color: white !important;
+        font-weight: 600 !important;
     }
     
     .comment-btn-text {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Mobile Button Hover Effects */
+    .like-btn:hover,
+    .share-btn:hover,
+    .comment-btn:hover,
+    .favorite-btn:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .like-btn.liked {
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        color: white !important;
+    }
+    
+    .favorite-btn.favorited {
+        background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+        color: #333 !important;
     }
     
     .like-info {
@@ -2490,4 +2940,219 @@ body.dark-theme .mobile-nav-menu a:hover {
         align-items: flex-start;
         gap: 1rem;
     }
+    
+    /* Dark Theme Mobile Buttons */
+    body.dark-theme .like-btn,
+    body.dark-theme .share-btn,
+    body.dark-theme .comment-btn,
+    body.dark-theme .favorite-btn {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #fff !important;
+    }
+    
+    body.dark-theme .like-btn:hover,
+    body.dark-theme .share-btn:hover,
+    body.dark-theme .comment-btn:hover,
+    body.dark-theme .favorite-btn:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    body.dark-theme .like-btn.liked {
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        border-color: #ff6b6b !important;
+        color: white !important;
+    }
+    
+    body.dark-theme .favorite-btn.favorited {
+        background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+        border-color: #ffd700 !important;
+        color: #333 !important;
+    }
+    
+    body.dark-theme .like-btn-text,
+    body.dark-theme .share-btn-text,
+    body.dark-theme .comment-btn-text {
+        color: #fff !important;
+        font-weight: 600 !important;
+    }
+    
+    body.dark-theme .favorite-btn.favorited .favorite-btn-text {
+        color: #333 !important;
+        font-weight: 600 !important;
+    }
+}
+
+/* Mobile Button Colors - High Specificity Override */
+@media (max-width: 768px) {
+    /* Force override all button styles for mobile */
+    .shayari-card .action-buttons .like-btn {
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3) !important;
+    }
+    
+    .shayari-card .action-buttons .share-btn {
+        background: linear-gradient(45deg, #4facfe, #00f2fe) !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3) !important;
+    }
+    
+    .shayari-card .action-buttons .comment-btn {
+        background: linear-gradient(45deg, #8b5cf6, #7c3aed) !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3) !important;
+    }
+    
+    .shayari-card .action-buttons .favorite-btn {
+        background: linear-gradient(45deg, #f59e0b, #d97706) !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
+    }
+    
+    /* Hover effects */
+    .shayari-card .action-buttons .like-btn:hover {
+        background: linear-gradient(45deg, #ff4757, #ff6b6b) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4) !important;
+    }
+    
+    .shayari-card .action-buttons .share-btn:hover {
+        background: linear-gradient(45deg, #00f2fe, #4facfe) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4) !important;
+    }
+    
+    .shayari-card .action-buttons .comment-btn:hover {
+        background: linear-gradient(45deg, #7c3aed, #8b5cf6) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4) !important;
+    }
+    
+    .shayari-card .action-buttons .favorite-btn:hover {
+        background: linear-gradient(45deg, #d97706, #f59e0b) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4) !important;
+    }
+    
+    /* Active states */
+    .shayari-card .action-buttons .like-btn.liked {
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        color: white !important;
+        animation: heartBeat 0.6s ease !important;
+    }
+    
+    .shayari-card .action-buttons .favorite-btn.favorited {
+        background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+        color: #333 !important;
+        animation: starTwinkle 0.6s ease !important;
+    }
+    
+    /* Text colors */
+    .shayari-card .action-buttons .like-btn-text {
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    .shayari-card .action-buttons .share-btn-text {
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    .shayari-card .action-buttons .comment-btn-text {
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    .shayari-card .action-buttons .favorite-btn-text {
+        color: white !important;
+        font-weight: 600 !important;
+    }
+    
+    .shayari-card .action-buttons .favorite-btn.favorited .favorite-btn-text {
+        color: #333 !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Dark theme overrides */
+    body.dark-theme .shayari-card .action-buttons .like-btn,
+    body.dark-theme .shayari-card .action-buttons .share-btn,
+    body.dark-theme .shayari-card .action-buttons .comment-btn,
+    body.dark-theme .shayari-card .action-buttons .favorite-btn {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #fff !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    body.dark-theme .shayari-card .action-buttons .like-btn:hover,
+    body.dark-theme .shayari-card .action-buttons .share-btn:hover,
+    body.dark-theme .shayari-card .action-buttons .comment-btn:hover,
+    body.dark-theme .shayari-card .action-buttons .favorite-btn:hover {
+        background: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    body.dark-theme .shayari-card .action-buttons .like-btn.liked {
+        background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
+        border-color: #ff6b6b !important;
+        color: white !important;
+    }
+    
+    body.dark-theme .shayari-card .action-buttons .favorite-btn.favorited {
+        background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+        border-color: #ffd700 !important;
+        color: #333 !important;
+    }
+    
+    body.dark-theme .shayari-card .action-buttons .like-btn-text,
+    body.dark-theme .shayari-card .action-buttons .share-btn-text,
+    body.dark-theme .shayari-card .action-buttons .comment-btn-text {
+        color: #fff !important;
+    }
+    
+    body.dark-theme .shayari-card .action-buttons .favorite-btn.favorited .favorite-btn-text {
+        color: #333 !important;
+    }
+}
+
+/* Dark Theme Shayari Text Fix */
+body.dark-theme .shayari-content p {
+    color: #000 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+body.dark-theme .shayari-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #000 !important;
+}
+
+body.dark-theme .shayari-card .author-name {
+    color: #333 !important;
+}
+
+body.dark-theme .shayari-card .post-date {
+    color: #666 !important;
+}
+
+body.dark-theme .shayari-card .like-info {
+    color: #333 !important;
+}
+
+body.dark-theme .shayari-card .like-count {
+    color: #333 !important;
+}
+
+body.dark-theme .shayari-card .like-text {
+    color: #333 !important;
 }
