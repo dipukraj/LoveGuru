@@ -55,6 +55,13 @@ const allShayaris = [
         likes: 278
     },
     {
+        id: 6,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "  Coding भी इश्क़ की तरह होती है, समझ आ जाए तो सब Aasan होती है, वरना एक Comma(,) की गलती, पूरी रात Barbad कर देती है ।",
+        likes: 278
+    },
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
