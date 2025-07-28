@@ -2248,13 +2248,31 @@ function initAudioControls() {
     volumeSlider.value = savedVolume;
     backgroundMusic.volume = savedVolume / 100;
     
+    // Ensure audio is loaded
+    backgroundMusic.load();
+    
     // Set initial music state
     if (savedMusicState) {
-        backgroundMusic.play().catch(() => {
-            // Auto-play blocked, show notification
-            showMusicNotification('संगीत चालू करने के लिए क्लिक करें');
+        // Try to play music after user interaction
+        const playMusic = () => {
+            backgroundMusic.play().then(() => {
+                musicToggle.classList.add('playing');
+                localStorage.setItem('musicPlaying', 'true');
+                showMusicNotification('🎵 संगीत चालू हो गया');
+            }).catch((error) => {
+                console.log('Auto-play blocked:', error);
+                showMusicNotification('संगीत चालू करने के लिए क्लिक करें');
+            });
+        };
+        
+        // Try to play on first user interaction
+        document.addEventListener('click', playMusic, { once: true });
+        
+        // Also try on any user interaction
+        const userInteractions = ['click', 'touchstart', 'keydown'];
+        userInteractions.forEach(event => {
+            document.addEventListener(event, playMusic, { once: true });
         });
-        musicToggle.classList.add('playing');
     }
     
     // Music toggle functionality
@@ -2264,7 +2282,14 @@ function initAudioControls() {
                 musicToggle.classList.add('playing');
                 localStorage.setItem('musicPlaying', 'true');
                 showMusicNotification('🎵 संगीत चालू हो गया');
-            }).catch(() => {
+                
+                // Update button icon
+                const icon = musicToggle.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-volume-up';
+                }
+            }).catch((error) => {
+                console.log('Music play failed:', error);
                 showMusicNotification('❌ संगीत चालू नहीं हो सका');
             });
         } else {
@@ -2272,6 +2297,12 @@ function initAudioControls() {
             musicToggle.classList.remove('playing');
             localStorage.setItem('musicPlaying', 'false');
             showMusicNotification('🔇 संगीत बंद हो गया');
+            
+            // Update button icon
+            const icon = musicToggle.querySelector('i');
+            if (icon) {
+                icon.className = 'fas fa-volume-mute';
+            }
         }
     });
     
@@ -2283,12 +2314,119 @@ function initAudioControls() {
         
         // Show volume notification
         showVolumeNotification(this.value);
+        
+        // Update volume label
+        const volumeLabel = document.querySelector('.volume-label');
+        if (volumeLabel) {
+            volumeLabel.textContent = `Volume: ${this.value}%`;
+        }
     });
     
-    // Handle audio errors
-    backgroundMusic.addEventListener('error', function() {
-        // Audio failed to load - continue silently
-        // showMusicNotification('❌ संगीत फ़ाइल लोड नहीं हो सकी');
+    // Initialize volume label
+    const volumeLabel = document.querySelector('.volume-label');
+    if (volumeLabel) {
+        volumeLabel.textContent = `Volume: ${savedVolume}%`;
+    }
+    
+    // Update initial button state
+    if (savedMusicState) {
+        const icon = musicToggle.querySelector('i');
+        if (icon) {
+            icon.className = 'fas fa-volume-up';
+        }
+        musicToggle.classList.add('playing');
+    } else {
+        const icon = musicToggle.querySelector('i');
+        if (icon) {
+            icon.className = 'fas fa-volume-mute';
+        }
+        musicToggle.classList.remove('playing');
+    }
+    
+    // Handle audio events
+    backgroundMusic.addEventListener('loadstart', () => {
+        console.log('Audio loading started');
+    });
+    
+    backgroundMusic.addEventListener('canplay', () => {
+        console.log('Audio can play');
+    });
+    
+    backgroundMusic.addEventListener('error', function(e) {
+        console.log('Audio error:', e);
+        // Try to load alternative source if current one fails
+        const currentSrc = backgroundMusic.currentSrc;
+        const sources = backgroundMusic.querySelectorAll('source');
+        let alternativeFound = false;
+        
+        for (let source of sources) {
+            if (source.src !== currentSrc && !source.src.includes('error')) {
+                backgroundMusic.src = source.src;
+                backgroundMusic.load();
+                alternativeFound = true;
+                showMusicNotification('🔄 वैकल्पिक संगीत लोड हो रहा है...');
+                break;
+            }
+        }
+        
+        if (!alternativeFound) {
+            showMusicNotification('❌ संगीत उपलब्ध नहीं है');
+            musicToggle.style.opacity = '0.5';
+            musicToggle.title = 'संगीत उपलब्ध नहीं है';
+        }
+    });
+    
+    // Handle audio ending and restart
+    backgroundMusic.addEventListener('ended', function() {
+        // Restart the loop
+        backgroundMusic.currentTime = 0;
+        if (!backgroundMusic.paused) {
+            backgroundMusic.play().catch(() => {
+                console.log('Failed to restart music');
+            });
+        }
+    });
+    
+    // Handle audio loading
+    backgroundMusic.addEventListener('loadstart', function() {
+        console.log('Music loading started');
+    });
+    
+    backgroundMusic.addEventListener('canplaythrough', function() {
+        console.log('Music can play through');
+    });
+    
+    // Handle audio seeking
+    backgroundMusic.addEventListener('seeking', function() {
+        console.log('Music seeking');
+    });
+    
+    backgroundMusic.addEventListener('seeked', function() {
+        console.log('Music seeked');
+    });
+    
+    // Keyboard shortcuts for music control
+    document.addEventListener('keydown', function(e) {
+        // Space bar to toggle music
+        if (e.code === 'Space' && !e.target.matches('input, textarea')) {
+            e.preventDefault();
+            musicToggle.click();
+        }
+        
+        // Arrow keys for volume control
+        if (e.code === 'ArrowUp' && (e.ctrlKey || e.metaKey)) {
+            e.preventDefault();
+            const newVolume = Math.min(100, parseInt(volumeSlider.value) + 10);
+            volumeSlider.value = newVolume;
+            volumeSlider.dispatchEvent(new Event('input'));
+        }
+        
+        if (e.code === 'ArrowDown' && (e.ctrlKey || e.metaKey)) {
+            e.preventDefault();
+            const newVolume = Math.max(0, parseInt(volumeSlider.value) - 10);
+            volumeSlider.value = newVolume;
+            volumeSlider.dispatchEvent(new Event('input'));
+        }
     });
 }
 

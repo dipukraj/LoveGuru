@@ -1416,6 +1416,11 @@ body {
 .music-toggle.playing {
     background: linear-gradient(45deg, #10b981, #059669);
     animation: pulse 2s infinite;
+    transform: scale(1.05);
+}
+
+.music-toggle.playing i {
+    animation: musicBeat 1s infinite;
 }
 
 .volume-control {
@@ -1429,6 +1434,12 @@ body {
     align-items: center;
     gap: 0.5rem;
     min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.volume-control:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .volume-slider {
@@ -1477,6 +1488,15 @@ body {
     }
     100% {
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+@keyframes musicBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
     }
 }
 
