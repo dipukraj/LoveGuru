@@ -187,7 +187,8 @@ const allShayaris = [
     {
         id: 7,
         author: "Love Guru",
-        date: "अगर तू HTML है, तो मैं तेरा CSS बन जाऊं, तेरे हर tag को स्टाइल करूं, तेरे हर mood में रंग लाऊं।",
+        date: "2 महीने पहले",
+        content: "अगर तू HTML है, तो मैं तेरा CSS बन जाऊं, तेरे हर tag को स्टाइल करूं, तेरे हर mood में रंग लाऊं।",
         likes: 311
     },
     {
