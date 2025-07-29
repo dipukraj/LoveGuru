@@ -62,6 +62,13 @@ const allShayaris = [
         likes: 278
     },
     {
+        id: 6,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "  आईंन मौके पर ये तस्वीर बदल सकती हैं, एक लम्हे में तक़दीर बदल सकती है , खूब विश्वाश हो, तभी भगाना रांझणा , कटघरे में भी तेरी हीर बदल शक्ति है ।",
+        likes: 278
+    },
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -2240,6 +2247,17 @@ function initAudioControls() {
     const volumeSlider = document.getElementById('volume-slider');
     const backgroundMusic = document.getElementById('background-music');
     
+    // Playlist configuration
+    const playlist = [
+        'music/chaaha hai tujho song.mp3',
+        'music/Music Zaroori tha.mp3',
+        'music/chhor ke na ja o piya song.mp3',
+        'music/tere hawaale song.mp3'
+    ];
+    
+    let currentSongIndex = 0;
+    let isPlaying = false;
+    
     // Load saved audio settings
     const savedVolume = localStorage.getItem('musicVolume') || 50;
     const savedMusicState = localStorage.getItem('musicPlaying') === 'true';
@@ -2248,21 +2266,46 @@ function initAudioControls() {
     volumeSlider.value = savedVolume;
     backgroundMusic.volume = savedVolume / 100;
     
-    // Ensure audio is loaded
-    backgroundMusic.load();
-    
-    // Set initial music state
-    if (savedMusicState) {
-        // Try to play music after user interaction
-        const playMusic = () => {
+    // Function to load and play current song
+    function loadAndPlayCurrentSong() {
+        backgroundMusic.src = playlist[currentSongIndex];
+        backgroundMusic.load();
+        
+        if (isPlaying) {
             backgroundMusic.play().then(() => {
                 musicToggle.classList.add('playing');
                 localStorage.setItem('musicPlaying', 'true');
-                showMusicNotification('🎵 संगीत चालू हो गया');
+                showMusicNotification(`🎵 गाना चल रहा है: ${playlist[currentSongIndex].split('/').pop().replace('.mp3', '')}`);
+                
+                // Update button icon
+                const icon = musicToggle.querySelector('i');
+                if (icon) {
+                    icon.className = 'fas fa-volume-up';
+                }
             }).catch((error) => {
-                console.log('Auto-play blocked:', error);
-                showMusicNotification('संगीत चालू करने के लिए क्लिक करें');
+                console.log('Music play failed:', error);
+                showMusicNotification('❌ संगीत चालू नहीं हो सका');
             });
+        }
+    }
+    
+    // Function to play next song
+    function playNextSong() {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        loadAndPlayCurrentSong();
+    }
+    
+    // Event listener for when song ends
+    backgroundMusic.addEventListener('ended', function() {
+        playNextSong();
+    });
+    
+    // Set initial music state
+    if (savedMusicState) {
+        isPlaying = true;
+        // Try to play music after user interaction
+        const playMusic = () => {
+            loadAndPlayCurrentSong();
         };
         
         // Try to play on first user interaction
@@ -2278,10 +2321,11 @@ function initAudioControls() {
     // Music toggle functionality
     musicToggle.addEventListener('click', function() {
         if (backgroundMusic.paused) {
+            isPlaying = true;
             backgroundMusic.play().then(() => {
                 musicToggle.classList.add('playing');
                 localStorage.setItem('musicPlaying', 'true');
-                showMusicNotification('🎵 संगीत चालू हो गया');
+                showMusicNotification(`🎵 गाना चल रहा है: ${playlist[currentSongIndex].split('/').pop().replace('.mp3', '')}`);
                 
                 // Update button icon
                 const icon = musicToggle.querySelector('i');
@@ -2294,6 +2338,7 @@ function initAudioControls() {
             });
         } else {
             backgroundMusic.pause();
+            isPlaying = false;
             musicToggle.classList.remove('playing');
             localStorage.setItem('musicPlaying', 'false');
             showMusicNotification('🔇 संगीत बंद हो गया');
@@ -2335,13 +2380,10 @@ function initAudioControls() {
             icon.className = 'fas fa-volume-up';
         }
         musicToggle.classList.add('playing');
-    } else {
-        const icon = musicToggle.querySelector('i');
-        if (icon) {
-            icon.className = 'fas fa-volume-mute';
-        }
-        musicToggle.classList.remove('playing');
     }
+    
+    // Load the first song initially
+    loadAndPlayCurrentSong();
     
     // Handle audio events
     backgroundMusic.addEventListener('loadstart', () => {
