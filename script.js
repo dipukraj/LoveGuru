@@ -405,6 +405,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  आपके mobile के keyboard में 'Y' and 'I' के बीच ek बहुत pyara इंसान है..यकीन ना हो तो खुद ही देखलौ..।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " इंतज़ार चाहे कितनी भी लम्बा हो, बस एक तरफा नहीं होना चाहिए|",
         likes: 502
     },
