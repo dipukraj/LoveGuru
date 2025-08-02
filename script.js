@@ -328,6 +328,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "   शांत चेहरों के पीछे जख्म काफी गहरे होते हैं!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "   तेरे बिना जैसे Code में semicolon की कमी, हर Line सही पर कुछ अधूरी सी लगी,function भी लिखा, logic भी strong था, पर तेरे बिना कोई output ही नहीं मिली।।",
         likes: 502
     },
