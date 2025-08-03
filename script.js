@@ -482,77 +482,126 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: " बिना जिस्म को छुए जो रूह से लिपट जाए... वो भूत होता है पागल हर चीज इश्क नहीं होती..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  ये सिर्फ़ कहावत हैं आप अगर अच्छे हो तो आपके साथ अच्छा होगा !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: " धोका तो नहीं पर साथ तो तुमने भी नहीं दिया !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: " लोग वक्त ढूँढ़ते हैं जो, बीत चुका है..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  Life is like railway station भीड़ बहुत है पर अपना कोई नहीं !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: " अपने लिए हमेशा अच्छा सोचिए ग़लत तो दुनिया सोच ही लेती है !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  ज़िंदगी पूछती है.... और कुछ चाहिए_? मैं कहता हूं जो था, वो ही लौटा दे...।",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  मोहब्बत की अपनी ही बचकानी ज़िद होती है, चुप कराने के लिए भी वही चहिए जो रुला के गया हो..!!!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  उम्र से ज़्यादा अगर समझ आ जाए. तो फिर, झुर्रियां चेहरे पर नहीं, दिल पर पड़ती हैं..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: " छींक की तरह आएगी मौत ... रूमाल ज़ेब में ही रह जाएगा !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        content: "  मिलन बहुत जरूरी है खुश रहने के लिए !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  थोड़ा वक्त गुजरने दो, जल्द ही महसूस होगा मेरा होना क्या था, मेरा न होना क्या है !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  बहुत शिकायतें हैं तुमसे मगर तुम आंसू नहीं समझे शब्द क्या समझोगे..!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  ज्यादा उम्मीदें हमेशा घाव देती हैं...!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  जो चीज़ वक्त पर न मिले, वो फिर मिले या न मिले.. क्या फर्क पड़ता है...!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Bharosa Rakh! वो यहाँ तक लाया है, तो आगे भी ले जायेगा !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  अब किसी से कोई बहस करने का मन ही नहीं करता, कोई कहे तुम गलत हो...!हाँ जी मैं गलत हूँ. तुम सही हो (खुश रहो).!!+!! !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  कभी लगता है उसकी रूह में हूँ शामिल कभी लगता है वो मेरा ज़रा सा भी नहीं !",
         likes: 502
     },
     {
@@ -574,6 +623,76 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "TU AGLE JANAM MIL SAKE DUBARA MUJHE।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " I accepted, लोग वैसे नहीं होते, जैसे नजर आते है !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " जिसे अपना कहा...उसी ने सबसे ज्यादा पराया महसूस करवाया है...।।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " रिश्ते में भरोसा इतना हो, कि सच पूछने की ज़रूरत ना पड़े, और साहस इतना हो कि झूठ बोलने की ज़रूरत ना पड़े..।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " जिससे उम्मीद हो अगर वही दिल तोड़ दे तो पूरी दुनियाँ से भरोसा उठ जाता है साहब !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " कुछ लोग वहां बदल गए जहां मुझे उनकी सबसे अधिक जरुरत थी !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " साथ तू भी तो छोड़ देगी मेरा जिंदगी तू भी तो पराई है..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " टूटी हुई डाली कहा छाव देती हैं हद से ज्यादा उम्मीदे हमेशा घाव देती हैं !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " अधूरा पाकर भी क्या करता, इसलिए पूरा छोड़ दिया !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " कुछ दर्द ऐसे मिले ज़िंदगी में, जिन्होंने जान भी ले ली, और ज़िंदा भी छोड़ दिया !",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " हकीकत से सामना हुआ तो पता चला लोग तो सिर्फ बातो से अपने थे !",
         likes: 502
     },
     {
