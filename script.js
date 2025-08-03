@@ -545,6 +545,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: " Age Is Just a Number प्यार में कोई उम्र नहीं होती है।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "  कभी backend की गलियों में खो जाते हैं, तो कभी frontend पे CSS से उलझ जाते हैं, पर layout हो या logic की बात हो, हम हर pixel को प्यार से सजाते हैं।।",
         likes: 502
     },
