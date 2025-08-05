@@ -1277,7 +1277,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   बदलना कौन चाहता है जनाब लोग मजबूर कर देते है बदलने को !!",
+        content: "   Nothing is permanent जो आज साथ है शायद कल ना हो क्या पता !!",
         likes: 502
     },
     {
