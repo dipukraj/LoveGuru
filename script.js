@@ -1298,6 +1298,62 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "   कड़वा है पर सच है मर्द मांग ले तो जिस्म, औरत खुद दे दे तो मोहब्बत !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   एक रखो और एक के ही रहो !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "   सभी के असली चेहरे न दिखा ये जिदंगी कुछ लोगों की हम इज्जत करते है..!!",
         likes: 502
     },
