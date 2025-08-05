@@ -1312,7 +1312,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   एक रखो और एक के ही रहो !!",
+        content: "   Woh Ishq hi Kya Jo Kisi Ki Chehre Se Ho Jaaye..Maza Toh Tab Hai Jab Ishq Uski Baaton Se Ho Jaaye...!!",
         likes: 502
     },
     {
