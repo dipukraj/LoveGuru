@@ -1739,7 +1739,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   पसंद एक ही रखो ..फिर चाहे मिले या ना मिले..!!",
+        content: "   Sorry and thank you , Sorry isliye ki maine aapko apna samjha Aur thank, You isliye ki aapne meri galat fehmi dur kar di !!",
         likes: 502
     },
     {
