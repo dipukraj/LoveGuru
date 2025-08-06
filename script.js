@@ -1725,7 +1725,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   पसंद एक ही रखो ..फिर चाहे मिले या ना मिले..!!",
+        content: "  Takleef bohot hai zindagi main par kisi se gila nahi, Aur koi bina bole samajh sake aisa koi mila nahi..!!",
         likes: 502
     },
     {
