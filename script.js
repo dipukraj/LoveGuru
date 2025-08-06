@@ -1718,7 +1718,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   पसंद एक ही रखो ..फिर चाहे मिले या ना मिले..!!",
+        content: "   Intizar bhi wahi kar sakta hai jisne ek hi shakhs mein puri duniya dekhi ho...!!",
         likes: 502
     },
     {
