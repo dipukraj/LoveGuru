@@ -1711,7 +1711,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   पसंद एक ही रखो ..फिर चाहे मिले या ना मिले..!!",
+        content: "  Tum biwi kisi ki bhi ban jao lekin...Mohabbat to tum meri hi rahogi...",
         likes: 502
     },
     {
