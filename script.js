@@ -219,7 +219,7 @@ const allShayaris = [
 
         likes: 280
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
