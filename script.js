@@ -231,7 +231,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " भूला देंगे तुमको, जरा सब्र तो रखो, रग रग में बसे हो, थोड़ा वक्त तो लगेगा|",
+        content: "  Pagal Sa ladka hun per Dil Se saccha hun thoda sa aawara hun lekin jaisa bhi hun Tera Deewana hun..!!",
 
         likes: 280
     },
