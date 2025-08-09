@@ -332,7 +332,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        content: " सौ मेकअप वाली एक तरफ और एक Allen T-shirt वाली मोहतरमा एक तरफ।",
         likes: 277
     },
     {
