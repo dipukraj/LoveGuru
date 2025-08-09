@@ -163,7 +163,7 @@ const allShayaris = [
 
         likes: 280
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -307,6 +307,77 @@ const allShayaris = [
         content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
         likes: 277
     },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " हो सके तो एक एहसान हम पर करना नजर में आए कभी तो देख हमें नजर अंदाज न करना, हम तो तुम्हारा कोई दुश्मन नहीं समझ लेना किसी अनजान को तुमसे मोहब्बत ही सही।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        likes: 277
+    },
+
     {
         id: 7,
         author: "Love Guru",
