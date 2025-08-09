@@ -2852,69 +2852,85 @@ body.dark-theme .analytics-number {
     }
     
     .like-btn {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.9rem !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.8rem !important;
+        gap: 0.35rem !important;
+        flex: 0 0 auto !important;
+        min-width: auto !important;
         background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
         color: white !important;
         border: none !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important;
         transition: all 0.3s ease !important;
+        line-height: 1 !important;
     }
     
     .share-btn {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.9rem !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.8rem !important;
+        gap: 0.35rem !important;
+        flex: 0 0 auto !important;
+        min-width: auto !important;
         background: linear-gradient(45deg, #4facfe, #00f2fe) !important;
         color: white !important;
         border: none !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important;
         transition: all 0.3s ease !important;
+        line-height: 1 !important;
     }
     
     .comment-btn {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.9rem !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.8rem !important;
+        gap: 0.35rem !important;
+        flex: 0 0 auto !important;
+        min-width: auto !important;
         background: linear-gradient(45deg, #8b5cf6, #7c3aed) !important;
         color: white !important;
         border: none !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important;
         transition: all 0.3s ease !important;
+        line-height: 1 !important;
     }
     
     .favorite-btn {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.9rem !important;
-        flex: 1 !important;
-        min-width: 0 !important;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.8rem !important;
+        gap: 0.35rem !important;
+        flex: 0 0 auto !important;
+        min-width: auto !important;
         background: linear-gradient(45deg, #f59e0b, #d97706) !important;
         color: white !important;
         border: none !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important;
         transition: all 0.3s ease !important;
+        line-height: 1 !important;
     }
     
     .like-btn-text {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         color: white !important;
         font-weight: 600 !important;
     }
     
     .share-btn-text {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         color: white !important;
         font-weight: 600 !important;
     }
     
     .comment-btn-text {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         color: white !important;
         font-weight: 600 !important;
+    }
+
+    /* Smaller icon size on mobile */
+    .action-buttons .like-btn i,
+    .action-buttons .share-btn i,
+    .action-buttons .comment-btn i,
+    .action-buttons .favorite-btn i {
+        font-size: 1rem !important;
     }
     
     /* Mobile Button Hover Effects */
@@ -3129,7 +3145,7 @@ body.dark-theme .analytics-number {
     }
     
     .shayari-card .action-buttons {
-        gap: 0.8rem !important;
+        gap: 0.4rem !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
     }
@@ -3139,56 +3155,60 @@ body.dark-theme .analytics-number {
         background: linear-gradient(45deg, #ff6b6b, #ff4757) !important;
         color: white !important;
         border: none !important;
-        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3) !important;
-        border-radius: 20px !important;
-        padding: 0.8rem 1.2rem !important;
-        font-size: 0.9rem !important;
+        box-shadow: 0 3px 10px rgba(255, 107, 107, 0.25) !important;
+        border-radius: 12px !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
         font-weight: 600 !important;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         position: relative !important;
         overflow: hidden !important;
+        line-height: 1 !important;
     }
     
     .shayari-card .action-buttons .share-btn {
         background: linear-gradient(45deg, #4facfe, #00f2fe) !important;
         color: white !important;
         border: none !important;
-        box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3) !important;
-        border-radius: 20px !important;
-        padding: 0.8rem 1.2rem !important;
-        font-size: 0.9rem !important;
+        box-shadow: 0 3px 10px rgba(79, 172, 254, 0.25) !important;
+        border-radius: 12px !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
         font-weight: 600 !important;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         position: relative !important;
         overflow: hidden !important;
+        line-height: 1 !important;
     }
     
     .shayari-card .action-buttons .comment-btn {
         background: linear-gradient(45deg, #8b5cf6, #7c3aed) !important;
         color: white !important;
         border: none !important;
-        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3) !important;
-        border-radius: 20px !important;
-        padding: 0.8rem 1.2rem !important;
-        font-size: 0.9rem !important;
+        box-shadow: 0 3px 10px rgba(139, 92, 246, 0.25) !important;
+        border-radius: 12px !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
         font-weight: 600 !important;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         position: relative !important;
         overflow: hidden !important;
+        line-height: 1 !important;
     }
     
     .shayari-card .action-buttons .favorite-btn {
         background: linear-gradient(45deg, #f59e0b, #d97706) !important;
         color: white !important;
         border: none !important;
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
-        border-radius: 20px !important;
-        padding: 0.8rem 1.2rem !important;
-        font-size: 0.9rem !important;
+        box-shadow: 0 3px 10px rgba(245, 158, 11, 0.25) !important;
+        border-radius: 12px !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8rem !important;
         font-weight: 600 !important;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         position: relative !important;
         overflow: hidden !important;
+        line-height: 1 !important;
     }
     
     /* Hover effects */
