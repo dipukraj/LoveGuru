@@ -339,7 +339,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " तुम पर शक नहीं हक था, अब ना शक है और ना ही हक।",
+        content: "  हम B.Tech Student Wale हैं साहब दिल तोड़ने की नहीं जोड़ने का काम करते हैं।",
         likes: 277
     },
     {
