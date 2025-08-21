@@ -508,7 +508,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " इतना मत रूठा करो तुम मुझसे, तुम मेरी किस्मत में वैसे भी नहीं हो।",
+        content: "  ।। Percentage सा सीधा हु मैं, तुम Geometry जैसी कठिन प्रिय...तुम पढ़ती Allen से, और मैं IIT Phulpura का फैन प्रिय..।।",
         likes: 502
     },
     {
