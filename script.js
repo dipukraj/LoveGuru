@@ -515,7 +515,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " इतना मत रूठा करो तुम मुझसे, तुम मेरी किस्मत में वैसे भी नहीं हो।",
+        content: " ।। मैं Self Study करने वाला Middle Class छात्र, तुम बड़े Coaching की Queen प्रिय...तुम Allen की दिवानी और मैं IIT Phulpura का Fan प्रिय..।।",
         likes: 502
     },
     {
