@@ -658,6 +658,27 @@ const allShayaris = [
         content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
         likes: 502
     },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  एक अच्छी दोस्त महिला मित्र होती हैं पार्थ जो सलाह और साथ दोनों देती हैं।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  Ek Chehra Agar Dil Me Buss Jaaye, Toh Laakh Haseen Mile Fark Nahi Padta |",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
         {
         id: 7,
         author: "Love Guru",
