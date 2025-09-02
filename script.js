@@ -887,6 +887,12 @@ const allShayaris = [
         date: "2 महीने पहले",
         content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
         likes: 502
+    },{
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
     },
         {
         id: 7,
