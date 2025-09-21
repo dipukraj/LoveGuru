@@ -996,7 +996,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  आज तक मेने जिसको जितनी IMPORTANCE दी है उसने उसी LEVAL पर जाकर मुझे HURT किया है !!",
         likes: 502
     },
     {
