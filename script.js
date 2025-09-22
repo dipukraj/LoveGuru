@@ -1339,7 +1339,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  जब समय खराब हो तो सुकून, देने वाला भी दर्द दे जाता हैं।।",
         likes: 502
     },
     {
