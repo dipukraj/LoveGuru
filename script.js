@@ -1199,91 +1199,91 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: " मेरी कमियों पर मुझे, कोई परदा चाहिए ही नही, मैं उस रब के अलावा, किसी भी राय की परवाह नहीं करती..!!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  हो सकता है भाग्य में न होना ही भाग्य हो !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  बोझ बन जाने से याद बन जाना बेहतर है..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  Itne bhi mature nahi hona tha ki koi hurt bhi kare toh khud se pehle uski situation samjhne lago :)",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  दर्द सहते सहते इंसान सिर्फ.. हँसना नहीं रोना भी छोड़ देता है..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  Kisike bina udaas ho To accha hai, Kisike saath rehkar bhi udaas ho To masla hai !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  मुझे वहां से पढ़िए जहां से मैं ख़ामोश हूं, ये हंसना और हंसाना तो मेरा हुनर है।",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  कोई समझे या ना समझे कोई फर्क नहीं पड़ता लेकिन जिससे उम्मीद हो अगर वो भी ना समझे तो बहुत दर्द होता है..!!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  बुरा कैसे कह दे वक्त को, यही तो सबकी असलियत बताता है !",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  भगवत गीता में लिखा है... अहंकार भी आवश्यक है जब बात PURPORT अधिकार, चरित्र और सम्मान की हो..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  वक्त और रिश्ते, किसी के साथ हम वक्त को भूल जाते हैं और कोई वक्त के साथ हमें भूल जाता है और यही ज़िन्दगी है..!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  पता है, जो सहना सीख जाते है ना वो अक्सर कहना छोड़ देते है ।",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  हमने सहना सीख लिया, कुछ ना कहना सीख लिया... बोलते तो बात और बिगड़ जाती, इसीलिए हमने चुप रहना सिख लिया..!",
         likes: 502
     },
     {
