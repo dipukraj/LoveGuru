@@ -1297,6 +1297,55 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  तुम्हे तो सारे दुख बताए थे, तुमने भी दुख दे दिया!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
         likes: 502
     },
