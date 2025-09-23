@@ -1458,7 +1458,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        content: "  ज़िंदगी में tension ऐसे पीछे पड़ी हैं जैसे उसका पहला प्यार मैं ही हूं...!!",
         likes: 502
     },
     {
