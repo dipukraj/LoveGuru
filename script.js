@@ -1416,6 +1416,62 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  मुझे गुरूर है अपने किरदार पर.. मैं जान वार दु अगर मुझे मुझ जैसा कोई मिल जाए...!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " प्रेम का एक ही password हैं...और वो हैं...(भरोसा)।",
         likes: 502
     },
