@@ -1765,14 +1765,14 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   शांत चेहरों के पीछे जख्म काफी गहरे होते हैं!",
+        content: "    काश लाइफ में भी, Create A New Account का Option होता...!!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   शांत चेहरों के पीछे जख्म काफी गहरे होते हैं!",
+        content: "   नए सफर में खामोशी को चुना है मैने, क्योंकि बिना गलती के बहुत कुछ सुना है मैने..!!",
         likes: 502
     },
     {
