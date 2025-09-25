@@ -1849,7 +1849,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   शांत चेहरों के पीछे जख्म काफी गहरे होते हैं!",
+        content: "    8वीं की TC और B .Tech की मोहब्बत, ज़िन्दगी में कभी काम नहीं आती !",
         likes: 502
     },
     {
