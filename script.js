@@ -1835,7 +1835,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   शांत चेहरों के पीछे जख्म काफी गहरे होते हैं!",
+        content: "    Dekh tu Idki achi hai, par muh utha ke kisi par bhi trust mat kiya kar",
         likes: 502
     },
     {
