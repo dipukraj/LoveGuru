@@ -1940,35 +1940,77 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   समय का खेल है, जिसका आ गया वो छा गया।",
+        content: "   जितना ज़्यादा दूर से देखोगे, लोग उतने ज़्यादा अच्छे लगेंगे !!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   समय का खेल है, जिसका आ गया वो छा गया।",
+        content: "   जब मैं अपनी जिद पर आता हूँ, तो सिर्फ जिद देखता हूँ, नुकसान नहीं..!!",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   समय का खेल है, जिसका आ गया वो छा गया।",
+        content: "    अपनेपन का दिखावा ना करें जनाब, ये चेहरे परखलेने की पुरानी आदत है मेरी",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   समय का खेल है, जिसका आ गया वो छा गया।",
+        content: "   Suna tha shiddat se chaho to..! Puri kaaynat milane me lag jati hai..❤️Jhuth hai mujhse toh har wo chiz dur chali Gayi Jisse maine shiddat se chaha tha...",
         likes: 502
     },
     {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "   समय का खेल है, जिसका आ गया वो छा गया।",
+        content: "   उससे बात करने का मन तो बहुत करता है, लेकिन जो मेरे बिना खुश है उसे क्यों परेशान करु",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  मीठे लोगों से मिलकर मैने जाना, कड़वे लोग अक्सर सच्चे होते हैं।",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   !! जिंदगी का आखरी डर तुमसे बिछड़ने का था !! अफ़सोस अब वो भी देख चुके !!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   dimang pr zor laga kar ginte ho galtiyan meri..!! kabhi dil pr hath rakh kar puchna ki kasoor kiska tha..!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   औरत की zindagi में अपनी jagah देखनी है तो, उसे gussa दिलाओ तुम्हारी jagah कहां है पता चल जाएगी...!!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   अब मैं आखरी बार बोल रहा हूं...मैं तुझसे सच्चा प्यार करता हूं, और मुझे हर उस इंसान से दिक्कत होगी !जो तेरे करीब आने की कोशिश करेगा?और मुझे उससे भी ज्यादा दिक्कत तब होगी, जब तू उसे भाव देगी... और उसके थोड़ा भी करीब जाएगी...!",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "   अब अपने प्यार का और क्या सबूत दूँ तुझे, तू अपना बर्ताव देख और मेरा सब्र देख !! बात गहरी है फिर से पढ़ो...!!",
         likes: 502
     },
     {
