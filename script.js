@@ -2178,7 +2178,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  मीठे लोगों से मिलकर मैने जाना, कड़वे लोग अक्सर सच्चे होते हैं।",
+        content: "  Let the miracles begin because, जब आप ढूँढना छोड़ देते है, तो आपको सब मिल जाता है !",
         likes: 502
     },
     {
