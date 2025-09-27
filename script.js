@@ -44,7 +44,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: " मैने मां से पूछा Computer इतने स्मार्ट क्यों होते हैं...? मां का सुंदर जवाब... क्योंकि Computer अपने Motherboard की सुनते हैं..!!",
+        content: "  ज़िंदगी में गलतियाँ करने से डरना मत, बस वो गलती मत करना जो करते समय गुनाह लगे..!!",
         likes: 203
     },
     {
@@ -2291,6 +2291,13 @@ const allShayaris = [
         author: "Love Guru",
         date: "2 महीने पहले",
         content: " इंतज़ार चाहे कितनी भी लम्बा हो, बस एक तरफा नहीं होना चाहिए|",
+        likes: 502
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  मैने मां से पूछा Computer इतने स्मार्ट क्यों होते हैं...? मां का सुंदर जवाब... क्योंकि Computer अपने Motherboard की सुनते हैं..!!",
         likes: 502
     },
     {
