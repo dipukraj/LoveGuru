@@ -2192,7 +2192,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  मीठे लोगों से मिलकर मैने जाना, कड़वे लोग अक्सर सच्चे होते हैं।",
+        content: "   I believe in कहीं का किया, कहीं तो अवश्य मिलता है !!",
         likes: 502
     },
     {
