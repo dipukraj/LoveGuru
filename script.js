@@ -79,6 +79,13 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  इस बार तो तुम मुझे नहीं मिली, अगली बार फिर आऊंगा उस बार भी नहीं मिली मुझे तुम, तो फिर मैं पीछे हट जाऊंगा ।।",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " Node ने पकड़ी backend की कमान, MongoDB बोला - अब data मेरी जान, Express ने सबको किया connect, MERN stack बना, बन गया perfect ।",
         likes: 189
     },
