@@ -114,7 +114,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  इस बार तो तुम मुझे नहीं मिली, अगली बार फिर आऊंगा उस बार भी नहीं मिली मुझे तुम, तो फिर मैं पीछे हट जाऊंगा ।।",
+        content: "  Mandir dekhte hi usko mangne ki aadat ho rakhi hai ।।",
         likes: 189
     },
     {
