@@ -425,6 +425,14 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "  जो देर से मिलता है, वो जीवन भर चलता है ।",
+
+        likes: 280
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: "  मेरी जिंदगी की किताब में, तुम्हारा पन्ना हमेशा ख़ास रहेगा मेरे दोस्त ।",
 
         likes: 280
