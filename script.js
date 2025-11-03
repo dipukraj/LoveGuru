@@ -401,7 +401,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  मेरी जिंदगी की किताब में, तुम्हारा पन्ना हमेशा ख़ास रहेगा मेरे दोस्त ।",
+        content: "  I Accepted हर किसी को ज़बरदस्ती अपना नहीं बना सकते।",
 
         likes: 280
     },
