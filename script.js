@@ -745,7 +745,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: " इतना मत रूठा करो तुम मुझसे, तुम मेरी किस्मत में वैसे भी नहीं हो।",
+        content: "  Life में सब कुछ मिल जाता है बस वही नहीं मिलता जो दिल chahta है !!",
         likes: 502
     },
     {
