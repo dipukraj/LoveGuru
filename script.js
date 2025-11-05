@@ -198,6 +198,34 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
+        content: "   काश वो मेरी होती, या कभी मिली ही ना होती !!",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  फ़िक्र कैसे ना करूँ तुम्हारी तुम एकलौती पसंद हो हमारी !",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  फ़िक्र कैसे ना करूँ तुम्हारी तुम एकलौती पसंद हो हमारी !",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
+        content: "  फ़िक्र कैसे ना करूँ तुम्हारी तुम एकलौती पसंद हो हमारी !",
+        likes: 189
+    },
+    {
+        id: 7,
+        author: "Love Guru",
+        date: "2 महीने पहले",
         content: " Node ने पकड़ी backend की कमान, MongoDB बोला - अब data मेरी जान, Express ने सबको किया connect, MERN stack बना, बन गया perfect ।",
         likes: 189
     },
