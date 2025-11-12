@@ -111,6 +111,13 @@ const allShayaris = [
         likes: 203
     },
     {
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   अगर कष्ट मुझे है तो कर्म भी मेरे ही होंगे...फिर आपसे क्या शिकायत माधव...!!",
+        likes: 203
+    },
+    {
         id: 6,
         author: "Love Guru",
         date: "1 महीना पहले",
