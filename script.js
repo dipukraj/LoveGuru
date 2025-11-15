@@ -162,7 +162,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    मैं नहीं कहता कि मुझे ज़िन्दगी का हिस्सा बनाए रखना, बस दूर होकर भी दूरी न लगे इतना सा रिश्ता बनाए रखना...!!",
         likes: 203
     },{
         id: 5,
