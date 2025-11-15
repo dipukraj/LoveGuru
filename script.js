@@ -126,7 +126,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    My life is full of..सोचा कुछ, हुआ कुछ, मिला कुछ...!!",
         likes: 203
     },{
         id: 5,
