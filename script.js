@@ -114,6 +114,73 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
+        content: "   कि खो के मुझे तुम पा न सकोगी, हम तुम्हें वहां मिलेंगे जहां तुम आ न सकोगी..!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },{
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
+        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        likes: 203
+    },
+    {
+        id: 5,
+        author: "Love Guru",
+        date: "1 महीना पहले",
         content: "   रबर ने पेंसिल से कहा, तू गलती करती रह...मैं मिटाता रहूंगा...पर इतनी भी गलतियां मत करना...की मैं ही खत्म हो जाऊ...!!",
         likes: 203
     },
