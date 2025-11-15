@@ -120,7 +120,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    ना जाने कौन सी शिकायतों के हम शिकार हो गए, जितना दिल साफ रखा उतने गुनहगार हो गए...!!",
         likes: 203
     },{
         id: 5,
