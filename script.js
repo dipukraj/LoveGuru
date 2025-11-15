@@ -138,7 +138,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    सबसे सस्ती चीज है दर्द, जो हर कोई मुफ़्त में देकर चला जाता है...!!",
         likes: 203
     },{
         id: 5,
