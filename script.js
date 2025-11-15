@@ -150,7 +150,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    बात करने की जिद उसी से करो, जो आपसे बात करके खुश हो, उनसे नहीं जो आपसे परेशान हों...!!",
         likes: 203
     },{
         id: 5,
