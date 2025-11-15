@@ -144,7 +144,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "    ख़ामोशी को समझने वाले अगर मिल जाए तो दुःख भी बयान करने की जरूरत नहीं पड़ती...!!",
         likes: 203
     },{
         id: 5,
