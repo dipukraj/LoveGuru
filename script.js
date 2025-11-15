@@ -156,7 +156,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "   हम किसी भी उम्र में मिल सकते है तुम मेरे हिस्से की मोहब्बत बचा के रखना...!!",
         likes: 203
     },{
         id: 5,
