@@ -51,7 +51,7 @@ const allShayaris = [
         id: 4,
         author: "Love Guru",
         date: "3 सप्ताह पहले",
-        content: " ना सुंदर होगी ना सयानी होगी, अपनी वाली तो बस Computer की दीवानी होगी..!!",
+        content: "  Silent is not always 'Ego' Sometimes it's hides a 'lot of pain'..!!",
         likes: 156
     },
     {
