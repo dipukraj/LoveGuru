@@ -135,7 +135,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "   Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
+        content: "Aaj Se Apna Waada Raha हम मिलेंगे हर एक मोड पर...!!",
         likes: 203
     },
     {
