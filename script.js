@@ -154,7 +154,7 @@ const allShayaris = [
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
-        content: "    My life is full of..सोचा कुछ, हुआ कुछ, मिला कुछ...!!",
+        content: "My life is full of..सोचा कुछ, हुआ कुछ, मिला कुछ...!!",
         likes: 203
     },{
         id: 5,
