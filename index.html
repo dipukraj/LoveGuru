@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="style.css?v=4.1">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
 <body>
     <!-- Floating Particles -->
@@ -167,6 +169,24 @@
                     <div class="analytics-content">
                         <h3 class="analytics-number" id="total-views">0</h3>
                         <p class="analytics-label">कुल व्यूज़</p>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <div class="analytics-content">
+                        <h3 class="analytics-number" id="total-shayaris">0</h3>
+                        <p class="analytics-label">कुल शायरी</p>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <div class="analytics-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="analytics-content">
+                        <h3 class="analytics-number" id="total-visitors">0</h3>
+                        <p class="analytics-label">कुल विज़िटर</p>
                     </div>
                 </div>
             </div>
@@ -411,6 +431,7 @@
         </div>
     </footer>
 
+    <script src="firebase-config.js"></script>
     <script src="script.js?v=4.1"></script>
 </body>
 </html>

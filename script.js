@@ -4640,6 +4640,15 @@ addShayariForm.addEventListener('submit', function(e) {
             likes: 0,
             timestamp: Date.now() // <-- add timestamp
         };
+
+        // Track in Firebase (real totals)
+        if (window.realTimeDB && window.realTimeDB.addShayari) {
+            try {
+                window.realTimeDB.addShayari(newShayari);
+            } catch (err) {
+                // ignore
+            }
+        }
         
         // Add to DOM
         addShayariToDOM(newShayari, true);
@@ -4868,10 +4877,16 @@ function showLikeNotification(likeBtn, message) {
                 favoriteBtn.classList.add('favorited');
                 addToFavorites(shayariId);
                 showFavoriteNotification('⭐ फेवरिट में जोड़ा गया!');
+                if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                    window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', 1);
+                }
             } else {
                 favoriteBtn.classList.remove('favorited');
                 removeFromFavorites(shayariId);
                 showFavoriteNotification('💔 फेवरिट से हटा दिया गया');
+                if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                    window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', -1);
+                }
             }
             updateAnalytics();
             return;
@@ -4894,6 +4909,11 @@ function showLikeNotification(likeBtn, message) {
             
             // Save like state to localStorage
             saveLikeState(shayariId, true, likes + 1);
+
+            // Track in Firebase (real totals)
+            if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                window.realTimeDB.trackShayariInteraction(shayariId, 'likes', 1);
+            }
             
             // Show like notification
             showLikeNotification(likeBtn, '❤️ लाइक किया गया!');
@@ -4905,6 +4925,11 @@ function showLikeNotification(likeBtn, message) {
             
             // Save like state to localStorage
             saveLikeState(shayariId, false, likes - 1);
+
+            // Track in Firebase (real totals)
+            if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                window.realTimeDB.trackShayariInteraction(shayariId, 'likes', -1);
+            }
             
             // Show unlike notification
             showLikeNotification(likeBtn, '💔 लाइक हटा दिया गया');
@@ -5110,6 +5135,18 @@ function setupCommentFeatures() {
             saveComments(shayariId, comments);
             renderComments(card, shayariId);
             commentInput.value = '';
+
+            // Track in Firebase (real totals)
+            if (window.realTimeDB && window.realTimeDB.addComment) {
+                try {
+                    window.realTimeDB.addComment(shayariId, {
+                        text: comment,
+                        author: 'Anonymous User'
+                    });
+                } catch (err) {
+                    // ignore
+                }
+            }
         });
     });
 }
@@ -5326,6 +5363,15 @@ function saveGeneratedShayari() {
     
     // Add to DOM
     addShayariToDOM(newShayari, true);
+
+    // Track in Firebase (real totals)
+    if (window.realTimeDB && window.realTimeDB.addShayari) {
+        try {
+            window.realTimeDB.addShayari(newShayari);
+        } catch (err) {
+            // ignore
+        }
+    }
     
     // Close AI modal
     document.getElementById('ai-generator-modal').classList.remove('active');
@@ -5771,8 +5817,19 @@ function isFavorited(shayariId) {
     return favorites.includes(shayariId);
 }
 
-// Analytics System
+// Enhanced Analytics System with Real-time Database Integration
 function updateAnalytics() {
+    // Try to use real-time database if available
+    if (window.realTimeDB) {
+        console.log('Using real-time database for analytics');
+        return; // Real-time DB handles updates automatically
+    }
+    
+    // Fallback to static calculation
+    calculateStaticAnalytics();
+}
+
+function calculateStaticAnalytics() {
     // Calculate total likes
     const likeElements = document.querySelectorAll('.like-count');
     let totalLikes = 0;
@@ -5794,16 +5851,110 @@ function updateAnalytics() {
     const totalViews = Math.floor(totalLikes * 10 + Math.random() * 100);
     
     // Update analytics display
-    document.getElementById('total-likes').textContent = totalLikes.toLocaleString();
-    document.getElementById('total-favorites').textContent = totalFavorites.toLocaleString();
-    document.getElementById('total-comments').textContent = totalComments.toLocaleString();
-    document.getElementById('total-views').textContent = totalViews.toLocaleString();
+    updateAnalyticsDisplay({
+        totalLikes,
+        totalFavorites,
+        totalComments,
+        totalViews
+    });
+}
+
+function updateAnalyticsDisplay(data) {
+    const updates = {
+        'total-likes': data.totalLikes || 0,
+        'total-favorites': data.totalFavorites || 0,
+        'total-comments': data.totalComments || 0,
+        'total-views': data.totalViews || 0,
+        // Prefer real DB value; otherwise fall back to local shayari array length.
+        'total-shayaris': data.totalShayaris ?? (Array.isArray(allShayaris) ? allShayaris.length : 0),
+        'online-visitors': data.onlineVisitors || Math.floor(Math.random() * 50) + 10
+    };
     
-    // Animate numbers
-    animateNumber('total-likes', totalLikes);
-    animateNumber('total-favorites', totalFavorites);
-    animateNumber('total-comments', totalComments);
-    animateNumber('total-views', totalViews);
+    console.log('Updating analytics display:', updates);
+    
+    Object.entries(updates).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = value.toLocaleString();
+            animateNumber(id, value);
+        } else {
+            console.log('Element not found:', id);
+        }
+    });
+}
+
+// Make function global for firebase-config.js
+window.updateAnalyticsDisplay = updateAnalyticsDisplay;
+
+// Enhanced like function with real-time tracking
+function likeShayari(shayariId) {
+    // Track in real-time database
+    if (window.realTimeDB) {
+        window.realTimeDB.trackShayariInteraction(shayariId, 'likes');
+    }
+    
+    // Update local display
+    const likeBtn = document.querySelector(`[data-shayari-id="${shayariId}"] .like-btn`);
+    const likeCount = document.querySelector(`[data-shayari-id="${shayariId}"] .like-count`);
+    
+    if (likeBtn && likeCount) {
+        const currentLikes = parseInt(likeCount.textContent) || 0;
+        likeCount.textContent = currentLikes + 1;
+        likeBtn.classList.add('liked');
+        likeBtn.disabled = true;
+    }
+}
+
+// Enhanced comment function with real-time tracking
+function addComment(shayariId, commentText) {
+    const comment = {
+        text: commentText,
+        author: 'Anonymous User',
+        timestamp: new Date().toISOString()
+    };
+    
+    // Track in real-time database
+    if (window.realTimeDB) {
+        window.realTimeDB.addComment(shayariId, comment);
+    }
+    
+    // Update local display
+    const commentsContainer = document.querySelector(`[data-shayari-id="${shayariId}"] .comments-container`);
+    if (commentsContainer) {
+        const commentElement = createCommentElement(comment);
+        commentsContainer.appendChild(commentElement);
+        
+        // Update comment count
+        const commentCount = document.querySelector(`[data-shayari-id="${shayariId}"] .comment-count`);
+        if (commentCount) {
+            const currentCount = parseInt(commentCount.textContent) || 0;
+            commentCount.textContent = currentCount + 1;
+        }
+    }
+}
+
+function createCommentElement(comment) {
+    const div = document.createElement('div');
+    div.className = 'comment';
+    div.innerHTML = `
+        <div class="comment-header">
+            <strong>${comment.author}</strong>
+            <span class="comment-time">${formatTime(comment.timestamp)}</span>
+        </div>
+        <div class="comment-text">${comment.text}</div>
+    `;
+    return div;
+}
+
+function formatTime(timestamp) {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diff = now - date;
+    
+    if (diff < 60000) return 'Just now';
+    if (diff < 3600000) return `${Math.floor(diff / 60000)} minutes ago`;
+    if (diff < 86400000) return `${Math.floor(diff / 3600000)} hours ago`;
+    return `${Math.floor(diff / 86400000)} days ago`;
 }
 
 // Animate number counting
@@ -6307,6 +6458,21 @@ document.addEventListener('DOMContentLoaded', function() {
         initAudioControls();
         initCategories();
         initAIGenerator();
+
+        // Seed total shayaris once (for "real" total shayari count)
+        if (window.realTimeDB && window.realTimeDB.db) {
+            try {
+                window.realTimeDB.db.ref('analytics/totalShayaris').transaction((current) => {
+                    const cur = typeof current === 'number' ? current : 0;
+                    const localCount = Array.isArray(allShayaris) ? allShayaris.length : 0;
+                    // Never decrease an already-increased total (e.g., new shayaris added by users),
+                    // but correct older demo/stale values.
+                    return Math.max(cur, localCount);
+                });
+            } catch (err) {
+                // ignore
+            }
+        }
         
         // Initialize analytics and trending
         setTimeout(() => {

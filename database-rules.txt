@@ -1,0 +1,34 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "visitors": {
+      "$visitorId": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "analytics": {
+      ".read": true,
+      ".write": true
+    },
+    "shayaris": {
+      "$shayariId": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "comments": {
+      "$shayariId": {
+        "$commentId": {
+          ".read": true,
+          ".write": true
+        }
+      }
+    },
+    "onlineVisitors": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}
