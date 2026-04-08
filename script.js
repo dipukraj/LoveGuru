@@ -4515,7 +4515,10 @@ const allShayaris = [
 ];
 
 // Load more functionality
-let loadedShayaris = 5;
+const PAGE_SIZE = 5;
+let currentCategory = 'all';
+let filteredShayaris = allShayaris;
+let loadedShayaris = 0;
 loadMoreBtn.addEventListener('click', function() {
     // Show loading state
     loadMoreBtn.disabled = true;
@@ -4524,10 +4527,10 @@ loadMoreBtn.addEventListener('click', function() {
     // Simulate API call with setTimeout
     setTimeout(function() {
         // Check if there are more shayaris to load
-        if (loadedShayaris < allShayaris.length) {
+        if (loadedShayaris < filteredShayaris.length) {
             let count = 0;
-            while (loadedShayaris < allShayaris.length && count < 5) {
-                const shayari = allShayaris[loadedShayaris];
+            while (loadedShayaris < filteredShayaris.length && count < PAGE_SIZE) {
+                const shayari = filteredShayaris[loadedShayaris];
                 addShayariToDOM(shayari);
                 loadedShayaris++;
                 count++;
@@ -4535,7 +4538,7 @@ loadMoreBtn.addEventListener('click', function() {
             // --- FIX: Re-attach comment features after loading more ---
             setupCommentFeatures();
             // --- END FIX ---
-            if (loadedShayaris >= allShayaris.length) {
+            if (loadedShayaris >= filteredShayaris.length) {
                 loadMoreBtn.disabled = true;
                 loadMoreBtn.textContent = 'कोई और शायरी नहीं है';
                 loadMoreBtn.classList.remove('hover:bg-pink-50');
@@ -4641,6 +4644,9 @@ addShayariForm.addEventListener('submit', function(e) {
             timestamp: Date.now() // <-- add timestamp
         };
 
+            // Include in local dataset so category filtering works
+            allShayaris.unshift(newShayari);
+
         // Track in Firebase (real totals)
         if (window.realTimeDB && window.realTimeDB.addShayari) {
             try {
@@ -4649,9 +4655,13 @@ addShayariForm.addEventListener('submit', function(e) {
                 // ignore
             }
         }
-        
-        // Add to DOM
-        addShayariToDOM(newShayari, true);
+
+            // Add to DOM (or re-render current category list)
+            if (currentCategory && currentCategory !== 'all') {
+                filterShayarisByCategory(currentCategory);
+            } else {
+                addShayariToDOM(newShayari, true);
+            }
         
         // Reset form
         shayariTextArea.value = '';
@@ -5153,13 +5163,30 @@ function setupCommentFeatures() {
 
 // On page load, render first 5 shayaris
 function renderInitialShayaris() {
+    // Reset list + DOM based on current category
+    shayariContainer.innerHTML = '';
+    filteredShayaris = currentCategory === 'all'
+        ? allShayaris
+        : getShayarisForCategory(currentCategory);
+
     let count = 0;
-    while (count < 5 && count < allShayaris.length) {
-        addShayariToDOM(allShayaris[count]);
+    while (count < PAGE_SIZE && count < filteredShayaris.length) {
+        addShayariToDOM(filteredShayaris[count]);
         count++;
     }
     loadedShayaris = count;
 }
+
+// Get shayaris list for a selected category
+function getShayarisForCategory(category) {
+    if (category === 'all') return allShayaris;
+    
+    return allShayaris.filter((shayari) => {
+        const text = `${shayari.content || ''} ${shayari.author || ''}`.toLowerCase();
+        return checkCategoryMatch(text, category);
+    });
+}
+
 // Categories System
 function initCategories() {
     const categoryTabs = document.querySelectorAll('.category-tab');
@@ -5180,34 +5207,27 @@ function initCategories() {
 
 // Filter shayaris by category
 function filterShayarisByCategory(category) {
-    const shayariCards = document.querySelectorAll('.shayari-card');
-    
-    if (category === 'all') {
-        shayariCards.forEach(card => {
-            card.style.display = 'block';
-            card.style.animation = 'fadeIn 0.5s ease';
-        });
-        return;
+    currentCategory = category;
+    filteredShayaris = getShayarisForCategory(category);
+
+    // Render ALL matched shayaris for that category (so results never appear empty)
+    shayariContainer.innerHTML = '';
+    let count = 0;
+    while (count < filteredShayaris.length) {
+        addShayariToDOM(filteredShayaris[count]);
+        count++;
     }
-    
-    let visibleCount = 0;
-    shayariCards.forEach(card => {
-        const shayariText = card.querySelector('.shayari-content p').textContent.toLowerCase();
-        
-        // Simple category detection based on keywords
-        const isInCategory = checkCategoryMatch(shayariText, category);
-        
-        if (isInCategory) {
-            card.style.display = 'block';
-            card.style.animation = 'fadeIn 0.5s ease';
-            visibleCount++;
-        } else {
-            card.style.display = 'none';
-        }
-    });
-    
+    loadedShayaris = count;
+
+    // Re-attach comment/toggle listeners for newly rendered cards
+    setupCommentFeatures();
+
+    // Since we render all, disable load more
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.textContent = 'इस कैटेगरी में और शायरी नहीं है';
+
     // Show category notification
-    showCategoryNotification(category, visibleCount);
+    showCategoryNotification(category, loadedShayaris);
 }
 
 // Check if shayari matches category
