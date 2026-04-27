@@ -5885,6 +5885,7 @@ function initAudioControls() {
     
     // Playlist configuration
     const playlist = [
+        'music/Aawaara Angaara song.mp3',
         'music/chaaha hai tujho song.mp3',
         'music/Music Zaroori tha.mp3',
         'music/chhor ke na ja o piya song.mp3',
