@@ -4018,7 +4018,8 @@ body.dark-theme .image-preview-container {
 .card-export-preview {
     width: 100%;
     max-width: 380px;
-    aspect-ratio: 1;
+    min-height: 380px;
+    height: auto;
     border-radius: 20px;
     padding: 35px;
     display: flex;

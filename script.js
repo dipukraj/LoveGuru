@@ -7402,12 +7402,67 @@ function initInteractiveCardActions() {
                 
                 const utterance = new SpeechSynthesisUtterance(text);
                 const voices = window.speechSynthesis.getVoices();
-                const hindiVoice = voices.find(voice => voice.lang.includes('hi'));
-                if (hindiVoice) {
-                    utterance.voice = hindiVoice;
+                
+                // Find all Hindi voices
+                const hindiVoices = voices.filter(voice => voice.lang.toLowerCase().includes('hi'));
+                let selectedVoice = null;
+                
+                if (hindiVoices.length > 0) {
+                    // List of female Hindi voice identifiers (in order of quality and preference)
+                    const femaleKeywords = ['swara', 'google हिन्दी', 'google hindi', 'kalpana', 'lekha', 'female', 'woman'];
+                    const maleKeywords = ['madhur', 'hemant', 'male', 'man'];
+                    
+                    // 1. Look for an explicit female voice by keyword
+                    for (const keyword of femaleKeywords) {
+                        const match = hindiVoices.find(voice => {
+                            const nameLower = voice.name.toLowerCase();
+                            return nameLower.includes(keyword) && !maleKeywords.some(m => nameLower.includes(m));
+                        });
+                        if (match) {
+                            selectedVoice = match;
+                            break;
+                        }
+                    }
+                    
+                    // 2. Fallback to any Hindi voice that doesn't have male keywords
+                    if (!selectedVoice) {
+                        selectedVoice = hindiVoices.find(voice => {
+                            const nameLower = voice.name.toLowerCase();
+                            return !maleKeywords.some(m => nameLower.includes(m));
+                        });
+                    }
+                    
+                    // 3. Fallback to the first available Hindi voice
+                    if (!selectedVoice) {
+                        selectedVoice = hindiVoices[0];
+                    }
                 }
                 
-                utterance.rate = 0.8; // Soulful emotional pace
+                // Fallback to English/generic female voice if no Hindi voice is found at all
+                if (!selectedVoice && voices.length > 0) {
+                    const femaleEngKeywords = ['zira', 'samantha', 'karen', 'moira', 'tessa', 'veena', 'susan', 'hazel', 'female', 'woman'];
+                    for (const keyword of femaleEngKeywords) {
+                        const match = voices.find(voice => voice.name.toLowerCase().includes(keyword));
+                        if (match) {
+                            selectedVoice = match;
+                            break;
+                        }
+                    }
+                    
+                    // Absolute fallback
+                    if (!selectedVoice) {
+                        selectedVoice = voices.find(voice => voice.default) || voices[0];
+                    }
+                }
+                
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                    console.log("Selected voice for narration:", selectedVoice.name, selectedVoice.lang);
+                }
+                
+                // Adjusting pitch and rate to make the female voice sound sweeter, attractive, and soulful
+                utterance.pitch = 1.15; // Slightly sweeter/clear tone for female voice
+                utterance.rate = 0.82;  // Slow, heartfelt/emotional pace for Shayari narration
                 
                 utterance.onend = function() {
                     btn.classList.remove('speaking');
