@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <title>Love Guru - रोमांटिक शायरी</title>
 
     <link rel="icon" type="image/jpg" href="/image/Love guru logo.webp">
-    
+
     <!-- PWA Meta Tags - Disabled -->
     <!-- <meta name="theme-color" content="#ff6b6b"> -->
     <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
@@ -17,42 +18,33 @@
     <!-- <meta name="apple-mobile-web-app-title" content="Love Guru"> -->
     <!-- <meta name="msapplication-TileColor" content="#ff6b6b"> -->
     <!-- <meta name="msapplication-config" content="/browserconfig.xml"> -->
-    
+
     <!-- PWA Manifest - Disabled -->
     <!-- <link rel="manifest" href="/manifest.json"> -->
-    
+
     <!-- Apple Touch Icons - Disabled -->
     <!-- <link rel="apple-touch-icon" href="/icon-192x192.png"> -->
     <!-- <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png"> -->
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png"> -->
     <!-- <link rel="apple-touch-icon" sizes="167x167" href="/icon-167x167.png"> -->
-    
+
     <!-- Favicon - Fixed for GitHub Pages -->
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png"> -->
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png"> -->
     <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
-    
+
     <link rel="stylesheet" href="style.css?v=4.1">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
 </head>
+
 <body>
-    <!-- Floating Particles -->
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-    
+    <!-- Interactive Canvas Particles -->
+    <canvas id="particle-canvas"></canvas>
+
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -64,10 +56,10 @@
                 <button class="mobile-theme-toggle-nav" id="mobile-theme-toggle-nav" title="डार्क मोड में बदलें">
                     <i class="fas fa-moon"></i>
                 </button>
-            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
             <ul class="nav-menu" id="nav-menu">
@@ -83,7 +75,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
         <div class="mobile-menu-content">
@@ -363,6 +355,77 @@
         </div>
     </div>
 
+    <!-- Share as Image Customizer Modal -->
+    <div id="image-generator-modal" class="modal-overlay">
+        <div class="modal-content image-modal">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-image"></i>
+                    शायरी कार्ड कस्टमाइज़र
+                </h3>
+                <button class="modal-close" id="close-image-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="image-generator-content">
+                <div class="image-preview-container">
+                    <div id="card-export-preview" class="card-export-preview gradient-bg-1">
+                        <div class="preview-hearts-bg"></div>
+                        <div class="preview-card-body">
+                            <i class="fas fa-quote-left quote-icon-preview"></i>
+                            <p class="preview-card-text" id="preview-text">यहाँ आपकी शायरी का पूर्वावलोकन दिखेगा...</p>
+                            <span class="preview-card-author" id="preview-author">- Love Guru</span>
+                        </div>
+                        <div class="preview-card-watermark" id="preview-watermark">Love Guru | Sukoon...</div>
+                    </div>
+                </div>
+                <div class="image-options-panel">
+                    <div class="option-group">
+                        <label>पृष्ठभूमि (Background):</label>
+                        <div class="background-swatches">
+                            <button class="swatch gradient-bg-1 active" data-bg="gradient-bg-1"
+                                title="Warm Sunset"></button>
+                            <button class="swatch gradient-bg-2" data-bg="gradient-bg-2"
+                                title="Midnight Dream"></button>
+                            <button class="swatch gradient-bg-3" data-bg="gradient-bg-3" title="Sweet Purple"></button>
+                            <button class="swatch gradient-bg-4" data-bg="gradient-bg-4" title="Ocean Love"></button>
+                            <button class="swatch gradient-bg-5" data-bg="gradient-bg-5"
+                                title="Cherry Blossom"></button>
+                            <button class="swatch solid-bg-dark" data-bg="solid-bg-dark" title="Dark Romance"></button>
+                            <button class="swatch solid-bg-pink" data-bg="solid-bg-pink" title="Soft Pink"></button>
+                        </div>
+                    </div>
+                    <div class="option-group">
+                        <label>अक्षर का आकार (Font Size):</label>
+                        <input type="range" id="font-size-slider" min="16" max="32" value="22" class="option-range">
+                        <span class="option-value" id="font-size-val">22px</span>
+                    </div>
+                    <div class="option-group">
+                        <label>अलाइनमेंट (Alignment):</label>
+                        <div class="align-buttons">
+                            <button class="align-btn active" data-align="center"><i
+                                    class="fas fa-align-center"></i></button>
+                            <button class="align-btn" data-align="left"><i class="fas fa-align-left"></i></button>
+                            <button class="align-btn" data-align="right"><i class="fas fa-align-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="option-group toggle-group">
+                        <label for="toggle-watermark">वाटरमार्क (Watermark) दिखाएं:</label>
+                        <input type="checkbox" id="toggle-watermark" checked class="option-checkbox">
+                    </div>
+                    <div class="option-group toggle-group">
+                        <label for="toggle-preview-hearts">बैकग्राउंड डिज़ाइन (Hearts) दिखाएं:</label>
+                        <input type="checkbox" id="toggle-preview-hearts" checked class="option-checkbox">
+                    </div>
+                    <button id="download-card-btn" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        इमेज डाउनलोड करें (PNG)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Add Shayari Modal -->
     <div id="add-shayari-modal" class="modal-overlay">
         <div class="modal-content">
@@ -387,23 +450,54 @@
         </div>
     </div>
 
-    <!-- Audio Controls -->
-    <div class="audio-controls">
-        <button id="music-toggle" class="music-toggle" title="संगीत चालू/बंद करें (Spacebar)">
-            <i class="fas fa-music"></i>
-        </button>
-        <div class="volume-control" title="Volume Control (Ctrl + Arrow Keys)">
-            <input type="range" id="volume-slider" min="0" max="100" value="50" class="volume-slider">
-            <span class="volume-label">Volume: 50%</span>
+    <!-- Audio Controls / Upgraded Music Player -->
+    <div class="audio-controls music-player-widget collapsed" id="music-player-widget">
+        <div class="player-header" id="player-header">
+            <div class="track-info">
+                <i class="fas fa-compact-disc disc-icon"></i>
+                <div class="track-details">
+                    <span class="track-name" id="player-track-name">सॉन्ग लोड हो रहा है...</span>
+                    <span class="track-status" id="player-track-status">संगीत बंद है</span>
+                </div>
+            </div>
+            <div class="player-visualizer" id="player-visualizer">
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+                <div class="visualizer-bar"></div>
+            </div>
+            <button class="player-expand-btn" id="player-expand-btn" title="प्लेयर खोलें">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <div class="player-body">
+            <div class="player-controls">
+                <button id="music-prev" class="player-btn" title="पिछला गाना">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="music-toggle" class="music-toggle player-btn play-pause-btn"
+                    title="संगीत चालू/बंद करें (Spacebar)">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="music-next" class="player-btn" title="अगला गाना">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+            <div class="volume-control-container">
+                <i class="fas fa-volume-down volume-icon"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="50" class="volume-slider">
+                <span class="volume-label">50%</span>
+            </div>
         </div>
     </div>
-    
+
     <!-- Background Music -->
     <audio id="background-music" preload="auto">
         <!-- Fallback for browsers that don't support audio -->
         <p>Your browser does not support the audio element.</p>
     </audio>
-    
+
     <!-- Floating Add Button -->
     <button id="floating-add-btn" class="floating-add-btn" title="नई शायरी जोड़ें">
         <i class="fas fa-plus"></i>
@@ -431,7 +525,9 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="firebase-config.js"></script>
     <script src="script.js?v=4.1"></script>
 </body>
+
 </html>

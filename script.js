@@ -1,7 +1,7 @@
 // Smooth scrolling function
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
-    element.scrollIntoView({ 
+    element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
     });
@@ -86,7 +86,7 @@ const allShayaris = [
         id: 4,
         author: "Love Guru",
         date: "3 सप्ताह पहले",
-        content:"i miss who you were, not who you are. तुम जो हुआ करते थे वो याद आता है तुम जो भी हो जैसा हो कर तुम चले गए वो याद नहीं आता जब भी तुम्हारी  याद आती है तो तुम्हारा वही चेहरा आँखों के समंदर में कस्ती बन कर तैरने लगता  है जो मैने पहली बार देखा था वही लहजा याद आता है कि जिस से मुझे मोहब्बत हुआ था तुम्हारा चले जाना याद नहीं आता मुझे बेरुखी  याद नहीं आते बहाने याद नहीं आते मुझे याद आता है भरोसा कुछ राते , कुछ सामे , बाते याद आती है जिंदगी साथ बिताने वाली , तुम्हारा होना याद आता है एक रोज़ तो मुझसे मिले थे मैने देखा था कुछ फूल खिले थे उन फूलों के खुशबू याद आती  है तुम्हारे हाथों में नरमी याद आती है तुम्हे मालूम होना चाहिए कुछ भी तुम्हारा गलत वाला कुछ भी बुरा याद नहीं आता मुझे तुम्हारा सब सही सब अच्छा याद आता है मैं तुम्हे ऐसे ही याद करता  हूँ जैसे तुम हुआ करते थे जैसे तुम अभी हो उसे मैं नहीं जनता..!!",
+        content: "i miss who you were, not who you are. तुम जो हुआ करते थे वो याद आता है तुम जो भी हो जैसा हो कर तुम चले गए वो याद नहीं आता जब भी तुम्हारी  याद आती है तो तुम्हारा वही चेहरा आँखों के समंदर में कस्ती बन कर तैरने लगता  है जो मैने पहली बार देखा था वही लहजा याद आता है कि जिस से मुझे मोहब्बत हुआ था तुम्हारा चले जाना याद नहीं आता मुझे बेरुखी  याद नहीं आते बहाने याद नहीं आते मुझे याद आता है भरोसा कुछ राते , कुछ सामे , बाते याद आती है जिंदगी साथ बिताने वाली , तुम्हारा होना याद आता है एक रोज़ तो मुझसे मिले थे मैने देखा था कुछ फूल खिले थे उन फूलों के खुशबू याद आती  है तुम्हारे हाथों में नरमी याद आती है तुम्हे मालूम होना चाहिए कुछ भी तुम्हारा गलत वाला कुछ भी बुरा याद नहीं आता मुझे तुम्हारा सब सही सब अच्छा याद आता है मैं तुम्हे ऐसे ही याद करता  हूँ जैसे तुम हुआ करते थे जैसे तुम अभी हो उसे मैं नहीं जनता..!!",
         likes: 156
     },
     {
@@ -256,61 +256,61 @@ const allShayaris = [
         date: "1 महीना पहले",
         content: "कि खो के मुझे तुम पा न सकोगी, हम तुम्हें वहां मिलेंगे जहां तुम आ न सकोगी..!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "ना जाने कौन सी शिकायतों के हम शिकार हो गए, जितना दिल साफ रखा उतने गुनहगार हो गए...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "My life is full of..सोचा कुछ, हुआ कुछ, मिला कुछ...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "जितना मैंने उसे मनाया...उतना तो मैंने कोई त्यौहार भी नहीं मनाया...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "सबसे सस्ती चीज है दर्द, जो हर कोई मुफ़्त में देकर चला जाता है...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "ख़ामोशी को समझने वाले अगर मिल जाए तो दुःख भी बयान करने की जरूरत नहीं पड़ती...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "बात करने की जिद उसी से करो, जो आपसे बात करके खुश हो, उनसे नहीं जो आपसे परेशान हों...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "हम किसी भी उम्र में मिल सकते है तुम मेरे हिस्से की मोहब्बत बचा के रखना...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "मैं नहीं कहता कि मुझे ज़िन्दगी का हिस्सा बनाए रखना, बस दूर होकर भी दूरी न लगे इतना सा रिश्ता बनाए रखना...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
         content: "मैंने सबकुछ छोड़कर उसे चुना, उसने मुझको छोड़कर सबकुछ चुन लिया...!!",
         likes: 203
-    },{
+    }, {
         id: 5,
         author: "Love Guru",
         date: "1 महीना पहले",
@@ -1066,21 +1066,21 @@ const allShayaris = [
         content: " किसी को नफरत है मुझसे और कोई प्यार कर बैठा है और किसी को यकीन नहीं है मुझ पर और कोई ऐतबार कर बैठा है, और यह दुनिया भी कितनी अजीब है ना – कोई मिलना नहीं चाहता और कोई इंतजार कर बैठा है।",
         likes: 277
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: " बहुत बुरा लगता है जब किसी के लिए सब कुछ कर दो और वह इंसान जाते–जाते यह कह दे कि मैंने कहा था क्या यह सब करने के लिए।",
         likes: 277
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  कुछ दिल की मजबूरी थी कुछ किस्मत के मारे थे साथ वह भी छोड़ गए जो जान से भी प्यारे थे।",
         likes: 277
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -1577,7 +1577,7 @@ const allShayaris = [
         date: "2 महीने पहले",
         content: "  किसी की फ़िक्र करो तो उन्हें बताना ज़रूर ! अनकहे शब्द अक्सर अनसुने रह जाते है!",
         likes: 502
-    },{
+    }, {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -1598,14 +1598,14 @@ const allShayaris = [
         content: " रूह का रिश्ता है आपसे, मन भरने का सवाल ही पैदा नहीं होता..!!",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। आंखें बंद करके तुम्हें महसूस करने के सिवा मेरे पास तुमसे मिलने का कोई दूसरा रास्ता नहीं है ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -1632,7 +1632,7 @@ const allShayaris = [
         date: "2 महीने पहले",
         content: "  हम अधूरे लोग हैं, हमारी न नींद पूरी, न ख्वाब पूरे !",
         likes: 502
-    },{
+    }, {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -1814,7 +1814,7 @@ const allShayaris = [
         content: " परेशानियाँ खा गई वरना, थोड़े बहुत खूबसूरत तो हम भी थे !",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -2241,48 +2241,48 @@ const allShayaris = [
         content: "  क्या करोगे अब मेरे पास आकर, खो दिया तुमने मुझे बार-बार आजमा के।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। कभी समझना है मुझे तो दिल लेकर आना,  दिमाग लेकर आओगे तो कभी समझ नहीं पाओगे ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। किसी से खाली वक्त में बात करना, और किसी के लिए वक्त खाली करके बात करना बहुत फर्क है ।।",
         likes: 502
-    },    {
+    }, {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। हर  ख्वाहिश, हर ख्वाब, हर अरमान पूरे कहां होते हैं, जो हमारे लिए जरूरी है हम उनके लिए जरूरी कहां होते हैं ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। अगर मुझसे कोई गलती हो जाए तो मुझसे लड़ लेना झगड़ लेना लेकिन मुझे कभी छोड़कर मत जाना ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। बहुत प्यार करते हैं हम तुम्हें, हमें दूसरों जैसे मत समझना... हम जान दे देंगे पर कभी धोखा नहीं देंगे ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  ।। साथ होना जरूरी नहीं एहसास होना जरूरी है,  दूरियां चाहे कितनी भी क्यों ना हो एक दूसरे पर विश्वास होना जरूरी है ।।",
         likes: 502
     },
-        {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -2895,7 +2895,7 @@ const allShayaris = [
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
-        content: "  रुकना मत एक खूबसूरत मोड़ आएगा, और जिंदगी संवर जाएगी !!", 
+        content: "  रुकना मत एक खूबसूरत मोड़ आएगा, और जिंदगी संवर जाएगी !!",
         likes: 502
     },
     {
@@ -3059,7 +3059,7 @@ const allShayaris = [
         content: "  अतीत को अगर जाने नहीं दोगे तो, ये आप को कभी जीने नहीं देगा|",
         likes: 502
     },
-     {
+    {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -4371,13 +4371,13 @@ const allShayaris = [
         date: "2 महीने पहले",
         content: "  कभी कभी मन को मना लेना ही बेहतर होता है, हर ज़िद हमें खुशी नहीं देती...!!",
         likes: 502
-    },{
+    }, {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
         content: "  तकलीफ़ देने के बाद जताई गई मोहब्बत, और नज़रंदाज़ करने के बाद दी गई अहमियत कोई मायने नहीं रखती !!",
         likes: 502
-    },{
+    }, {
         id: 7,
         author: "Love Guru",
         date: "2 महीने पहले",
@@ -4911,13 +4911,13 @@ const PAGE_SIZE = 5;
 let currentCategory = 'all';
 let filteredShayaris = allShayaris;
 let loadedShayaris = 0;
-loadMoreBtn.addEventListener('click', function() {
+loadMoreBtn.addEventListener('click', function () {
     // Show loading state
     loadMoreBtn.disabled = true;
     loadMoreBtn.innerHTML = '<span class="loading"></span> लोड हो रहा है...';
-    
+
     // Simulate API call with setTimeout
-    setTimeout(function() {
+    setTimeout(function () {
         // Check if there are more shayaris to load
         if (loadedShayaris < filteredShayaris.length) {
             let count = 0;
@@ -4944,7 +4944,7 @@ loadMoreBtn.addEventListener('click', function() {
 });
 
 // Modal functionality
-floatingAddBtn.addEventListener('click', function() {
+floatingAddBtn.addEventListener('click', function () {
     // Create options menu
     const optionsMenu = document.createElement('div');
     optionsMenu.className = 'floating-options';
@@ -4969,21 +4969,21 @@ floatingAddBtn.addEventListener('click', function() {
         z-index: 1000;
         animation: slideInFromBottom 0.3s ease;
     `;
-    
+
     document.body.appendChild(optionsMenu);
-    
+
     // Add event listeners
-    document.getElementById('manual-add').addEventListener('click', function() {
+    document.getElementById('manual-add').addEventListener('click', function () {
         addShayariModal.classList.add('active');
         shayariTextArea.focus();
         document.body.removeChild(optionsMenu);
     });
-    
-    document.getElementById('ai-generate').addEventListener('click', function() {
+
+    document.getElementById('ai-generate').addEventListener('click', function () {
         document.getElementById('ai-generator-modal').classList.add('active');
         document.body.removeChild(optionsMenu);
     });
-    
+
     // Close menu when clicking outside
     setTimeout(() => {
         document.addEventListener('click', function closeMenu(e) {
@@ -4997,13 +4997,13 @@ floatingAddBtn.addEventListener('click', function() {
     }, 100);
 });
 
-closeModalBtn.addEventListener('click', function() {
+closeModalBtn.addEventListener('click', function () {
     addShayariModal.classList.remove('active');
     shayariTextArea.value = '';
 });
 
 // Close modal when clicking outside
-addShayariModal.addEventListener('click', function(e) {
+addShayariModal.addEventListener('click', function (e) {
     if (e.target === addShayariModal) {
         addShayariModal.classList.remove('active');
         shayariTextArea.value = '';
@@ -5011,21 +5011,21 @@ addShayariModal.addEventListener('click', function(e) {
 });
 
 // Add new shayari
-addShayariForm.addEventListener('submit', function(e) {
+addShayariForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const shayariText = shayariTextArea.value.trim();
-    
+
     if (shayariText === '') {
         alert('कृपया अपनी शायरी लिखें!');
         return;
     }
-    
+
     // Show loading state
     submitShayariBtn.disabled = true;
     submitShayariBtn.innerHTML = '<span class="loading"></span> पोस्ट हो रहा है...';
-    
+
     // Simulate API call with setTimeout
-    setTimeout(function() {
+    setTimeout(function () {
         // Create new shayari object
         const newShayari = {
             id: Date.now(),
@@ -5036,8 +5036,8 @@ addShayariForm.addEventListener('submit', function(e) {
             timestamp: Date.now() // <-- add timestamp
         };
 
-            // Include in local dataset so category filtering works
-            allShayaris.unshift(newShayari);
+        // Include in local dataset so category filtering works
+        allShayaris.unshift(newShayari);
 
         // Track in Firebase (real totals)
         if (window.realTimeDB && window.realTimeDB.addShayari) {
@@ -5048,21 +5048,21 @@ addShayariForm.addEventListener('submit', function(e) {
             }
         }
 
-            // Add to DOM (or re-render current category list)
-            if (currentCategory && currentCategory !== 'all') {
-                filterShayarisByCategory(currentCategory);
-            } else {
-                addShayariToDOM(newShayari, true);
-            }
-        
+        // Add to DOM (or re-render current category list)
+        if (currentCategory && currentCategory !== 'all') {
+            filterShayarisByCategory(currentCategory);
+        } else {
+            addShayariToDOM(newShayari, true);
+        }
+
         // Reset form
         shayariTextArea.value = '';
         submitShayariBtn.disabled = false;
         submitShayariBtn.innerHTML = '<i class="fas fa-paper-plane"></i> शायरी पोस्ट करें';
-        
+
         // Close modal
         addShayariModal.classList.remove('active');
-        
+
         // Scroll to new shayari
         const firstShayari = shayariContainer.firstElementChild;
         firstShayari.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -5116,6 +5116,18 @@ function addShayariToDOM(shayari, isNew = false) {
                     <i class="fas fa-comment"></i>
                     <span class="comment-btn-text" style="color: white; font-weight: 600;">कमेंट</span>
                 </button>
+                <button class="listen-btn" title="शायरी सुनें" style="background: linear-gradient(45deg, #10b981, #059669); color: white; border: none; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+                    <i class="fas fa-volume-up"></i>
+                    <span class="listen-btn-text" style="color: white; font-weight: 600;">सुनें</span>
+                </button>
+                <button class="focus-btn" title="फोकस मोड" style="background: linear-gradient(45deg, #0284c7, #0369a1); color: white; border: none; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);">
+                    <i class="fas fa-expand"></i>
+                    <span class="focus-btn-text" style="color: white; font-weight: 600;">फोकस</span>
+                </button>
+                <button class="create-img-btn" title="इमेज बनाएं" style="background: linear-gradient(45deg, #ec4899, #db2777); color: white; border: none; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);">
+                    <i class="fas fa-image"></i>
+                    <span class="create-img-btn-text" style="color: white; font-weight: 600;">इमेज</span>
+                </button>
             </div>
         </div>
         <div class="comments-section" style="display:none;">
@@ -5134,28 +5146,28 @@ function addShayariToDOM(shayari, isNew = false) {
             </form>
         </div>
     `;
-    
+
     // --- SET INITIAL LIKE COUNT AND STATE ---
     const likeCountElement = shayariCard.querySelector('.like-count');
     const likeBtn = shayariCard.querySelector('.like-btn');
     const likeTextElement = shayariCard.querySelector('.like-text');
-    
+
     // Load saved like state
     const shayariId = shayari.id || shayariNumber;
     const likeState = loadLikeState(shayariId, shayari.likes);
-    
+
     // Set like count
     likeCountElement.textContent = likeState.likeCount;
-    
+
     // Set like button state
     if (likeState.isLiked) {
         likeBtn.classList.add('liked');
     }
-    
+
     // Set like text
     const count = likeState.likeCount;
     likeTextElement.textContent = count === 1 ? 'लाइक' : 'लाइक्स';
-    
+
     // Set favorite button state
     const favoriteBtn = shayariCard.querySelector('.favorite-btn');
     if (isFavorited(shayariId)) {
@@ -5165,7 +5177,7 @@ function addShayariToDOM(shayari, isNew = false) {
 
     if (isNew) {
         shayariContainer.prepend(shayariCard);
-        
+
         // Remove 'new-shayari' class after animation completes
         setTimeout(() => {
             shayariCard.classList.remove('new-shayari');
@@ -5181,10 +5193,10 @@ function copyToClipboard(text, button) {
         // Show success message
         const originalText = button.innerHTML;
         const originalBackground = button.style.background;
-        
+
         button.innerHTML = '<i class="fas fa-check"></i> कॉपी हो गया';
         button.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-        
+
         setTimeout(() => {
             button.innerHTML = originalText;
             button.style.background = originalBackground;
@@ -5197,14 +5209,14 @@ function copyToClipboard(text, button) {
         textArea.select();
         document.execCommand('copy');
         document.body.removeChild(textArea);
-        
+
         // Show success message
         const originalText = button.innerHTML;
         const originalBackground = button.style.background;
-        
+
         button.innerHTML = '<i class="fas fa-check"></i> कॉपी हो गया';
         button.style.background = 'linear-gradient(45deg, #10b981, #059669)';
-        
+
         setTimeout(() => {
             button.innerHTML = originalText;
             button.style.background = originalBackground;
@@ -5257,10 +5269,10 @@ function showLikeNotification(likeBtn, message) {
         box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         white-space: nowrap;
     `;
-    
+
     likeBtn.style.position = 'relative';
     likeBtn.appendChild(notification);
-    
+
     setTimeout(() => {
         if (notification.parentNode) {
             notification.parentNode.removeChild(notification);
@@ -5268,47 +5280,47 @@ function showLikeNotification(likeBtn, message) {
     }, 2000);
 }
 
-    // Enhanced like functionality
-    shayariContainer.addEventListener('click', function(e) {
-        // Favorite functionality
-        if (e.target.classList.contains('favorite-btn') || e.target.closest('.favorite-btn')) {
-            const favoriteBtn = e.target.classList.contains('favorite-btn') ? e.target : e.target.closest('.favorite-btn');
-            const shayariId = favoriteBtn.getAttribute('data-shayari-id');
-            
-            if (!favoriteBtn.classList.contains('favorited')) {
-                favoriteBtn.classList.add('favorited');
-                addToFavorites(shayariId);
-                showFavoriteNotification('⭐ फेवरिट में जोड़ा गया!');
-                if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
-                    window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', 1);
-                }
-            } else {
-                favoriteBtn.classList.remove('favorited');
-                removeFromFavorites(shayariId);
-                showFavoriteNotification('💔 फेवरिट से हटा दिया गया');
-                if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
-                    window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', -1);
-                }
+// Enhanced like functionality
+shayariContainer.addEventListener('click', function (e) {
+    // Favorite functionality
+    if (e.target.classList.contains('favorite-btn') || e.target.closest('.favorite-btn')) {
+        const favoriteBtn = e.target.classList.contains('favorite-btn') ? e.target : e.target.closest('.favorite-btn');
+        const shayariId = favoriteBtn.getAttribute('data-shayari-id');
+
+        if (!favoriteBtn.classList.contains('favorited')) {
+            favoriteBtn.classList.add('favorited');
+            addToFavorites(shayariId);
+            showFavoriteNotification('⭐ फेवरिट में जोड़ा गया!');
+            if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', 1);
             }
-            updateAnalytics();
-            return;
+        } else {
+            favoriteBtn.classList.remove('favorited');
+            removeFromFavorites(shayariId);
+            showFavoriteNotification('💔 फेवरिट से हटा दिया गया');
+            if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
+                window.realTimeDB.trackShayariInteraction(shayariId, 'favorites', -1);
+            }
         }
-        
-        // Like functionality
-        if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
+        updateAnalytics();
+        return;
+    }
+
+    // Like functionality
+    if (e.target.classList.contains('like-btn') || e.target.closest('.like-btn')) {
         const likeBtn = e.target.classList.contains('like-btn') ? e.target : e.target.closest('.like-btn');
         const likeCountElement = likeBtn.closest('.shayari-card').querySelector('.like-count');
         const likeTextElement = likeBtn.closest('.shayari-card').querySelector('.like-text');
-        
+
         const shayariCard = likeBtn.closest('.shayari-card');
         const shayariId = shayariCard.getAttribute('data-id') || shayariCard.querySelector('.shayari-number').textContent.replace('.', '');
-        
+
         if (!likeBtn.classList.contains('liked')) {
             likeBtn.classList.add('liked');
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes + 1;
             likeTextElement.textContent = likes === 0 ? 'लाइक' : 'लाइक्स';
-            
+
             // Save like state to localStorage
             saveLikeState(shayariId, true, likes + 1);
 
@@ -5316,7 +5328,7 @@ function showLikeNotification(likeBtn, message) {
             if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
                 window.realTimeDB.trackShayariInteraction(shayariId, 'likes', 1);
             }
-            
+
             // Show like notification
             showLikeNotification(likeBtn, '❤️ लाइक किया गया!');
         } else {
@@ -5324,7 +5336,7 @@ function showLikeNotification(likeBtn, message) {
             let likes = parseInt(likeCountElement.textContent);
             likeCountElement.textContent = likes - 1;
             likeTextElement.textContent = likes - 1 === 1 ? 'लाइक' : 'लाइक्स';
-            
+
             // Save like state to localStorage
             saveLikeState(shayariId, false, likes - 1);
 
@@ -5332,24 +5344,24 @@ function showLikeNotification(likeBtn, message) {
             if (window.realTimeDB && window.realTimeDB.trackShayariInteraction) {
                 window.realTimeDB.trackShayariInteraction(shayariId, 'likes', -1);
             }
-            
+
             // Show unlike notification
             showLikeNotification(likeBtn, '💔 लाइक हटा दिया गया');
         }
-        
+
         // Update analytics after like/unlike
         updateAnalytics();
     }
-    
+
     // Share functionality
     if (e.target.classList.contains('share-btn') || e.target.closest('.share-btn')) {
         const shareBtn = e.target.classList.contains('share-btn') ? e.target : e.target.closest('.share-btn');
         const shayariCard = shareBtn.closest('.shayari-card');
         const shayariText = shayariCard.querySelector('.shayari-content p').textContent;
-        
+
         // Create share text with only the shayari content
         const shareText = `💕 Love Guru की यह खूबसूरत शायरी ��\n\n${shayariText}\n\n#LoveGuru #Shayari #Romantic #HindiShayari`;
-        
+
         // Try to use Web Share API if available
         if (navigator.share) {
             navigator.share({
@@ -5369,18 +5381,18 @@ function showLikeNotification(likeBtn, message) {
 });
 
 // Filter functionality
-shayariFilter.addEventListener('change', function() {
+shayariFilter.addEventListener('change', function () {
     const filterValue = this.value;
     const shayariCards = shayariContainer.querySelectorAll('.shayari-card');
-    
+
     // Add loading effect
     shayariContainer.style.opacity = '0.5';
-    
+
     setTimeout(() => {
         shayariCards.forEach(card => {
             card.style.display = 'block';
         });
-        
+
         // Apply filter logic (in a real app, you'd fetch filtered data from server)
         if (filterValue === 'popular') {
             // Sort by likes (descending)
@@ -5389,7 +5401,7 @@ shayariFilter.addEventListener('change', function() {
                 const likesB = parseInt(b.querySelector('.like-count').textContent);
                 return likesB - likesA;
             });
-            
+
             sortedCards.forEach(card => shayariContainer.appendChild(card));
         } else if (filterValue === 'short') {
             // Show only short shayaris (less than 100 characters)
@@ -5404,20 +5416,20 @@ shayariFilter.addEventListener('change', function() {
                 card.style.display = text.length >= 100 ? 'block' : 'none';
             });
         }
-        
+
         shayariContainer.style.opacity = '1';
     }, 300);
 });
 
 // Like button functionality (existing)
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const likeButtons = document.querySelectorAll('.like-btn');
-    
+
     likeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const likeCount = this.nextElementSibling;
             let count = parseInt(likeCount.textContent);
-            
+
             if (this.classList.contains('liked')) {
                 count--;
                 this.classList.remove('liked');
@@ -5427,9 +5439,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('liked');
                 this.style.color = '#ff4757';
             }
-            
+
             likeCount.textContent = count;
-            
+
             // Heart animation
             this.style.transform = 'scale(1.3)';
             setTimeout(() => {
@@ -5461,47 +5473,47 @@ function renderComments(shayariCard, shayariId) {
     const commentCount = shayariCard.querySelector('.comment-count');
     const comments = loadComments(shayariId);
     commentsList.innerHTML = '';
-    
+
     comments.forEach(comment => {
         const commentItem = document.createElement('div');
         commentItem.className = 'comment-item';
-        
+
         // Create comment structure with author, text, and date
         const author = document.createElement('div');
         author.className = 'comment-author';
         author.textContent = 'Anonymous User';
-        
+
         const text = document.createElement('div');
         text.className = 'comment-text';
         text.textContent = comment;
-        
+
         const date = document.createElement('div');
         date.className = 'comment-date';
         date.textContent = 'Just now';
-        
+
         // Add action buttons
         const actions = document.createElement('div');
         actions.className = 'comment-actions';
-        
+
         const likeBtn = document.createElement('button');
         likeBtn.className = 'comment-action-btn';
         likeBtn.innerHTML = '<i class="fas fa-heart"></i> Like';
-        
+
         const replyBtn = document.createElement('button');
         replyBtn.className = 'comment-action-btn';
         replyBtn.innerHTML = '<i class="fas fa-reply"></i> Reply';
-        
+
         actions.appendChild(likeBtn);
         actions.appendChild(replyBtn);
-        
+
         commentItem.appendChild(author);
         commentItem.appendChild(text);
         commentItem.appendChild(date);
         commentItem.appendChild(actions);
-        
+
         commentsList.appendChild(commentItem);
     });
-    
+
     commentCount.textContent = comments.length;
 }
 
@@ -5517,7 +5529,7 @@ function setupCommentFeatures() {
         const commentForm = card.querySelector('.comment-form');
         const commentInput = card.querySelector('.comment-input');
         // Toggle comment section
-        commentBtn.addEventListener('click', function() {
+        commentBtn.addEventListener('click', function () {
             if (commentsSection.style.display === 'none' || !commentsSection.style.display) {
                 commentsSection.style.display = 'block';
                 commentInput.focus();
@@ -5528,7 +5540,7 @@ function setupCommentFeatures() {
         // Render comments on load
         renderComments(card, shayariId);
         // Handle comment submit
-        commentForm.addEventListener('submit', function(e) {
+        commentForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const comment = commentInput.value.trim();
             if (!comment) return;
@@ -5572,7 +5584,7 @@ function renderInitialShayaris() {
 // Get shayaris list for a selected category
 function getShayarisForCategory(category) {
     if (category === 'all') return allShayaris;
-    
+
     return allShayaris.filter((shayari) => {
         const text = `${shayari.content || ''} ${shayari.author || ''}`.toLowerCase();
         return checkCategoryMatch(text, category);
@@ -5582,15 +5594,15 @@ function getShayarisForCategory(category) {
 // Categories System
 function initCategories() {
     const categoryTabs = document.querySelectorAll('.category-tab');
-    
+
     categoryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             const category = this.getAttribute('data-category');
-            
+
             // Update active tab
             categoryTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
-            
+
             // Filter shayaris by category
             filterShayarisByCategory(category);
         });
@@ -5630,7 +5642,7 @@ function checkCategoryMatch(text, category) {
         'friendship': ['दोस्त', 'यार', 'साथी', 'मित्र', 'दोस्ती', 'साथ', 'साथी', 'दोस्त'],
         'motivation': ['जीत', 'सफलता', 'हार', 'लड़ना', 'जीतना', 'सफल', 'प्रेरणा', 'उत्साह']
     };
-    
+
     const keywords = categoryKeywords[category] || [];
     return keywords.some(keyword => text.includes(keyword));
 }
@@ -5642,16 +5654,16 @@ function initAIGenerator() {
     const generateBtn = document.getElementById('generate-shayari-btn');
     const regenerateBtn = document.getElementById('regenerate-btn');
     const saveShayariBtn = document.getElementById('save-shayari-btn');
-    
+
     // Close AI modal
-    closeAiModal.addEventListener('click', function() {
+    closeAiModal.addEventListener('click', function () {
         aiModal.classList.remove('active');
     });
-    
+
     // Generate shayari
     generateBtn.addEventListener('click', generateShayari);
     regenerateBtn.addEventListener('click', generateShayari);
-    
+
     // Save generated shayari
     saveShayariBtn.addEventListener('click', saveGeneratedShayari);
 }
@@ -5661,21 +5673,21 @@ function generateShayari() {
     const topic = document.getElementById('ai-topic').value;
     const length = document.getElementById('ai-length').value;
     const style = document.getElementById('ai-style').value;
-    
+
     const generateBtn = document.getElementById('generate-shayari-btn');
     const loading = document.getElementById('ai-loading');
     const generatedSection = document.getElementById('generated-shayari');
-    
+
     // Show loading
     generateBtn.style.display = 'none';
     loading.style.display = 'flex';
     generatedSection.style.display = 'none';
-    
+
     // Simulate AI generation delay
     setTimeout(() => {
         const shayari = generateAIShayari(topic, length, style);
         displayGeneratedShayari(shayari);
-        
+
         // Hide loading
         loading.style.display = 'none';
         generateBtn.style.display = 'inline-flex';
@@ -5738,11 +5750,11 @@ function generateAIShayari(topic, length, style) {
             ]
         }
     };
-    
+
     const templates = shayariTemplates[topic] || shayariTemplates.love;
     const lengthTemplates = templates[length] || templates.medium;
     const randomIndex = Math.floor(Math.random() * lengthTemplates.length);
-    
+
     return lengthTemplates[randomIndex];
 }
 
@@ -5750,10 +5762,10 @@ function generateAIShayari(topic, length, style) {
 function displayGeneratedShayari(shayari) {
     const preview = document.getElementById('shayari-preview');
     const generatedSection = document.getElementById('generated-shayari');
-    
+
     preview.textContent = shayari;
     generatedSection.style.display = 'block';
-    
+
     // Store generated shayari for saving
     window.generatedShayari = shayari;
 }
@@ -5761,7 +5773,7 @@ function displayGeneratedShayari(shayari) {
 // Save generated shayari
 function saveGeneratedShayari() {
     if (!window.generatedShayari) return;
-    
+
     const newShayari = {
         id: Date.now(),
         author: "AI Generated",
@@ -5769,10 +5781,10 @@ function saveGeneratedShayari() {
         likes: 0,
         timestamp: Date.now()
     };
-    
+
     // Add to allShayaris array
     allShayaris.unshift(newShayari);
-    
+
     // Add to DOM
     addShayariToDOM(newShayari, true);
 
@@ -5784,13 +5796,13 @@ function saveGeneratedShayari() {
             // ignore
         }
     }
-    
+
     // Close AI modal
     document.getElementById('ai-generator-modal').classList.remove('active');
-    
+
     // Show success notification
     showAISuccessNotification();
-    
+
     // Update analytics
     updateAnalytics();
 }
@@ -5819,9 +5831,9 @@ function showAISuccessNotification() {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -5841,7 +5853,7 @@ function showCategoryNotification(category, count) {
         'friendship': 'दोस्ती शायरी',
         'motivation': 'प्रेरणा शायरी'
     };
-    
+
     const notification = document.createElement('div');
     notification.className = 'category-notification';
     notification.innerHTML = `
@@ -5864,9 +5876,9 @@ function showCategoryNotification(category, count) {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -5881,11 +5893,11 @@ function showCategoryNotification(category, count) {
 function initSearch() {
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
-    
+
     function performSearch() {
         const query = searchInput.value.toLowerCase().trim();
         const shayariCards = document.querySelectorAll('.shayari-card');
-        
+
         if (query === '') {
             // Show all shayaris if search is empty
             shayariCards.forEach(card => {
@@ -5894,12 +5906,12 @@ function initSearch() {
             });
             return;
         }
-        
+
         let foundCount = 0;
         shayariCards.forEach(card => {
             const shayariText = card.querySelector('.shayari-content p').textContent.toLowerCase();
             const authorName = card.querySelector('.author-name').textContent.toLowerCase();
-            
+
             if (shayariText.includes(query) || authorName.includes(query)) {
                 card.style.display = 'block';
                 card.style.animation = 'fadeIn 0.5s ease';
@@ -5908,23 +5920,23 @@ function initSearch() {
                 card.style.display = 'none';
             }
         });
-        
+
         // Show search results notification
         showSearchNotification(foundCount, query);
     }
-    
+
     // Search on button click
     searchBtn.addEventListener('click', performSearch);
-    
+
     // Search on Enter key
-    searchInput.addEventListener('keypress', function(e) {
+    searchInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             performSearch();
         }
     });
-    
+
     // Real-time search (optional)
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         if (this.value.length >= 3) {
             performSearch();
         } else if (this.value.length === 0) {
@@ -5935,11 +5947,17 @@ function initSearch() {
 
 // Audio Controls Functionality
 function initAudioControls() {
+    const playerWidget = document.getElementById('music-player-widget');
+    const playerHeader = document.getElementById('player-header');
+    const expandBtn = document.getElementById('player-expand-btn');
+    const trackName = document.getElementById('player-track-name');
+    const trackStatus = document.getElementById('player-track-status');
+    const prevBtn = document.getElementById('music-prev');
     const musicToggle = document.getElementById('music-toggle');
+    const nextBtn = document.getElementById('music-next');
     const volumeSlider = document.getElementById('volume-slider');
     const backgroundMusic = document.getElementById('background-music');
-    
-    // Playlist configuration
+
     const playlist = [
         'music/Aawaara Angaara song.mp3',
         'music/chaaha hai tujho song.mp3',
@@ -5947,84 +5965,112 @@ function initAudioControls() {
         'music/chhor ke na ja o piya song.mp3',
         'music/tere hawaale song.mp3'
     ];
-    
+
     let currentSongIndex = 0;
     let isPlaying = false;
-    
-    // Load saved audio settings
+
+    // Load saved settings
     const savedVolume = localStorage.getItem('musicVolume') || 50;
     const savedMusicState = localStorage.getItem('musicPlaying') === 'true';
-    
-    // Set initial volume
+
     volumeSlider.value = savedVolume;
     backgroundMusic.volume = savedVolume / 100;
+    updateVolumeLabel(savedVolume);
+
+    // Toggle expand/collapse
+    function toggleExpand() {
+        playerWidget.classList.toggle('collapsed');
+    }
     
-    // Function to load and play current song
+    if (playerHeader) {
+        playerHeader.addEventListener('click', function(e) {
+            if (e.target.closest('#player-expand-btn') || e.target.closest('.player-controls') || e.target.closest('.volume-control-container')) return;
+            toggleExpand();
+        });
+    }
+
+    if (expandBtn) {
+        expandBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleExpand();
+        });
+    }
+
+    function updateVolumeLabel(val) {
+        const volumeLabel = document.querySelector('.volume-control-container .volume-label');
+        if (volumeLabel) {
+            volumeLabel.textContent = `${val}%`;
+        }
+    }
+
+    function getCleanTrackName(path) {
+        return path.split('/').pop().replace('.mp3', '');
+    }
+
+    // Load and play song
     function loadAndPlayCurrentSong() {
-        backgroundMusic.src = playlist[currentSongIndex];
+        const songPath = playlist[currentSongIndex];
+        backgroundMusic.src = songPath;
         backgroundMusic.load();
-        
+
+        const cleanName = getCleanTrackName(songPath);
+        if (trackName) {
+            trackName.textContent = cleanName;
+        }
+
         if (isPlaying) {
             backgroundMusic.play().then(() => {
-                musicToggle.classList.add('playing');
+                playerWidget.classList.add('playing');
+                if (trackStatus) trackStatus.textContent = 'चल रहा है...';
                 localStorage.setItem('musicPlaying', 'true');
-                showMusicNotification(`🎵 गाना चल रहा है: ${playlist[currentSongIndex].split('/').pop().replace('.mp3', '')}`);
-                
-                // Update button icon
-                const icon = musicToggle.querySelector('i');
-                if (icon) {
-                    icon.className = 'fas fa-volume-up';
-                }
+                showMusicNotification(`🎵 गाना चल रहा है: ${cleanName}`);
             }).catch((error) => {
                 console.log('Music play failed:', error);
+                isPlaying = false;
+                playerWidget.classList.remove('playing');
+                if (trackStatus) trackStatus.textContent = 'संगीत बंद है';
                 showMusicNotification('❌ संगीत चालू नहीं हो सका');
+                const icon = musicToggle.querySelector('i');
+                if (icon) icon.className = 'fas fa-play';
             });
         }
     }
-    
-    // Function to play next song
-    function playNextSong() {
-        currentSongIndex = (currentSongIndex + 1) % playlist.length;
-        loadAndPlayCurrentSong();
-    }
-    
-    // Event listener for when song ends
-    backgroundMusic.addEventListener('ended', function() {
-        playNextSong();
-    });
-    
-    // Set initial music state
-    if (savedMusicState) {
-        isPlaying = true;
-        // Try to play music after user interaction
-        const playMusic = () => {
+
+    // Prev / Next actions
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+            isPlaying = true;
+            const icon = musicToggle.querySelector('i');
+            if (icon) icon.className = 'fas fa-pause';
             loadAndPlayCurrentSong();
-        };
-        
-        // Try to play on first user interaction
-        document.addEventListener('click', playMusic, { once: true });
-        
-        // Also try on any user interaction
-        const userInteractions = ['click', 'touchstart', 'keydown'];
-        userInteractions.forEach(event => {
-            document.addEventListener(event, playMusic, { once: true });
         });
     }
-    
-    // Music toggle functionality
-    musicToggle.addEventListener('click', function() {
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+            isPlaying = true;
+            const icon = musicToggle.querySelector('i');
+            if (icon) icon.className = 'fas fa-pause';
+            loadAndPlayCurrentSong();
+        });
+    }
+
+    musicToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const icon = this.querySelector('i');
+        
         if (backgroundMusic.paused) {
             isPlaying = true;
             backgroundMusic.play().then(() => {
-                musicToggle.classList.add('playing');
+                playerWidget.classList.add('playing');
+                if (trackStatus) trackStatus.textContent = 'चल रहा है...';
                 localStorage.setItem('musicPlaying', 'true');
-                showMusicNotification(`🎵 गाना चल रहा है: ${playlist[currentSongIndex].split('/').pop().replace('.mp3', '')}`);
-                
-                // Update button icon
-                const icon = musicToggle.querySelector('i');
-                if (icon) {
-                    icon.className = 'fas fa-volume-up';
-                }
+                if (icon) icon.className = 'fas fa-pause';
+                showMusicNotification(`🎵 गाना चल रहा है: ${getCleanTrackName(playlist[currentSongIndex])}`);
             }).catch((error) => {
                 console.log('Music play failed:', error);
                 showMusicNotification('❌ संगीत चालू नहीं हो सका');
@@ -6032,130 +6078,62 @@ function initAudioControls() {
         } else {
             backgroundMusic.pause();
             isPlaying = false;
-            musicToggle.classList.remove('playing');
+            playerWidget.classList.remove('playing');
+            if (trackStatus) trackStatus.textContent = 'संगीत बंद है';
             localStorage.setItem('musicPlaying', 'false');
+            if (icon) icon.className = 'fas fa-play';
             showMusicNotification('🔇 संगीत बंद हो गया');
-            
-            // Update button icon
-            const icon = musicToggle.querySelector('i');
-            if (icon) {
-                icon.className = 'fas fa-volume-mute';
-            }
         }
     });
-    
-    // Volume control
-    volumeSlider.addEventListener('input', function() {
+
+    // Volume control slider
+    volumeSlider.addEventListener('input', function () {
         const volume = this.value / 100;
         backgroundMusic.volume = volume;
         localStorage.setItem('musicVolume', this.value);
-        
-        // Show volume notification
-        showVolumeNotification(this.value);
-        
-        // Update volume label
-        const volumeLabel = document.querySelector('.volume-label');
-        if (volumeLabel) {
-            volumeLabel.textContent = `Volume: ${this.value}%`;
-        }
+        updateVolumeLabel(this.value);
     });
-    
-    // Initialize volume label
-    const volumeLabel = document.querySelector('.volume-label');
-    if (volumeLabel) {
-        volumeLabel.textContent = `Volume: ${savedVolume}%`;
-    }
-    
-    // Update initial button state
+
+    // Setup first interaction trigger
     if (savedMusicState) {
+        isPlaying = true;
         const icon = musicToggle.querySelector('i');
-        if (icon) {
-            icon.className = 'fas fa-volume-up';
-        }
-        musicToggle.classList.add('playing');
+        if (icon) icon.className = 'fas fa-pause';
+        
+        const playMusicOnInteraction = () => {
+            loadAndPlayCurrentSong();
+        };
+
+        ['click', 'touchstart', 'keydown'].forEach(event => {
+            document.addEventListener(event, playMusicOnInteraction, { once: true });
+        });
+    } else {
+        const songPath = playlist[currentSongIndex];
+        backgroundMusic.src = songPath;
+        backgroundMusic.load();
+        if (trackName) trackName.textContent = getCleanTrackName(songPath);
+        if (trackStatus) trackStatus.textContent = 'संगीत बंद है';
     }
-    
-    // Load the first song initially
-    loadAndPlayCurrentSong();
-    
-    // Handle audio events
-    backgroundMusic.addEventListener('loadstart', () => {
-        console.log('Audio loading started');
+
+    backgroundMusic.addEventListener('ended', function () {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        loadAndPlayCurrentSong();
     });
-    
-    backgroundMusic.addEventListener('canplay', () => {
-        console.log('Audio can play');
-    });
-    
-    backgroundMusic.addEventListener('error', function(e) {
-        console.log('Audio error:', e);
-        // Try to load alternative source if current one fails
-        const currentSrc = backgroundMusic.currentSrc;
-        const sources = backgroundMusic.querySelectorAll('source');
-        let alternativeFound = false;
-        
-        for (let source of sources) {
-            if (source.src !== currentSrc && !source.src.includes('error')) {
-                backgroundMusic.src = source.src;
-                backgroundMusic.load();
-                alternativeFound = true;
-                showMusicNotification('🔄 वैकल्पिक संगीत लोड हो रहा है...');
-                break;
-            }
-        }
-        
-        if (!alternativeFound) {
-            showMusicNotification('❌ संगीत उपलब्ध नहीं है');
-            musicToggle.style.opacity = '0.5';
-            musicToggle.title = 'संगीत उपलब्ध नहीं है';
-        }
-    });
-    
-    // Handle audio ending and restart
-    backgroundMusic.addEventListener('ended', function() {
-        // Restart the loop
-        backgroundMusic.currentTime = 0;
-        if (!backgroundMusic.paused) {
-            backgroundMusic.play().catch(() => {
-                console.log('Failed to restart music');
-            });
-        }
-    });
-    
-    // Handle audio loading
-    backgroundMusic.addEventListener('loadstart', function() {
-        console.log('Music loading started');
-    });
-    
-    backgroundMusic.addEventListener('canplaythrough', function() {
-        console.log('Music can play through');
-    });
-    
-    // Handle audio seeking
-    backgroundMusic.addEventListener('seeking', function() {
-        console.log('Music seeking');
-    });
-    
-    backgroundMusic.addEventListener('seeked', function() {
-        console.log('Music seeked');
-    });
-    
-    // Keyboard shortcuts for music control
-    document.addEventListener('keydown', function(e) {
-        // Space bar to toggle music
+
+    // Handle spacebar / arrow shortcuts
+    document.addEventListener('keydown', function (e) {
         if (e.code === 'Space' && !e.target.matches('input, textarea')) {
             e.preventDefault();
             musicToggle.click();
         }
-        
-        // Arrow keys for volume control
+
         if (e.code === 'ArrowUp' && (e.ctrlKey || e.metaKey)) {
             e.preventDefault();
             const newVolume = Math.min(100, parseInt(volumeSlider.value) + 10);
             volumeSlider.value = newVolume;
             volumeSlider.dispatchEvent(new Event('input'));
         }
-        
+
         if (e.code === 'ArrowDown' && (e.ctrlKey || e.metaKey)) {
             e.preventDefault();
             const newVolume = Math.max(0, parseInt(volumeSlider.value) - 10);
@@ -6189,9 +6167,9 @@ function showMusicNotification(message) {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -6237,7 +6215,7 @@ function updateAnalytics() {
         console.log('Using real-time database for analytics');
         return; // Real-time DB handles updates automatically
     }
-    
+
     // Fallback to static calculation
     calculateStaticAnalytics();
 }
@@ -6249,20 +6227,20 @@ function calculateStaticAnalytics() {
     likeElements.forEach(element => {
         totalLikes += parseInt(element.textContent) || 0;
     });
-    
+
     // Get total favorites
     const totalFavorites = getFavorites().length;
-    
+
     // Calculate total comments
     const commentElements = document.querySelectorAll('.comment-count');
     let totalComments = 0;
     commentElements.forEach(element => {
         totalComments += parseInt(element.textContent) || 0;
     });
-    
+
     // Calculate total views (simulated based on page visits)
     const totalViews = Math.floor(totalLikes * 10 + Math.random() * 100);
-    
+
     // Update analytics display
     updateAnalyticsDisplay({
         totalLikes,
@@ -6282,9 +6260,9 @@ function updateAnalyticsDisplay(data) {
         'total-shayaris': data.totalShayaris ?? (Array.isArray(allShayaris) ? allShayaris.length : 0),
         'online-visitors': data.onlineVisitors || Math.floor(Math.random() * 50) + 10
     };
-    
+
     console.log('Updating analytics display:', updates);
-    
+
     Object.entries(updates).forEach(([id, value]) => {
         const element = document.getElementById(id);
         if (element) {
@@ -6305,11 +6283,11 @@ function likeShayari(shayariId) {
     if (window.realTimeDB) {
         window.realTimeDB.trackShayariInteraction(shayariId, 'likes');
     }
-    
+
     // Update local display
     const likeBtn = document.querySelector(`[data-shayari-id="${shayariId}"] .like-btn`);
     const likeCount = document.querySelector(`[data-shayari-id="${shayariId}"] .like-count`);
-    
+
     if (likeBtn && likeCount) {
         const currentLikes = parseInt(likeCount.textContent) || 0;
         likeCount.textContent = currentLikes + 1;
@@ -6325,18 +6303,18 @@ function addComment(shayariId, commentText) {
         author: 'Anonymous User',
         timestamp: new Date().toISOString()
     };
-    
+
     // Track in real-time database
     if (window.realTimeDB) {
         window.realTimeDB.addComment(shayariId, comment);
     }
-    
+
     // Update local display
     const commentsContainer = document.querySelector(`[data-shayari-id="${shayariId}"] .comments-container`);
     if (commentsContainer) {
         const commentElement = createCommentElement(comment);
         commentsContainer.appendChild(commentElement);
-        
+
         // Update comment count
         const commentCount = document.querySelector(`[data-shayari-id="${shayariId}"] .comment-count`);
         if (commentCount) {
@@ -6363,7 +6341,7 @@ function formatTime(timestamp) {
     const date = new Date(timestamp);
     const now = new Date();
     const diff = now - date;
-    
+
     if (diff < 60000) return 'Just now';
     if (diff < 3600000) return `${Math.floor(diff / 60000)} minutes ago`;
     if (diff < 86400000) return `${Math.floor(diff / 3600000)} hours ago`;
@@ -6377,7 +6355,7 @@ function animateNumber(elementId, finalValue) {
     const duration = 2000;
     const increment = finalValue / (duration / 16);
     let currentValue = startValue;
-    
+
     const timer = setInterval(() => {
         currentValue += increment;
         if (currentValue >= finalValue) {
@@ -6391,17 +6369,17 @@ function animateNumber(elementId, finalValue) {
 // Load trending shayaris
 function loadTrendingShayaris() {
     const trendingContainer = document.getElementById('trending-container');
-    
+
     // Sort shayaris by likes (simulated popularity)
     const sortedShayaris = [...allShayaris].sort((a, b) => {
         const aLikes = getLikeState(a.id || 1, a.likes).likeCount;
         const bLikes = getLikeState(b.id || 2, b.likes).likeCount;
         return bLikes - aLikes;
     });
-    
+
     // Take top 6 trending shayaris
     const trendingShayaris = sortedShayaris.slice(0, 6);
-    
+
     trendingContainer.innerHTML = '';
     trendingShayaris.forEach((shayari, index) => {
         const trendingCard = createTrendingCard(shayari, index + 1);
@@ -6413,9 +6391,9 @@ function loadTrendingShayaris() {
 function createTrendingCard(shayari, rank) {
     const card = document.createElement('div');
     card.className = 'trending-card';
-    
+
     const likeState = getLikeState(shayari.id || rank, shayari.likes);
-    
+
     card.innerHTML = `
         <div class="trending-rank">${rank}</div>
         <div class="shayari-header">
@@ -6448,16 +6426,28 @@ function createTrendingCard(shayari, rank) {
                     <i class="fas fa-share-alt"></i>
                     <span class="share-btn-text">शेयर</span>
                 </button>
+                <button class="listen-btn" title="शायरी सुनें">
+                    <i class="fas fa-volume-up"></i>
+                    <span class="listen-btn-text">सुनें</span>
+                </button>
+                <button class="focus-btn" title="फोकस मोड">
+                    <i class="fas fa-expand"></i>
+                    <span class="focus-btn-text">फोकस</span>
+                </button>
+                <button class="create-img-btn" title="इमेज बनाएं">
+                    <i class="fas fa-image"></i>
+                    <span class="create-img-btn-text">इमेज</span>
+                </button>
             </div>
         </div>
     `;
-    
+
     // Set favorite state
     const favoriteBtn = card.querySelector('.favorite-btn');
     if (isFavorited(shayari.id || rank)) {
         favoriteBtn.classList.add('favorited');
     }
-    
+
     return card;
 }
 
@@ -6485,9 +6475,9 @@ function showFavoriteNotification(message) {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -6523,9 +6513,9 @@ function showVolumeNotification(volume) {
         font-weight: 600;
         font-size: 0.9rem;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -6560,9 +6550,9 @@ function showSearchNotification(count, query) {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToRight 0.5s ease forwards';
         setTimeout(() => {
@@ -6578,34 +6568,34 @@ function initThemeSwitcher() {
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const mobileThemeToggleNav = document.getElementById('mobile-theme-toggle-nav');
-    
+
     // Clear old theme data and set default
     if (!localStorage.getItem('theme')) {
         localStorage.setItem('theme', 'default');
     }
-    
+
     const savedTheme = localStorage.getItem('theme');
-    
+
     // Apply saved theme
     applyTheme(savedTheme);
-    
+
     // Desktop theme toggle
     if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
+        themeToggle.addEventListener('click', function () {
             toggleTheme();
         });
     }
-    
+
     // Mobile theme toggle (in mobile menu)
     if (mobileThemeToggle) {
-        mobileThemeToggle.addEventListener('click', function() {
+        mobileThemeToggle.addEventListener('click', function () {
             toggleTheme();
         });
     }
-    
+
     // Mobile theme toggle (in navbar)
     if (mobileThemeToggleNav) {
-        mobileThemeToggleNav.addEventListener('click', function() {
+        mobileThemeToggleNav.addEventListener('click', function () {
             toggleTheme();
         });
     }
@@ -6615,7 +6605,7 @@ function initThemeSwitcher() {
 function toggleTheme() {
     const currentTheme = localStorage.getItem('theme') || 'default';
     const newTheme = currentTheme === 'dark' ? 'default' : 'dark';
-    
+
     applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     showThemeNotification(newTheme);
@@ -6626,58 +6616,58 @@ function applyTheme(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
     const mobileThemeToggleNav = document.getElementById('mobile-theme-toggle-nav');
-    
+
     // Theme application in progress
-    
+
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
-        
+
         // Update desktop theme toggle icon
         if (themeToggle) {
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             themeToggle.title = 'लाइट मोड में बदलें';
         }
-        
+
         // Update mobile theme toggle icon (in mobile menu)
         if (mobileThemeToggle) {
             mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             mobileThemeToggle.title = 'लाइट मोड में बदलें';
         }
-        
+
         // Update mobile theme toggle icon (in navbar)
         if (mobileThemeToggleNav) {
             mobileThemeToggleNav.innerHTML = '<i class="fas fa-sun"></i>';
             mobileThemeToggleNav.title = 'लाइट मोड में बदलें';
         }
-        
+
         // Dark theme applied successfully
     } else {
         document.body.classList.remove('dark-theme');
-        
+
         // Update desktop theme toggle icon
         if (themeToggle) {
             themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
             themeToggle.title = 'डार्क मोड में बदलें';
         }
-        
+
         // Update mobile theme toggle icon (in mobile menu)
         if (mobileThemeToggle) {
             mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i>';
             mobileThemeToggle.title = 'डार्क मोड में बदलें';
         }
-        
+
         // Update mobile theme toggle icon (in navbar)
         if (mobileThemeToggleNav) {
             mobileThemeToggleNav.innerHTML = '<i class="fas fa-moon"></i>';
             mobileThemeToggleNav.title = 'डार्क मोड में बदलें';
         }
-        
+
         // Default theme applied successfully
     }
-    
+
     // Apply mobile button colors
     applyMobileButtonColors();
-    
+
     // Force icon update after a small delay
     setTimeout(() => {
         // Forcing icon update
@@ -6701,7 +6691,7 @@ function applyMobileButtonColors() {
         const shareBtns = document.querySelectorAll('.share-btn');
         const commentBtns = document.querySelectorAll('.comment-btn');
         const favoriteBtns = document.querySelectorAll('.favorite-btn');
-        
+
         // Apply colors to like buttons
         likeBtns.forEach(btn => {
             btn.style.background = 'linear-gradient(45deg, #ff6b6b, #ff4757)';
@@ -6709,7 +6699,7 @@ function applyMobileButtonColors() {
             btn.style.border = 'none';
             btn.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
         });
-        
+
         // Apply colors to share buttons
         shareBtns.forEach(btn => {
             btn.style.background = 'linear-gradient(45deg, #4facfe, #00f2fe)';
@@ -6717,7 +6707,7 @@ function applyMobileButtonColors() {
             btn.style.border = 'none';
             btn.style.boxShadow = '0 4px 15px rgba(79, 172, 254, 0.3)';
         });
-        
+
         // Apply colors to comment buttons
         commentBtns.forEach(btn => {
             btn.style.background = 'linear-gradient(45deg, #8b5cf6, #7c3aed)';
@@ -6725,7 +6715,7 @@ function applyMobileButtonColors() {
             btn.style.border = 'none';
             btn.style.boxShadow = '0 4px 15px rgba(139, 92, 246, 0.3)';
         });
-        
+
         // Apply colors to favorite buttons
         favoriteBtns.forEach(btn => {
             btn.style.background = 'linear-gradient(45deg, #f59e0b, #d97706)';
@@ -6733,28 +6723,28 @@ function applyMobileButtonColors() {
             btn.style.border = 'none';
             btn.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.3)';
         });
-        
+
         // Apply text colors
         const likeBtnTexts = document.querySelectorAll('.like-btn-text');
         const shareBtnTexts = document.querySelectorAll('.share-btn-text');
         const commentBtnTexts = document.querySelectorAll('.comment-btn-text');
         const favoriteBtnTexts = document.querySelectorAll('.favorite-btn-text');
-        
+
         likeBtnTexts.forEach(text => {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         });
-        
+
         shareBtnTexts.forEach(text => {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         });
-        
+
         commentBtnTexts.forEach(text => {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         });
-        
+
         favoriteBtnTexts.forEach(text => {
             text.style.color = 'white';
             text.style.fontWeight = '600';
@@ -6770,7 +6760,7 @@ function showThemeNotification(theme) {
         'light': 'लाइट मोड',
         'dark': 'डार्क मोड'
     };
-    
+
     const notification = document.createElement('div');
     notification.className = 'theme-notification';
     notification.innerHTML = `
@@ -6793,9 +6783,9 @@ function showThemeNotification(theme) {
         gap: 0.5rem;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOutToLeft 0.5s ease forwards';
         setTimeout(() => {
@@ -6809,13 +6799,13 @@ function showThemeNotification(theme) {
 // PWA Service Worker Registration - Disabled and Unregistered
 if ('serviceWorker' in navigator) {
     // Unregister any existing service workers
-    navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
             registration.unregister();
             // Service Worker unregistered
         }
     });
-    
+
     // Prevent new service worker registration
     // if ('serviceWorker' in navigator) {
     //     window.addEventListener('load', () => {
@@ -6860,17 +6850,21 @@ if ('serviceWorker' in navigator) {
 // Show install prompt
 // Install prompt functions removed
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     try {
         // Initialize theme switcher first
         initThemeSwitcher();
-        
+
         renderInitialShayaris();
         setupCommentFeatures();
         initSearch();
         initAudioControls();
         initCategories();
         initAIGenerator();
+        initInteractiveBackground();
+        init3DTilt();
+        initInteractiveCardActions();
+        initImageCreator();
 
         // Seed total shayaris once (for "real" total shayari count)
         if (window.realTimeDB && window.realTimeDB.db) {
@@ -6886,13 +6880,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 // ignore
             }
         }
-        
+
         // Initialize analytics and trending
         setTimeout(() => {
             updateAnalytics();
             loadTrendingShayaris();
         }, 1000);
-        
+
         // Update analytics every 30 seconds
         setInterval(updateAnalytics, 30000);
     } catch (error) {
@@ -7004,7 +6998,7 @@ function getTimeAgoLabel(timestamp) {
 // --- AUTO-UPDATE DATE LABEL END ---
 
 // Navbar scroll effect
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
         header.style.background = 'linear-gradient(135deg, rgba(255, 107, 107, 0.95), rgba(255, 142, 142, 0.95))';
@@ -7014,10 +7008,10 @@ window.addEventListener('scroll', function() {
 });
 
 // Add floating hearts animation on scroll
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const hearts = document.querySelectorAll('.floating-hearts i');
     const scrolled = window.pageYOffset;
-    
+
     hearts.forEach((heart, index) => {
         const speed = 0.5 + (index * 0.1);
         heart.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
@@ -7030,7 +7024,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -7040,16 +7034,16 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe shayari cards for animation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const shayariCards = document.querySelectorAll('.shayari-card');
-    
+
     shayariCards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(50px)';
         card.style.transition = `all 0.6s ease ${index * 0.2}s`;
         observer.observe(card);
     });
-    
+
     // Apply mobile button colors on page load
     setTimeout(() => {
         applyMobileButtonColors();
@@ -7073,7 +7067,7 @@ function closeMobileMenu() {
     document.body.style.overflow = ''; // Restore scroll
 }
 
-mobileMenuToggle.addEventListener('click', function(e) {
+mobileMenuToggle.addEventListener('click', function (e) {
     e.stopPropagation();
     if (mobileMenuOverlay.classList.contains('active')) {
         closeMobileMenu();
@@ -7083,7 +7077,7 @@ mobileMenuToggle.addEventListener('click', function(e) {
 });
 
 // Close mobile menu when clicking on overlay
-mobileMenuOverlay.addEventListener('click', function(e) {
+mobileMenuOverlay.addEventListener('click', function (e) {
     if (e.target === mobileMenuOverlay) {
         closeMobileMenu();
     }
@@ -7092,18 +7086,18 @@ mobileMenuOverlay.addEventListener('click', function(e) {
 // Close mobile menu when clicking on a link
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
 mobileNavLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        
+
         // Close menu first
         closeMobileMenu();
-        
+
         // Then scroll to target after a small delay
         setTimeout(() => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({ 
+                targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
@@ -7113,14 +7107,14 @@ mobileNavLinks.forEach(link => {
 });
 
 // Close mobile menu on escape key
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         closeMobileMenu();
     }
 });
 
 // Apply mobile button colors on window resize
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     setTimeout(() => {
         applyMobileButtonColors();
         applyColorsToExistingButtons();
@@ -7133,7 +7127,7 @@ function applyColorsToExistingButtons() {
     const shareBtns = document.querySelectorAll('.share-btn');
     const commentBtns = document.querySelectorAll('.comment-btn');
     const favoriteBtns = document.querySelectorAll('.favorite-btn');
-    
+
     // Apply colors to like buttons
     likeBtns.forEach(btn => {
         if (!btn.style.background || btn.style.background === '') {
@@ -7143,7 +7137,7 @@ function applyColorsToExistingButtons() {
             btn.style.boxShadow = '0 4px 15px rgba(255, 107, 107, 0.3)';
         }
     });
-    
+
     // Apply colors to share buttons
     shareBtns.forEach(btn => {
         if (!btn.style.background || btn.style.background === '') {
@@ -7153,7 +7147,7 @@ function applyColorsToExistingButtons() {
             btn.style.boxShadow = '0 4px 15px rgba(79, 172, 254, 0.3)';
         }
     });
-    
+
     // Apply colors to comment buttons
     commentBtns.forEach(btn => {
         if (!btn.style.background || btn.style.background === '') {
@@ -7163,7 +7157,7 @@ function applyColorsToExistingButtons() {
             btn.style.boxShadow = '0 4px 15px rgba(139, 92, 246, 0.3)';
         }
     });
-    
+
     // Apply colors to favorite buttons
     favoriteBtns.forEach(btn => {
         if (!btn.style.background || btn.style.background === '') {
@@ -7173,34 +7167,34 @@ function applyColorsToExistingButtons() {
             btn.style.boxShadow = '0 4px 15px rgba(245, 158, 11, 0.3)';
         }
     });
-    
+
     // Apply text colors
     const likeBtnTexts = document.querySelectorAll('.like-btn-text');
     const shareBtnTexts = document.querySelectorAll('.share-btn-text');
     const commentBtnTexts = document.querySelectorAll('.comment-btn-text');
     const favoriteBtnTexts = document.querySelectorAll('.favorite-btn-text');
-    
+
     likeBtnTexts.forEach(text => {
         if (!text.style.color || text.style.color === '') {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         }
     });
-    
+
     shareBtnTexts.forEach(text => {
         if (!text.style.color || text.style.color === '') {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         }
     });
-    
+
     commentBtnTexts.forEach(text => {
         if (!text.style.color || text.style.color === '') {
             text.style.color = 'white';
             text.style.fontWeight = '600';
         }
     });
-    
+
     favoriteBtnTexts.forEach(text => {
         if (!text.style.color || text.style.color === '') {
             text.style.color = 'white';
@@ -7210,15 +7204,371 @@ function applyColorsToExistingButtons() {
 }
 
 // Keyboard shortcuts
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Escape key to close modal
     if (e.key === 'Escape' && addShayariModal.classList.contains('active')) {
         addShayariModal.classList.remove('active');
         shayariTextArea.value = '';
     }
-    
+
     // Ctrl/Cmd + Enter to submit form
     if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && addShayariModal.classList.contains('active')) {
         addShayariForm.dispatchEvent(new Event('submit'));
     }
 });
+
+// Interactive background particles canvas logic
+function initInteractiveBackground() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 120 };
+    
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    window.addEventListener('mousemove', function(e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+    
+    window.addEventListener('mouseout', function() {
+        mouse.x = null;
+        mouse.y = null;
+    });
+    
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height + canvas.height;
+            this.size = Math.random() * 8 + 3;
+            this.speedX = Math.random() * 1.5 - 0.75;
+            this.speedY = -(Math.random() * 1.5 + 0.5);
+            this.type = Math.random() > 0.4 ? 'heart' : 'sparkle';
+            this.color = this.type === 'heart' 
+                ? `rgba(255, ${Math.floor(Math.random() * 80 + 100)}, ${Math.floor(Math.random() * 80 + 100)}, ${Math.random() * 0.4 + 0.2})`
+                : `rgba(255, 255, 255, ${Math.random() * 0.5 + 0.2})`;
+            this.angle = Math.random() * Math.PI * 2;
+            this.spin = Math.random() * 0.02 - 0.01;
+        }
+        
+        draw() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.angle);
+            ctx.fillStyle = this.color;
+            
+            if (this.type === 'heart') {
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size, this.size / 3, 0, this.size);
+                ctx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -this.size / 2, 0, 0);
+                ctx.fill();
+            } else {
+                ctx.beginPath();
+                for (let i = 0; i < 4; i++) {
+                    ctx.lineTo(0, -this.size);
+                    ctx.rotate(Math.PI / 2);
+                }
+                ctx.fill();
+            }
+            ctx.restore();
+        }
+        
+        update() {
+            this.angle += this.spin;
+            this.y += this.speedY;
+            this.x += this.speedX;
+            
+            if (mouse.x !== null && mouse.y !== null) {
+                let dx = this.x - mouse.x;
+                let dy = this.y - mouse.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < mouse.radius) {
+                    let force = (mouse.radius - distance) / mouse.radius;
+                    this.x -= dx * force * 0.03;
+                    this.y -= dy * force * 0.03;
+                }
+            }
+            
+            if (this.y < -20 || this.x < -20 || this.x > canvas.width + 20) {
+                this.y = canvas.height + 20;
+                this.x = Math.random() * canvas.width;
+                this.speedY = -(Math.random() * 1.5 + 0.5);
+                this.speedX = Math.random() * 1.5 - 0.75;
+            }
+        }
+    }
+    
+    function init() {
+        particles = [];
+        const numParticles = 40;
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+            particles[i].y = Math.random() * canvas.height;
+        }
+    }
+    init();
+    
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+}
+
+// 3D card tilt hover handler
+function init3DTilt() {
+    document.addEventListener('mousemove', function(e) {
+        const card = e.target.closest('.shayari-card, .trending-card');
+        if (!card || card.classList.contains('focused-card')) return;
+        
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((centerY - y) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    
+    document.addEventListener('mouseleave', function(e) {
+        const card = e.target.closest('.shayari-card, .trending-card');
+        if (card) {
+            card.style.transform = '';
+        }
+    }, true);
+}
+
+// TTS Speech and Focus mode listeners
+function initInteractiveCardActions() {
+    let backdrop = document.getElementById('focus-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.id = 'focus-backdrop';
+        backdrop.className = 'focus-mode-backdrop';
+        
+        const tip = document.createElement('div');
+        tip.className = 'focus-close-tip';
+        tip.innerHTML = '<i class="fas fa-info-circle"></i> बंद करने के लिए कहीं भी क्लिक करें';
+        
+        document.body.appendChild(backdrop);
+        document.body.appendChild(tip);
+        
+        backdrop.addEventListener('click', exitFocusMode);
+    }
+    
+    let activeListenBtn = null;
+    
+    document.addEventListener('click', function(e) {
+        // --- 1. Speech Synthesis (Listen) ---
+        if (e.target.classList.contains('listen-btn') || e.target.closest('.listen-btn')) {
+            const btn = e.target.classList.contains('listen-btn') ? e.target : e.target.closest('.listen-btn');
+            const card = btn.closest('.shayari-card, .trending-card');
+            const text = card.querySelector('.shayari-content p').textContent;
+            
+            if (btn.classList.contains('speaking')) {
+                window.speechSynthesis.cancel();
+                btn.classList.remove('speaking');
+                btn.querySelector('.listen-btn-text').textContent = 'सुनें';
+                btn.querySelector('i').className = 'fas fa-volume-up';
+                activeListenBtn = null;
+            } else {
+                if (activeListenBtn) {
+                    window.speechSynthesis.cancel();
+                    activeListenBtn.classList.remove('speaking');
+                    activeListenBtn.querySelector('.listen-btn-text').textContent = 'सुनें';
+                    activeListenBtn.querySelector('i').className = 'fas fa-volume-up';
+                }
+                
+                btn.classList.add('speaking');
+                btn.querySelector('.listen-btn-text').textContent = 'रुकें';
+                btn.querySelector('i').className = 'fas fa-stop';
+                activeListenBtn = btn;
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                const voices = window.speechSynthesis.getVoices();
+                const hindiVoice = voices.find(voice => voice.lang.includes('hi'));
+                if (hindiVoice) {
+                    utterance.voice = hindiVoice;
+                }
+                
+                utterance.rate = 0.8; // Soulful emotional pace
+                
+                utterance.onend = function() {
+                    btn.classList.remove('speaking');
+                    btn.querySelector('.listen-btn-text').textContent = 'सुनें';
+                    btn.querySelector('i').className = 'fas fa-volume-up';
+                    if (activeListenBtn === btn) {
+                        activeListenBtn = null;
+                    }
+                };
+                
+                utterance.onerror = function() {
+                    btn.classList.remove('speaking');
+                    btn.querySelector('.listen-btn-text').textContent = 'सुनें';
+                    btn.querySelector('i').className = 'fas fa-volume-up';
+                };
+                
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // --- 2. Focus Mode ---
+        if (e.target.classList.contains('focus-btn') || e.target.closest('.focus-btn')) {
+            const btn = e.target.classList.contains('focus-btn') ? e.target : e.target.closest('.focus-btn');
+            const card = btn.closest('.shayari-card, .trending-card');
+            
+            if (card.classList.contains('focused-card')) {
+                exitFocusMode();
+            } else {
+                card.classList.add('focused-card');
+                document.body.classList.add('focus-mode-active');
+            }
+        }
+    });
+    
+    function exitFocusMode() {
+        const focusedCard = document.querySelector('.focused-card');
+        if (focusedCard) {
+            focusedCard.classList.remove('focused-card');
+        }
+        document.body.classList.remove('focus-mode-active');
+    }
+}
+
+// Shayari image customization panel
+function initImageCreator() {
+    const modal = document.getElementById('image-generator-modal');
+    const closeBtn = document.getElementById('close-image-modal');
+    const previewText = document.getElementById('preview-text');
+    const previewAuthor = document.getElementById('preview-author');
+    const downloadBtn = document.getElementById('download-card-btn');
+    const previewContainer = document.getElementById('card-export-preview');
+    
+    const fontSlider = document.getElementById('font-size-slider');
+    const fontSizeVal = document.getElementById('font-size-val');
+    const toggleWatermark = document.getElementById('toggle-watermark');
+    const toggleHearts = document.getElementById('toggle-preview-hearts');
+    
+    if (!modal) return;
+    
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('create-img-btn') || e.target.closest('.create-img-btn')) {
+            const btn = e.target.classList.contains('create-img-btn') ? e.target : e.target.closest('.create-img-btn');
+            const card = btn.closest('.shayari-card, .trending-card');
+            const content = card.querySelector('.shayari-content p').textContent;
+            const author = card.querySelector('.author-name').textContent;
+            
+            previewText.textContent = content;
+            previewAuthor.textContent = `- ${author}`;
+            
+            fontSlider.value = 22;
+            fontSizeVal.textContent = '22px';
+            previewText.style.fontSize = '22px';
+            previewText.style.textAlign = 'center';
+            toggleWatermark.checked = true;
+            document.getElementById('preview-watermark').style.display = 'block';
+            toggleHearts.checked = true;
+            document.querySelector('.preview-hearts-bg').style.opacity = '0.8';
+            
+            previewContainer.className = 'card-export-preview gradient-bg-1';
+            document.querySelectorAll('.background-swatches .swatch').forEach(sw => sw.classList.remove('active'));
+            document.querySelector('.background-swatches .swatch[data-bg="gradient-bg-1"]').classList.add('active');
+            
+            document.querySelectorAll('.align-buttons .align-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.align-buttons .align-btn[data-align="center"]').classList.add('active');
+            
+            modal.classList.add('active');
+        }
+    });
+    
+    document.querySelectorAll('.background-swatches .swatch').forEach(swatch => {
+        swatch.addEventListener('click', function() {
+            document.querySelectorAll('.background-swatches .swatch').forEach(sw => sw.classList.remove('active'));
+            this.classList.add('active');
+            const bgClass = this.getAttribute('data-bg');
+            previewContainer.className = `card-export-preview ${bgClass}`;
+        });
+    });
+    
+    fontSlider.addEventListener('input', function() {
+        fontSizeVal.textContent = `${this.value}px`;
+        previewText.style.fontSize = `${this.value}px`;
+    });
+    
+    document.querySelectorAll('.align-buttons .align-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.align-buttons .align-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const align = this.getAttribute('data-align');
+            previewText.style.textAlign = align;
+        });
+    });
+    
+    toggleWatermark.addEventListener('change', function() {
+        document.getElementById('preview-watermark').style.display = this.checked ? 'block' : 'none';
+    });
+    
+    toggleHearts.addEventListener('change', function() {
+        document.querySelector('.preview-hearts-bg').style.opacity = this.checked ? '0.8' : '0';
+    });
+    
+    downloadBtn.addEventListener('click', function() {
+        const originalText = downloadBtn.innerHTML;
+        downloadBtn.disabled = true;
+        downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> इमेज बन रही है...';
+        
+        setTimeout(() => {
+            html2canvas(previewContainer, {
+                useCORS: true,
+                scale: 2,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.download = `LoveGuru_Shayari_${Date.now()}.png`;
+                link.href = imgData;
+                link.click();
+                
+                downloadBtn.innerHTML = '<i class="fas fa-check"></i> डाउनलोड सफल!';
+                setTimeout(() => {
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Image export failed:', err);
+                downloadBtn.innerHTML = '<i class="fas fa-times"></i> असफल!';
+                setTimeout(() => {
+                    downloadBtn.disabled = false;
+                    downloadBtn.innerHTML = originalText;
+                }, 2000);
+            });
+        }, 100);
+    });
+}
