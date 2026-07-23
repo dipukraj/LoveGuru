@@ -4907,7 +4907,7 @@ const allShayaris = [
 ];
 
 // Load more functionality
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 50;
 let currentCategory = 'all';
 let filteredShayaris = allShayaris;
 let loadedShayaris = 0;
