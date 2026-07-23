@@ -7336,7 +7336,8 @@ function initInteractiveBackground() {
     
     function init() {
         particles = [];
-        const numParticles = 40;
+        const isMobile = window.innerWidth <= 768;
+        const numParticles = isMobile ? 15 : 40;
         for (let i = 0; i < numParticles; i++) {
             particles.push(new Particle());
             particles[i].y = Math.random() * canvas.height;
@@ -7357,6 +7358,9 @@ function initInteractiveBackground() {
 
 // 3D card tilt hover handler
 function init3DTilt() {
+    // Disable on mobile/touch devices for smooth scrolling performance
+    if (window.innerWidth <= 768 || 'ontouchstart' in window) return;
+
     document.addEventListener('mousemove', function(e) {
         const card = e.target.closest('.shayari-card, .trending-card');
         if (!card || card.classList.contains('focused-card')) return;
