@@ -4987,7 +4987,7 @@ floatingAddBtn.addEventListener('click', function () {
         </div>
     `;
     optionsMenu.style.cssText = `
-        position: absolute;
+        position: fixed;
         bottom: 80px;
         right: 20px;
         background: white;
@@ -5128,33 +5128,33 @@ function addShayariToDOM(shayari, isNew = false) {
                 <span class="like-text">लाइक्स</span>
             </div>
             <div class="action-buttons">
-                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें" style="background: linear-gradient(45deg, #ff6b6b, #ff4757); color: white; border: none; box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);">
+                <button class="like-btn" data-likes="${shayari.likes}" title="इस शायरी को लाइक करें">
                     <i class="fas fa-heart"></i>
-                    <span class="like-btn-text" style="color: white; font-weight: 600;">लाइक</span>
+                    <span class="like-btn-text">लाइक</span>
                 </button>
-                <button class="favorite-btn" data-shayari-id="${shayari.id || shayariNumber}" title="फेवरिट में जोड़ें" style="background: linear-gradient(45deg, #f59e0b, #d97706); color: white; border: none; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);">
+                <button class="favorite-btn" data-shayari-id="${shayari.id || shayariNumber}" title="फेवरिट में जोड़ें">
                     <i class="fas fa-star"></i>
-                    <span class="favorite-btn-text" style="color: white; font-weight: 600;">फेवरिट</span>
+                    <span class="favorite-btn-text">फेवरिट</span>
                 </button>
-                <button class="share-btn" style="background: linear-gradient(45deg, #4facfe, #00f2fe); color: white; border: none; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);">
+                <button class="share-btn" title="शेयर करें">
                     <i class="fas fa-share-alt"></i>
-                    <span class="share-btn-text" style="color: white; font-weight: 600;">शेयर</span>
+                    <span class="share-btn-text">शेयर</span>
                 </button>
-                <button class="comment-btn" style="background: linear-gradient(45deg, #8b5cf6, #7c3aed); color: white; border: none; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
+                <button class="comment-btn" title="कमेंट करें">
                     <i class="fas fa-comment"></i>
-                    <span class="comment-btn-text" style="color: white; font-weight: 600;">कमेंट</span>
+                    <span class="comment-btn-text">कमेंट</span>
                 </button>
-                <button class="listen-btn" title="शायरी सुनें" style="background: linear-gradient(45deg, #10b981, #059669); color: white; border: none; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+                <button class="listen-btn" title="शायरी सुनें">
                     <i class="fas fa-volume-up"></i>
-                    <span class="listen-btn-text" style="color: white; font-weight: 600;">सुनें</span>
+                    <span class="listen-btn-text">सुनें</span>
                 </button>
-                <button class="focus-btn" title="फोकस मोड" style="background: linear-gradient(45deg, #0284c7, #0369a1); color: white; border: none; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);">
+                <button class="focus-btn" title="फोकस मोड">
                     <i class="fas fa-expand"></i>
-                    <span class="focus-btn-text" style="color: white; font-weight: 600;">फोकस</span>
+                    <span class="focus-btn-text">फोकस</span>
                 </button>
-                <button class="create-img-btn" title="इमेज बनाएं" style="background: linear-gradient(45deg, #ec4899, #db2777); color: white; border: none; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);">
+                <button class="create-img-btn" title="इमेज बनाएं">
                     <i class="fas fa-image"></i>
-                    <span class="create-img-btn-text" style="color: white; font-weight: 600;">इमेज</span>
+                    <span class="create-img-btn-text">इमेज</span>
                 </button>
             </div>
         </div>
@@ -6400,8 +6400,8 @@ function loadTrendingShayaris() {
 
     // Sort shayaris by likes (simulated popularity)
     const sortedShayaris = [...allShayaris].sort((a, b) => {
-        const aLikes = getLikeState(a.id || 1, a.likes).likeCount;
-        const bLikes = getLikeState(b.id || 2, b.likes).likeCount;
+        const aLikes = loadLikeState(a.id || 1, a.likes).likeCount;
+        const bLikes = loadLikeState(b.id || 2, b.likes).likeCount;
         return bLikes - aLikes;
     });
 
@@ -6420,7 +6420,7 @@ function createTrendingCard(shayari, rank) {
     const card = document.createElement('div');
     card.className = 'trending-card';
 
-    const likeState = getLikeState(shayari.id || rank, shayari.likes);
+    const likeState = loadLikeState(shayari.id || rank, shayari.likes);
 
     card.innerHTML = `
         <div class="trending-rank">${rank}</div>
@@ -7136,7 +7136,7 @@ mobileNavLinks.forEach(link => {
 
 // Close mobile menu on escape key
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+    if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
         closeMobileMenu();
     }
 });
@@ -7375,7 +7375,7 @@ function init3DTilt() {
     });
     
     document.addEventListener('mouseleave', function(e) {
-        const card = e.target.closest('.shayari-card, .trending-card');
+        const card = (e.target && e.target.closest) ? e.target.closest('.shayari-card, .trending-card') : null;
         if (card) {
             card.style.transform = '';
         }
